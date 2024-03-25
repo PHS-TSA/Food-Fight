@@ -2,27 +2,42 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+var rotation_rate:float = 100
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor():
-		velocity.y += gravity * delta
-
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
-
-	# Get the input direction and handle the movement/deceleration.
-	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
-	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+	
+	#need to make tank rotate smoothly according to direction,
+	var direction = Input.get_vector("left","right","up","down")
+	
+	velocity = direction * SPEED
+	
+	print(%TankBottomGreen.global_rotation)
+	match(Input):
+		"left":
+			%TankBottomGreen.global_rotation.move_toward(PI,rotation_rate)
+			%TankCollision.global_rotation.move_toward(PI,rotation_rate)
+			print(%TankBottomGreen.global_rotation)
+		"right":
+			%TankBottomGreen.global_rotation.move_toward(0,rotation_rate)
+			%TankCollision.global_rotation.move_toward(0,rotation_rate)
+			print(%TankBottomGreen.global_rotation)
+		"up":
+			%TankBottomGreen.global_rotation.move_toward(PI/2,rotation_rate)
+			%TankCollision.global_rotation.move_toward(PI,rotation_rate)
+		"down":
+			%TankBottomGreen.global_rotation.move_toward(3*PI/2,rotation_rate)
+			%TankCollision.global_rotation.move_toward(3*PI/2,rotation_rate)
+		
+	
+	#var rotate_value:float = 
+	
+	%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(get_global_mouse_position()) + (PI/2)
+	#if direction:
+		#velocity.x = direction * SPEED
+	#else:
+		#velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()

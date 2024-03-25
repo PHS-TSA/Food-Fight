@@ -1,15 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmdsynnjc3w7k"]
+[gd_scene load_steps=5 format=3 uid="uid://dmdsynnjc3w7k"]
 
+[ext_resource type="Script" path="res://tank.gd" id="1_p07w2"]
 [ext_resource type="Texture2D" uid="uid://n22r1dymaeg6" path="res://Assets/Tank_Bottom_Green.png" id="1_rnurt"]
+[ext_resource type="Texture2D" uid="uid://bg3fgk624uxj" path="res://Assets/Tank_Top_Green.png" id="3_0xfs2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 
 [node name="Tank" type="CharacterBody2D"]
+script = ExtResource("1_p07w2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="TankCollision" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-1.42109e-14, 0)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7ianc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="TankBottomGreen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 position = Vector2(1.78814e-07, 2.38419e-07)
 scale = Vector2(1.33333, 1.25697)
 texture = ExtResource("1_rnurt")
+
+[node name="TankTopGreen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-1, 0)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("3_0xfs2")
+
+[node name="FirePoint" type="Marker2D" parent="TankTopGreen"]
+unique_name_in_owner = true
+position = Vector2(0.625, -8.125)

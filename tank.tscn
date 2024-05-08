@@ -14,13 +14,14 @@ script = ExtResource("1_p07w2")
 [node name="TankBottomGreen" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(1.78814e-07, 2.38419e-07)
+rotation = 1.5708
 scale = Vector2(1.33333, 1.25697)
 texture = ExtResource("2_r85tv")
 
 [node name="TankCollision" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-2.38419e-07, -2)
-scale = Vector2(1, 1)
+rotation = 1.5708
 shape = SubResource("RectangleShape2D_7ianc")
 
 [node name="TankTopGreen" type="Sprite2D" parent="."]

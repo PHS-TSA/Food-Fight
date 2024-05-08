@@ -10,10 +10,12 @@ var aimMethod:bool = true #true = key board. false = mouse
 
 var rotationDirection = 0
 
-func get_input():
+
+func _physics_process(delta):
 	rotationDirection = Input.get_axis("rotate_left", "rotate_right") 
-	velocity = transform.x * Input.get_axis("backwards", "forwards") * SPEED
-	if(aimMethod):
+	velocity = transform.x * Input.get_axis("backwards", "forwards") * SPEED 
+	
+	if(aimMethod): #might wanna update with delta
 		if(Input.is_action_pressed("aim_left")):
 			%TankTopGreen.global_rotation -= deg_to_rad(aimSpeed)
 		if(Input.is_action_pressed("aim_right")):
@@ -21,8 +23,10 @@ func get_input():
 	else:
 		%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(get_global_mouse_position()) + (PI/2)
 	
-func _physics_process(delta):	
-	get_input()
+	if(Input.is_action_just_pressed("fire")):
+		print("fire")
+	
+	
 	rotation += rotationDirection * rotationSpeed * delta
 	move_and_slide()
 	

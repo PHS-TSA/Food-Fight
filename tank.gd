@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+const BULLET = preload("res://bullet.tscn") 
 
 const SPEED = 300.0
 var rotationSpeed:float = 4
@@ -24,15 +25,18 @@ func _physics_process(delta):
 		%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(get_global_mouse_position()) + (PI/2)
 	
 	if(Input.is_action_just_pressed("fire")):
-		print("fire")
+		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
 	
 	rotation += rotationDirection * rotationSpeed * delta
 	move_and_slide()
-	
 
-	
 
-	
 
-	move_and_slide()
+
+func fire():
+	var spawned:Bullet = BULLET.instantiate()
+	spawned.rotation = %TankTopGreen.global_rotation #this rotation is broken rn
+	spawned.position = %FirePoint.global_position
+	#need offset 
+	get_parent().add_child(spawned)

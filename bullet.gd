@@ -1,3 +1,4 @@
+class_name Bullet
 extends Area2D
 
 var velocity := Vector2.RIGHT

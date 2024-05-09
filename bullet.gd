@@ -1,17 +1,21 @@
 class_name Bullet
 extends Area2D
 
-var velocity := Vector2.RIGHT
+var velocity := Vector2.from_angle(self.global_rotation)
 var traveled_distance := 0.0
 var num: int
+const SPEED := 400
+const RANGE := 1200
+
 
 @onready var ball: Sprite2D = %BallSprite
 
 
 func _physics_process(delta: float) -> void:
-	const SPEED := 300
-	const RANGE := 1200
-	self.position += self.velocity * SPEED * delta
+
+	#gonna be honest i don't really know how this bullet code works. It just does
+	#the velocity.rotated just gives the angle as a vector i think
+	self.position += velocity.rotated(global_rotation-(PI/2)) * SPEED * delta
 	self.traveled_distance += SPEED * delta
 	if self.traveled_distance > RANGE:
 		queue_free()

@@ -36,7 +36,8 @@ func _physics_process(delta):
 
 func fire():
 	var spawned:Bullet = BULLET.instantiate()
-	spawned.rotation = %TankTopGreen.global_rotation #this rotation is broken rn
+	spawned.global_rotation = %TankTopGreen.global_rotation #this rotation is broken rn
 	spawned.position = %FirePoint.global_position
+	
 	#need offset 
 	get_parent().add_child(spawned)

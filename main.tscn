@@ -1,8 +1,24 @@
-[gd_scene load_steps=2 format=3 uid="uid://boxrdr0rblc43"]
+[gd_scene load_steps=5 format=3 uid="uid://boxrdr0rblc43"]
 
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://tank.tscn" id="1_b7g6s"]
+[ext_resource type="Texture2D" uid="uid://mswl1hrsqgfw" path="res://icon.svg" id="2_2fbn0"]
+[ext_resource type="Script" path="res://SampleBox.gd" id="2_22e2a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ewrhd"]
+size = Vector2(126, 126)
 
 [node name="Main" type="Node2D"]
 
 [node name="Tank" parent="." instance=ExtResource("1_b7g6s")]
 position = Vector2(594, 321)
+
+[node name="SampleBox" type="StaticBody2D" parent="."]
+position = Vector2(260, 165)
+script = ExtResource("2_22e2a")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SampleBox"]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ewrhd")
+
+[node name="Sprite2D" type="Sprite2D" parent="SampleBox"]
+texture = ExtResource("2_2fbn0")

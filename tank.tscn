@@ -8,7 +8,7 @@
 size = Vector2(294, 342)
 
 [node name="Tank" type="CharacterBody2D"]
-scale = Vector2(0.643517, 0.643517)
+scale = Vector2(0.443519, 0.443519)
 script = ExtResource("1_p07w2")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]
@@ -27,7 +27,7 @@ shape = SubResource("RectangleShape2D_7ianc")
 [node name="TankTopGreen" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(-1, 0)
-scale = Vector2(1.6, 1.6)
+scale = Vector2(1.51536, 1.51536)
 texture = ExtResource("3_d63n3")
 
 [node name="FirePoint" type="Marker2D" parent="TankTopGreen"]

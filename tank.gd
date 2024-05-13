@@ -2,12 +2,16 @@ extends CharacterBody2D
 
 const BULLET = preload("res://bullet.tscn") 
 
+#Tank Stats
 const SPEED = 300.0
 var rotationSpeed:float = 4
 var aimSpeed:float = 5
 var aimMethod:bool = true #true = key board. false = mouse
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+#Bullet Stats
+var damage:float = 10
+
+
 
 var rotationDirection = 0
 
@@ -38,6 +42,6 @@ func fire():
 	var spawned:Bullet = BULLET.instantiate()
 	spawned.global_rotation = %TankTopGreen.global_rotation #this rotation is broken rn
 	spawned.position = %FirePoint.global_position
-	
+	spawned.damage = damage
 	#need offset 
 	get_parent().add_child(spawned)

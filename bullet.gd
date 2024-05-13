@@ -3,9 +3,11 @@ extends Area2D
 
 var velocity := Vector2.from_angle(self.global_rotation)
 var traveled_distance := 0.0
-var num: int
-const SPEED := 400
-const RANGE := 1200
+
+#stats
+var SPEED := 400
+var RANGE := 1200
+var damage:float = 10
 
 
 @onready var ball: Sprite2D = %BallSprite
@@ -23,4 +25,6 @@ func _physics_process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
+	if(body.has_method("take_damage")):
+		body.take_damage(damage)
 	

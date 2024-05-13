@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+var health:float = 100.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -10,5 +10,7 @@ func _ready():
 func _process(delta):
 	pass
 	
-func take_damage():
-	queue_free()
+func take_damage(damage:float):
+	health -= damage
+	if(health < 0):
+		queue_free()

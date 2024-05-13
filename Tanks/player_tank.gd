@@ -3,7 +3,7 @@ extends CharacterBody2D
 const BULLET = preload("res://bullet.tscn") 
 
 #Tank Stats
-const SPEED = 300.0
+const SPEED = 400.0
 var rotationSpeed:float = 4
 var aimSpeed:float = 5
 var aimMethod:bool = true #true = key board. false = mouse

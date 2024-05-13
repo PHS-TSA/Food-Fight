@@ -1,8 +1,15 @@
 extends StaticBody2D
-var health:float = 100.0
+const maxHealth:float = 100.0
+var health:float = maxHealth
+var healthBar:ProgressBar
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	healthBar = self.get_node("HealthBar")
+	healthBar.max_value = maxHealth
+	healthBar.value = health
+	print(healthBar.max_value)
 	pass # Replace with function body.
 
 
@@ -12,5 +19,6 @@ func _process(delta):
 	
 func take_damage(damage:float):
 	health -= damage
-	if(health < 0):
+	healthBar.value = health
+	if(health <= 0):
 		queue_free()

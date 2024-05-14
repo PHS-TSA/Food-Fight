@@ -1,7 +1,7 @@
 class_name Tank
 extends CharacterBody2D
 
-const BULLET = preload("res://bullet.tscn") 
+const BULLET = preload("res://Tanks/bullet.tscn") 
 
 #Tank Stats
 const maxHealth:float = 100.0
@@ -9,7 +9,7 @@ var health:float = maxHealth
 var healthBar:ProgressBar
 const SPEED = 400.0
 var rotationSpeed:float = 4
-var aimSpeed:float = 5
+var aimSpeed:float = 3
 var aimMethod:bool = true #true = key board. false = mouse
 var rotationDirection = 0
 

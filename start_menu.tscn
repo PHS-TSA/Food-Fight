@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjd03uacoxg33"]
+
+[ext_resource type="Script" path="res://Demo_Button.gd" id="1_x33o1"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Demo_Button" type="Button" parent="."]
+offset_left = -158.0
+offset_top = -124.0
+offset_right = 164.0
+offset_bottom = -93.0
+text = "Play Demo/2 Player. NO ROUNDS/CARDS"
+script = ExtResource("1_x33o1")
+
+[node name="Title" type="Label" parent="."]
+offset_left = -175.0
+offset_top = -261.0
+offset_right = 185.0
+offset_bottom = -192.0
+theme_override_font_sizes/font_size = 50
+text = "Tank Game"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="Demo_Button" to="Demo_Button" method="_on_pressed"]

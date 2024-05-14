@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Tanks/player_tank.gd" id="1_j15vl"]
 [ext_resource type="Texture2D" uid="uid://dwjc2jjj5pb3c" path="res://Assets/Tank_Bottom_Green.png" id="2_4yc35"]
 [ext_resource type="Texture2D" uid="uid://ddi5o35wsb3h8" path="res://Assets/Tank_Top_Green.png" id="3_dkwaf"]
-[ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Tanks/health_bar.tscn" id="4_yjnhi"]
+[ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="4_yjnhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 size = Vector2(294, 342)

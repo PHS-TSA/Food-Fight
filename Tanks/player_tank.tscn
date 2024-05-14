@@ -36,8 +36,6 @@ texture = ExtResource("3_dkwaf")
 unique_name_in_owner = true
 position = Vector2(2.5, -171.875)
 
-[node name="Camera2D" type="Camera2D" parent="."]
-
 [node name="HealthBar" parent="." instance=ExtResource("4_yjnhi")]
 offset_left = 124.008
 offset_top = 90.1878

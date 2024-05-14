@@ -1,9 +1,6 @@
 extends Tank
 
-#reassigns variables
-var rotate_left_button = "rotate_left_alt"
-var rotate_right_button = "rotate_right"
-var aim_left_button = "aim_left"
-var aim_right_button = "aim_right"
-var forward_button = "forwards"
-var backwards_button = "backwards"
+
+#passed in input variables to tank constructer
+func _init():
+	super._init("rotate_left","rotate_right","aim_left","aim_right","forwards","backwards","fire")

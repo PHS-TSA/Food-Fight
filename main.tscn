@@ -37,3 +37,21 @@ position = Vector2(938, 154)
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(587, 314)
 zoom = Vector2(0.5, 0.5)
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Node2D"]
+z_index = -1
+offset_left = -595.0
+offset_top = -345.0
+offset_right = 1739.0
+offset_bottom = 974.0
+color = Color(0, 0.662745, 0.231373, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Node2D"]
+z_index = -1
+offset_left = -590.0
+offset_top = 262.0
+offset_right = 1748.0
+offset_bottom = 532.0
+color = Color(0.247059, 0.12549, 0, 1)

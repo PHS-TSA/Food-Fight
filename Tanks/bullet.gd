@@ -10,8 +10,6 @@ var RANGE := 1200
 var damage:float = 10
 
 
-@onready var ball: Sprite2D = %BallSprite
-
 
 func _physics_process(delta: float) -> void:
 

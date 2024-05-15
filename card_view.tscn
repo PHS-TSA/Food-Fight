@@ -1,0 +1,41 @@
+[gd_scene load_steps=2 format=3 uid="uid://56hplkhf45aw"]
+
+[ext_resource type="PackedScene" uid="uid://bwjy877mvyge0" path="res://texture_button.tscn" id="1_rdmnm"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -558.0
+offset_top = -206.0
+offset_right = 558.0
+offset_bottom = 206.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Card3" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_rdmnm")]
+layout_mode = 2
+
+[node name="Card2" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_rdmnm")]
+layout_mode = 2
+
+[node name="Card4" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_rdmnm")]
+layout_mode = 2

@@ -26,6 +26,11 @@ var forward_button = "forwards"
 var backwards_button = "backwards"
 var fire_button = "fire"
 
+#Signals
+var tank_index:int #the index of the tank on the players list
+signal tank_dead(index:int) #signals to the round/level that the tank is dead
+
+ 
 #Constructer 
 func _init(
 	p_rotate_left_button: String,
@@ -74,7 +79,8 @@ func take_damage(damage:float):
 	health -= damage
 	healthBar.value = health
 	if(health <= 0):
-		queue_free()
+		tank_dead.emit(tank_index)
+		#queue_free()
 
 
 func fire():

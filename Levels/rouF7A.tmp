@@ -61,7 +61,6 @@ offset_bottom = 532.0
 color = Color(0.247059, 0.12549, 0, 1)
 
 [node name="Control" parent="." instance=ExtResource("7_jl14j")]
-visible = false
 offset_left = 583.0
 offset_top = 281.0
 offset_right = 583.0

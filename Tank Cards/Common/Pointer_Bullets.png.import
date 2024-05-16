@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://da7yvc22ir2pt"
-path="res://.godot/imported/1.png-3c5a9d027369979f5b880ea5990e73b4.ctex"
+uid="uid://cjoiiuxovksyc"
+path="res://.godot/imported/Pointer_Bullets.png-9ebfe04a46e3af9cc7d91b904b75d478.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tank Cards/1.png"
-dest_files=["res://.godot/imported/1.png-3c5a9d027369979f5b880ea5990e73b4.ctex"]
+source_file="res://Tank Cards/Common/Pointer_Bullets.png"
+dest_files=["res://.godot/imported/Pointer_Bullets.png-9ebfe04a46e3af9cc7d91b904b75d478.ctex"]
 
 [params]
 

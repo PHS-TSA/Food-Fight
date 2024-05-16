@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjoiiuxovksyc"
-path="res://.godot/imported/2.png-527a8245dec535ba7bd76da918ef2459.ctex"
+uid="uid://obac8ioqiv2"
+path="res://.godot/imported/Mechanic_on_Board.png-154a047acf909724c9655bc024a5ffc1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tank Cards/2.png"
-dest_files=["res://.godot/imported/2.png-527a8245dec535ba7bd76da918ef2459.ctex"]
+source_file="res://Tank Cards/Rare/Mechanic_on_Board.png"
+dest_files=["res://.godot/imported/Mechanic_on_Board.png-154a047acf909724c9655bc024a5ffc1.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://obac8ioqiv2"
-path="res://.godot/imported/5.png-da90fa447775a3e98c1c3658873e1655.ctex"
+uid="uid://da7yvc22ir2pt"
+path="res://.godot/imported/Reinforced_Armor.png-c6693a4ac5f8ed45855d8b2e69334081.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tank Cards/5.png"
-dest_files=["res://.godot/imported/5.png-da90fa447775a3e98c1c3658873e1655.ctex"]
+source_file="res://Tank Cards/Common/Reinforced_Armor.png"
+dest_files=["res://.godot/imported/Reinforced_Armor.png-c6693a4ac5f8ed45855d8b2e69334081.ctex"]
 
 [params]
 

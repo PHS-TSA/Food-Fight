@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh26nrhkdgrtg"]
+[gd_scene load_steps=8 format=3 uid="uid://bh26nrhkdgrtg"]
 
 [ext_resource type="Script" path="res://Levels/rounds.gd" id="1_itdtf"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/player_tank.tscn" id="2_5ry51"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://mswl1hrsqgfw" path="res://icon.svg" id="4_whoko"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="5_d8vx3"]
 [ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/player2_tank.tscn" id="6_7pvx6"]
-[ext_resource type="PackedScene" uid="uid://56hplkhf45aw" path="res://card_view.tscn" id="7_jl14j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewrhd"]
 size = Vector2(126, 126)
@@ -59,10 +58,3 @@ offset_top = 262.0
 offset_right = 1748.0
 offset_bottom = 532.0
 color = Color(0.247059, 0.12549, 0, 1)
-
-[node name="Control" parent="." instance=ExtResource("7_jl14j")]
-visible = false
-offset_left = 583.0
-offset_top = 281.0
-offset_right = 583.0
-offset_bottom = 281.0

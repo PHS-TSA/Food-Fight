@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bvanm77vaqmr2"
-path="res://.godot/imported/3.png-29a87a7446c45d38e2e49d2f2a59965c.ctex"
+uid="uid://bio10d2mrnuru"
+path="res://.godot/imported/Atom_Bullets.png-1b8d3378150aa296c5a0a7fccf0a0a83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tank Cards/3.png"
-dest_files=["res://.godot/imported/3.png-29a87a7446c45d38e2e49d2f2a59965c.ctex"]
+source_file="res://Tank Cards/Legendary/Atom_Bullets.png"
+dest_files=["res://.godot/imported/Atom_Bullets.png-1b8d3378150aa296c5a0a7fccf0a0a83.ctex"]
 
 [params]
 

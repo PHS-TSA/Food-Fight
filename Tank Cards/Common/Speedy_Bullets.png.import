@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bio10d2mrnuru"
-path="res://.godot/imported/6.png-7f60fb3202d308e4d9dfa0899c08c922.ctex"
+uid="uid://bvanm77vaqmr2"
+path="res://.godot/imported/Speedy_Bullets.png-121a084ac8a10aecd31993663c929387.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tank Cards/6.png"
-dest_files=["res://.godot/imported/6.png-7f60fb3202d308e4d9dfa0899c08c922.ctex"]
+source_file="res://Tank Cards/Common/Speedy_Bullets.png"
+dest_files=["res://.godot/imported/Speedy_Bullets.png-121a084ac8a10aecd31993663c929387.ctex"]
 
 [params]
 

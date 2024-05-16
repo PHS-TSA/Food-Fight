@@ -28,7 +28,7 @@ func generate_cards():
 	for card in card_list:
 		print(card)
 		ran = randi_range(1,100)
-		if(ran>=94):
+		if(ran>=95):
 			random_card = Global.legendary_cards[randi_range(0,len(Global.legendary_cards)-1)]
 			texture = load("res://Tank Cards/Legendary/"+str(random_card)+".png")
 			card.texture_normal = texture

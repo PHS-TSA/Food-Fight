@@ -68,8 +68,25 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 		tank = players[Global.G_tanks_picking[i]] 
 		print(card)
 		match card:
+			#Commons
 			"Pointer_Bullets": # Need to make a work around so tank stats don't get reset every time
 				tank.damage *= 1.2
+			"Reinforced_Armor":
+				tank.health *= 1.2
+			"Speedy_Bullets":
+				tank.bulletSpeed *= 1.2
+				
+			#uncommon
+			"Galvanized_Steel_Plating":
+				tank.health *= 1.4
+				
+				
+			#rare
+			"Mechanic_on_Board":
+				tank.regen += 0.01 #percent based system
+				
+				
+			#legendary
 			"Atom_Bullets":
 				tank.bulletSize *= 0.2
 				tank.bulletSpeed *= 2

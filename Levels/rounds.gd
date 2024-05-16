@@ -5,6 +5,7 @@ var players = [] #holds tank objects
 var player_wins = []
 var tanks_alive
 
+
 var tanks_picking = []
 var card:String
 # Called when the node enters the scene tree for the first time.
@@ -56,14 +57,21 @@ func pause_objects(pause_unpause:bool):
 				#child.paused = false
 
 
+
+
+#
 func apply_cards(): # Needs to apply card stats to the corresponding tank and reset global lists
 	print("apply time")
-	
+	var tank
 	for i in range(len(Global.G_tanks_picking)):
 		card = Global.G_cards_picked[i]
+		tank = players[Global.G_tanks_picking[i]] 
 		print(card)
 		match card:
-			"Pointer_Bullets": # Need to make a work around so tank variables don't get reset every time
-				print(players[i].damage)
-				players[i].damage *= 1.2
-				print(players[i].damage)
+			"Pointer_Bullets": # Need to make a work around so tank stats don't get reset every time
+				tank.damage *= 1.2
+			"Atom_Bullets":
+				tank.bulletSize *= 0.2
+				tank.bulletSpeed *= 2
+				tank.damage *= 1.5
+				

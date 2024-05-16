@@ -5,9 +5,13 @@ var velocity := Vector2.from_angle(self.global_rotation)
 var traveled_distance := 0.0
 
 #stats
-var SPEED := 400
-var RANGE := 1200
-var damage:float = 10
+var speed:float
+var range:float 
+var damage:float 
+var size:float 
+
+func _ready():
+	self.set_scale(Vector2(size, size))
 
 
 
@@ -15,9 +19,9 @@ func _physics_process(delta: float) -> void:
 
 	#gonna be honest i don't really know how this bullet code works. It just does
 	#the velocity.rotated just gives the angle as a vector i think
-	self.position += velocity.rotated(global_rotation-(PI/2)) * SPEED * delta
-	self.traveled_distance += SPEED * delta
-	if self.traveled_distance > RANGE:
+	self.position += velocity.rotated(global_rotation-(PI/2)) * speed * delta
+	self.traveled_distance += speed * delta
+	if self.traveled_distance > range:
 		queue_free()
 
 

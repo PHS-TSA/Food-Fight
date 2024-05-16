@@ -6,8 +6,11 @@ const BULLET = preload("res://Tanks/bullet.tscn")
 #Tank Stats
 const maxHealth:float = 100.0
 var health:float = maxHealth
+var tankSpeed = 400.0
+var regen:float = 0 #perecent based
+
+
 var healthBar:ProgressBar
-const SPEED = 400.0
 var rotationSpeed:float = 4
 var aimSpeed:float = 3
 var aimMethod:bool = true #true = key board. false = mouse
@@ -15,6 +18,9 @@ var rotationDirection = 0
 
 #Bullet Stats
 var damage:float = 10
+var bulletSpeed = 400
+var bulletRange = 1200
+var bulletSize = 1
 
 #Input/Player Properties
 #Have these variables be overidden in the child class
@@ -57,7 +63,7 @@ func _ready():
 
 func _physics_process(delta):
 	rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
-	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * SPEED 
+	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed 
 	
 	if(aimMethod): #might wanna update with delta
 		if(Input.is_action_pressed(aim_left_button)):
@@ -70,12 +76,14 @@ func _physics_process(delta):
 	if(Input.is_action_just_pressed(fire_button)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
+	health += maxHealth * regen * delta #regenerates tank health
 	
 	rotation += rotationDirection * rotationSpeed * delta
 	move_and_slide()
 
 
 func take_damage(damage:float):
+	healthBar.max_value = maxHealth #could be less redudant be need it here so the bar doesn't bug when max health increases
 	health -= damage
 	healthBar.value = health
 	if(health <= 0):
@@ -88,5 +96,8 @@ func fire():
 	spawned.global_rotation = %TankTopGreen.global_rotation #this rotation is broken rn
 	spawned.position = %FirePoint.global_position
 	spawned.damage = damage
+	spawned.speed = bulletSpeed
+	spawned.range = bulletRange
+	spawned.size = bulletSize
 	#need offset 
 	get_parent().add_child(spawned)

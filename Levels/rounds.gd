@@ -11,9 +11,6 @@ var card:String
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	print("this fire again")
-		
-	
 	
 	var tank_index = 0
 	var connections = [] #stores signal connections

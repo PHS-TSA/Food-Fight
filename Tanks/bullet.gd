@@ -8,7 +8,8 @@ var traveled_distance := 0.0
 var speed:float
 var range:float 
 var damage:float 
-var size:float 
+var size:float
+var fireB:bool
 
 func _ready():
 	self.set_scale(Vector2(size, size))
@@ -28,5 +29,5 @@ func _physics_process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	queue_free()
 	if(body.has_method("take_damage")):
-		body.take_damage(damage)
+		body.take_damage(damage,fireB)
 	

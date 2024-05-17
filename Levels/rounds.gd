@@ -56,6 +56,9 @@ func pause_objects(pause_unpause:bool):
 
 func save_stats():
 	for player in players:
+		#Wins
+		Global.G_wins = player_wins
+		
 		#Tank Stats
 		Global.G_maxHealth.append(player.maxHealth)
 		Global.G_tankSpeed.append(player.tankSpeed)
@@ -66,17 +69,25 @@ func save_stats():
 		Global.G_bulletSpeed.append(player.bulletSpeed)
 		Global.G_bulletRange.append(player.bulletRange)
 		Global.G_bulletSize.append(player.bulletSize)
+		Global.G_fireBullets.append(player.fireBullets)
 
 
 func apply_stats(): #applys and resets stats
 	for i in range(len(players)):
+		#Wins
+		player_wins = Global.G_wins
+		
+		#Tank Stats
 		players[i].maxHealth = Global.G_maxHealth[i]
 		players[i].tankSpeed = Global.G_tankSpeed[i]
 		players[i].regen = Global.G_regen[i]
+		
+		#Bullet STats
 		players[i].damage = Global.G_damage[i]
 		players[i].bulletSpeed = Global.G_bulletSpeed[i]
 		players[i].bulletRange = Global.G_bulletRange[i]
 		players[i].bulletSize = Global.G_bulletSize[i]
+		players[i].fireBullets = Global.G_fireBullets[i]
 	Global.G_maxHealth= []
 	Global.G_tankSpeed = []
 	Global.G_regen = []
@@ -110,8 +121,13 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 			#rare
 			"Mechanic_on_Board":
 				tank.regen += 0.01 #percent based system
-				
-				
+			"Fire_Bullets":
+				tank.fireBullets = true
+			"Super_Speed":
+				tank.tankSpeed *= 2
+			"Short_Fuse":
+				tank.damage *= 2
+				tank.bulletRange /= 2
 			#legendary
 			"Atom_Bullets":
 				tank.bulletSize *= 0.2

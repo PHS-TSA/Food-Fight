@@ -8,7 +8,7 @@ var maxHealth:float = 100.0
 var health
 var tankSpeed = 400.0
 var regen:float = 0 #perecent based
-
+var onFire = false
 
 var healthBar:ProgressBar
 var rotationSpeed:float = 4
@@ -20,7 +20,10 @@ var rotationDirection = 0
 var damage:float = 10
 var bulletSpeed = 400
 var bulletRange = 1200
-var bulletSize = 1
+var bulletSize = 0.5
+var fireBullets = false
+var fireDamage
+
 
 #Input/Player Properties
 #Have these variables be overidden in the child class
@@ -57,6 +60,7 @@ func _init(
 	fire_button = p_fire_button
 
 func _ready():
+	onFire = false
 	health = maxHealth
 	healthBar = self.get_node("HealthBar")
 	healthBar.max_value = maxHealth
@@ -77,13 +81,21 @@ func _physics_process(delta):
 	if(Input.is_action_just_pressed(fire_button)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
+	if(onFire):
+		health -= fireDamage * delta
+	
 	health += maxHealth * regen * delta #regenerates tank health
 	healthBar.value = health
 	rotation += rotationDirection * rotationSpeed * delta
 	move_and_slide()
 
 
-func take_damage(damage:float):
+func take_damage(damage:float,fire:bool):
+	if(fire):
+		onFire = true
+		fireDamage = damage/10
+		$Fire_Timer.start(10)
+		$Fire.visible = true
 	healthBar.max_value = maxHealth #could be less redudant be need it here so the bar doesn't bug when max health increases
 	health -= damage
 	healthBar.value = health
@@ -100,5 +112,6 @@ func fire():
 	spawned.speed = bulletSpeed
 	spawned.range = bulletRange
 	spawned.size = bulletSize
+	spawned.fireB = fireBullets
 	#need offset 
 	get_parent().add_child(spawned)

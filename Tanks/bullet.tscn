@@ -7,7 +7,7 @@
 radius = 20.0
 
 [node name="Bullet" type="Area2D"]
-scale = Vector2(0.64, 0.64)
+scale = Vector2(0.319998, 0.319998)
 script = ExtResource("1_kvtrc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

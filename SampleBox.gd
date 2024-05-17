@@ -17,7 +17,7 @@ func _ready():
 func _process(delta):
 	pass
 	
-func take_damage(damage:float):
+func take_damage(damage:float,fire:bool):
 	health -= damage
 	healthBar.value = health
 	if(health <= 0):

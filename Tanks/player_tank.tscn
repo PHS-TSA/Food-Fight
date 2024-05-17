@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="4_yjnhi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
-size = Vector2(294, 342)
+size = Vector2(280, 330)
 
 [node name="Player_Tank" type="CharacterBody2D"]
-scale = Vector2(0.443519, 0.443519)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_j15vl")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]
@@ -21,20 +21,21 @@ texture = ExtResource("2_4yc35")
 
 [node name="TankCollision" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-2.38419e-07, -2)
+position = Vector2(-2.23517e-05, 2.23337e-05)
 rotation = 1.5708
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7ianc")
 
 [node name="TankTopGreen" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(-1, 0)
+position = Vector2(-5.96046e-08, 0)
 scale = Vector2(1.51536, 1.51536)
 texture = ExtResource("3_dkwaf")
 
 [node name="FirePoint" type="Marker2D" parent="TankTopGreen"]
 unique_name_in_owner = true
-position = Vector2(2.5, -171.875)
+position = Vector2(2.02857, -178.361)
 
 [node name="HealthBar" parent="." instance=ExtResource("4_yjnhi")]
 offset_left = 124.008
@@ -42,3 +43,18 @@ offset_top = 90.1878
 offset_right = 225.008
 offset_bottom = 117.188
 rotation = -1.56803
+
+[node name="Fire_Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="Fire" type="ColorRect" parent="."]
+visible = false
+z_index = 2
+offset_left = -155.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 90.0
+color = Color(1, 0.596078, 0, 1)
+
+[connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]

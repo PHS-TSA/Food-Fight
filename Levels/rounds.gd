@@ -116,8 +116,13 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 			"Galvanized_Steel_Plating":
 				tank.maxHealth *= 1.4
 				tank.health = tank.maxHealth
-				
-				
+			"Bulking_Season":
+				tank.bulletSize *= 1.5
+			"Long_Range":
+				tank.bulletRange *= 3
+			"Super_Pointy_Bullets":
+				tank.damage *= 1.4
+			
 			#rare
 			"Mechanic_on_Board":
 				tank.regen += 0.01 #percent based system

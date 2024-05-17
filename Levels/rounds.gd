@@ -97,7 +97,6 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 				tank.damage *= 1.2
 			"Reinforced_Armor":
 				tank.maxHealth *= 1.2
-				print(tank.maxHealth)
 				tank.health = tank.maxHealth
 			"Speedy_Bullets":
 				tank.bulletSpeed *= 1.2
@@ -105,7 +104,6 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 			#uncommon
 			"Galvanized_Steel_Plating":
 				tank.maxHealth *= 1.4
-				print(tank.maxHealth)
 				tank.health = tank.maxHealth
 				
 				

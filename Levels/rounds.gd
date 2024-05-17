@@ -11,7 +11,6 @@ var card:String
 # Called when the node enters the scene tree for the first time.
 
 func _ready():
-	
 	var tank_index = 0
 	var connections = [] #stores signal connections
 	for child in self.get_children(): #loops through the tree to find tanks
@@ -22,7 +21,7 @@ func _ready():
 			connections.append(child.tank_dead.connect(self._on_tank_dead))
 			tank_index += 1
 	if(len(Global.G_cards_picked)>0): #runs after cards are picked
-		print("this works")
+		apply_stats()
 		apply_cards()
 	tanks_alive = len(players) 
 
@@ -41,6 +40,7 @@ func _on_tank_dead(index:int): #Use index to determine which player gets a card
 		#pause_objects(true)
 		print(player_wins)
 		tanks_alive = len(players)
+		save_stats()
 		self.get_tree().change_scene_to_file("res://card_view.tscn")
 		
 
@@ -54,28 +54,59 @@ func pause_objects(pause_unpause:bool):
 				#child.paused = false
 
 
+func save_stats():
+	for player in players:
+		#Tank Stats
+		Global.G_maxHealth.append(player.maxHealth)
+		Global.G_tankSpeed.append(player.tankSpeed)
+		Global.G_regen.append(player.regen)
+		
+		#Bullet Stats
+		Global.G_damage.append(player.damage)
+		Global.G_bulletSpeed.append(player.bulletSpeed)
+		Global.G_bulletRange.append(player.bulletRange)
+		Global.G_bulletSize.append(player.bulletSize)
 
 
-#
+func apply_stats(): #applys and resets stats
+	for i in range(len(players)):
+		players[i].maxHealth = Global.G_maxHealth[i]
+		players[i].tankSpeed = Global.G_tankSpeed[i]
+		players[i].regen = Global.G_regen[i]
+		players[i].damage = Global.G_damage[i]
+		players[i].bulletSpeed = Global.G_bulletSpeed[i]
+		players[i].bulletRange = Global.G_bulletRange[i]
+		players[i].bulletSize = Global.G_bulletSize[i]
+	Global.G_maxHealth= []
+	Global.G_tankSpeed = []
+	Global.G_regen = []
+	Global.G_damage = []
+	Global.G_bulletSpeed = []
+	Global.G_bulletRange =[]
+	Global.G_bulletSize  =[]
+
 func apply_cards(): # Needs to apply card stats to the corresponding tank and reset global lists
-	print("apply time")
+	
 	var tank
 	for i in range(len(Global.G_tanks_picking)):
 		card = Global.G_cards_picked[i]
 		tank = players[Global.G_tanks_picking[i]] 
-		print(card)
 		match card:
 			#Commons
 			"Pointer_Bullets": # Need to make a work around so tank stats don't get reset every time
 				tank.damage *= 1.2
 			"Reinforced_Armor":
-				tank.health *= 1.2
+				tank.maxHealth *= 1.2
+				print(tank.maxHealth)
+				tank.health = tank.maxHealth
 			"Speedy_Bullets":
 				tank.bulletSpeed *= 1.2
 				
 			#uncommon
 			"Galvanized_Steel_Plating":
-				tank.health *= 1.4
+				tank.maxHealth *= 1.4
+				print(tank.maxHealth)
+				tank.health = tank.maxHealth
 				
 				
 			#rare
@@ -89,3 +120,5 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 				tank.bulletSpeed *= 2
 				tank.damage *= 1.5
 				
+	Global.G_tanks_picking = []
+	Global.G_cards_picked = []

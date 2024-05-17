@@ -4,8 +4,8 @@ extends CharacterBody2D
 const BULLET = preload("res://Tanks/bullet.tscn") 
 
 #Tank Stats
-const maxHealth:float = 100.0
-var health:float = maxHealth
+var maxHealth:float = 100.0
+var health
 var tankSpeed = 400.0
 var regen:float = 0 #perecent based
 
@@ -57,6 +57,7 @@ func _init(
 	fire_button = p_fire_button
 
 func _ready():
+	health = maxHealth
 	healthBar = self.get_node("HealthBar")
 	healthBar.max_value = maxHealth
 	healthBar.value = health
@@ -77,7 +78,7 @@ func _physics_process(delta):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
 	health += maxHealth * regen * delta #regenerates tank health
-	
+	healthBar.value = health
 	rotation += rotationDirection * rotationSpeed * delta
 	move_and_slide()
 

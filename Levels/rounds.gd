@@ -104,7 +104,7 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 		tank = players[Global.G_tanks_picking[i]] 
 		match card:
 			#Commons
-			"Pointer_Bullets": # Need to make a work around so tank stats don't get reset every time
+			"Pointer_Bullets": 
 				tank.damage *= 1.2
 			"Reinforced_Armor":
 				tank.maxHealth *= 1.2

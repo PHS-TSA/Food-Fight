@@ -9,6 +9,8 @@ var health
 var tankSpeed = 400.0
 var regen:float = 0 #perecent based
 var onFire = false
+var attackSpeed = 1
+var attackCooldown = false
 
 var healthBar:ProgressBar
 var rotationSpeed:float = 4
@@ -105,13 +107,16 @@ func take_damage(damage:float,fire:bool):
 
 
 func fire():
-	var spawned:Bullet = BULLET.instantiate()
-	spawned.global_rotation = %TankTopGreen.global_rotation #this rotation is broken rn
-	spawned.position = %FirePoint.global_position
-	spawned.damage = damage
-	spawned.speed = bulletSpeed
-	spawned.range = bulletRange
-	spawned.size = bulletSize
-	spawned.fireB = fireBullets
-	#need offset 
-	get_parent().add_child(spawned)
+	if(!attackCooldown):
+		attackCooldown = true
+		$Attack_Speed.start(attackSpeed)
+		var spawned:Bullet = BULLET.instantiate()
+		spawned.global_rotation = %TankTopGreen.global_rotation #this rotation is broken rn
+		spawned.position = %FirePoint.global_position
+		spawned.damage = damage
+		spawned.speed = bulletSpeed
+		spawned.range = bulletRange
+		spawned.size = bulletSize
+		spawned.fireB = fireBullets
+		#need offset 
+		get_parent().add_child(spawned)

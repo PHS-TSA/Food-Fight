@@ -80,7 +80,7 @@ func _physics_process(delta):
 	else:
 		%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(get_global_mouse_position()) + (PI/2)
 	
-	if(Input.is_action_just_pressed(fire_button)):
+	if(Input.is_action_pressed(fire_button)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
 	if(onFire):

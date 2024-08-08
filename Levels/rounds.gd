@@ -81,6 +81,7 @@ func apply_stats(): #applys and resets stats
 		players[i].maxHealth = Global.G_maxHealth[i]
 		players[i].tankSpeed = Global.G_tankSpeed[i]
 		players[i].regen = Global.G_regen[i]
+		players[i].attackSpeed = Global.G_attackSpeed[i]
 		
 		#Bullet STats
 		players[i].damage = Global.G_damage[i]

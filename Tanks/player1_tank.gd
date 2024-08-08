@@ -1,4 +1,4 @@
-extends Tank
+extends PlayerTank
 
 
 #passed in input variables to tank constructer

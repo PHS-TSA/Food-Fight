@@ -30,6 +30,3 @@ var common_cards = ["Reinforced_Armor","Pointer_Bullets","Speedy_Bullets"]
 var uncommon_cards = ["Galvanized_Steel_Plating","Bulking_Season",'Long_Range',"Super_Pointy_Bullets"]
 var rare_cards = ["Mechanic_on_Board","Fire_Bullets","Super_Speed","Short_Fuse"]
 var legendary_cards = ["Atom_Bullets"]
-
-
-

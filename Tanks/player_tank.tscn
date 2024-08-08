@@ -23,7 +23,6 @@ texture = ExtResource("2_4yc35")
 unique_name_in_owner = true
 position = Vector2(-2.23517e-05, 2.23337e-05)
 rotation = 1.5708
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_7ianc")
 
 [node name="TankTopGreen" type="Sprite2D" parent="."]

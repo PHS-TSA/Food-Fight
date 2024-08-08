@@ -59,6 +59,3 @@ func _on_card_picked():
 		self.get_tree().change_scene_to_file("res://Levels/round_scene.tscn") # THIS NEED TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-
-
-

@@ -54,7 +54,7 @@ func pause_objects(pause_unpause:bool):
 				#child.paused = false
 
 
-func save_stats():
+func save_stats(): #Saves stats before scene change
 	for player in players:
 		#Wins
 		Global.G_wins = player_wins
@@ -63,6 +63,7 @@ func save_stats():
 		Global.G_maxHealth.append(player.maxHealth)
 		Global.G_tankSpeed.append(player.tankSpeed)
 		Global.G_regen.append(player.regen)
+		Global.G_attackSpeed.append(player.attackSpeeds)
 		
 		#Bullet Stats
 		Global.G_damage.append(player.damage)

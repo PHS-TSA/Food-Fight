@@ -9,3 +9,8 @@ func _init():
 func _on_fire_timer_timeout():
 	self.onFire = false
 	$Fire.visible = false
+
+
+func _on_attack_speed_timeout():
+	self.attackCooldown = false
+	pass # Replace with function body.

@@ -63,7 +63,7 @@ func save_stats(): #Saves stats before scene change
 		Global.G_maxHealth.append(player.maxHealth)
 		Global.G_tankSpeed.append(player.tankSpeed)
 		Global.G_regen.append(player.regen)
-		Global.G_attackSpeed.append(player.attackSpeeds)
+		Global.G_attackSpeed.append(player.attackSpeed)
 		
 		#Bullet Stats
 		Global.G_damage.append(player.damage)

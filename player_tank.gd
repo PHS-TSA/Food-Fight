@@ -33,7 +33,7 @@ func _init(
 
 func _physics_process(delta): #Seperate physics process for AI and Player 
 	rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
-	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed 
+	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
 	
 	if(aimMethod): #might wanna update with delta
 		if(Input.is_action_pressed(aim_left_button)):

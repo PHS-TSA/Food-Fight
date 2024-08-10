@@ -10,6 +10,7 @@ size = Vector2(279.582, 333.695)
 
 [node name="Enemy_Tank" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
+motion_mode = 1
 script = ExtResource("1_ww4pu")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]

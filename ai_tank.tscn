@@ -10,6 +10,7 @@ size = Vector2(280, 330)
 
 [node name="AI_Tank" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
+motion_mode = 1
 script = ExtResource("1_052c8")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]
@@ -58,5 +59,11 @@ color = Color(1, 0.596078, 0, 1)
 
 [node name="Attack_Speed" type="Timer" parent="."]
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+avoidance_enabled = true
+max_speed = 40000.0
+debug_enabled = true
+
 [connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

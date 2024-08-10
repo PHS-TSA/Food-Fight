@@ -10,6 +10,7 @@ size = Vector2(280, 330)
 
 [node name="Player_Tank" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
+motion_mode = 1
 script = ExtResource("1_j15vl")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]

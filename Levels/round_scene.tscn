@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bh26nrhkdgrtg"]
+[gd_scene load_steps=10 format=3 uid="uid://bh26nrhkdgrtg"]
 
 [ext_resource type="Script" path="res://Levels/rounds.gd" id="1_itdtf"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/player_tank.tscn" id="2_5ry51"]
@@ -6,10 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://mswl1hrsqgfw" path="res://icon.svg" id="4_whoko"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="5_d8vx3"]
 [ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/player2_tank.tscn" id="6_7pvx6"]
-[ext_resource type="PackedScene" uid="uid://chbl2hygrntgp" path="res://ai_tank.tscn" id="9_gbnei"]
+[ext_resource type="PackedScene" uid="uid://chbl2hygrntgp" path="res://ai_tank.tscn" id="7_whuhv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ewrhd"]
 size = Vector2(126, 126)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_x4b6c"]
+vertices = PackedVector2Array(1204.09, 660.961, -40.9688, 657.031, -39.0234, -27.0078, 1210.9, -28.9766)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-49, -37, 1221, -39, 1214, 671, -51, 667)])
 
 [node name="Round_Scene" type="Node2D"]
 script = ExtResource("1_itdtf")
@@ -62,5 +67,13 @@ offset_right = 1748.0
 offset_bottom = 532.0
 color = Color(0.247059, 0.12549, 0, 1)
 
-[node name="AI_Tank" parent="." instance=ExtResource("9_gbnei")]
-position = Vector2(756, 508)
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_x4b6c")
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationRegion2D"]
+position = Vector2(264, 167)
+radius = 94.02
+vertices = PackedVector2Array(100, -100, 100, 100, -100, 100, -100, -100)
+
+[node name="AI_Tank" parent="." instance=ExtResource("7_whuhv")]
+position = Vector2(556, 514)

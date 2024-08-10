@@ -6,7 +6,7 @@ const BULLET = preload("res://Tanks/bullet.tscn")
 #Tank Stats
 var maxHealth:float = 100.0
 var health
-var tankSpeed = 400.0
+var tankSpeed = 20000.0 #May need tweaking
 var regen:float = 0 #perecent based
 var onFire = false
 var attackSpeed = 1

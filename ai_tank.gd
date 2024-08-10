@@ -37,7 +37,8 @@ func move(target,delta):
 	
 	
 	
-func get_circle_position(random): #Sets a target near the player
+ ## Set a target near the player.
+func get_circle_position(random):
 	var kill_circle_centre = player.global_position
 	var radius = 100
 	 #Distance from center to circumference of circle

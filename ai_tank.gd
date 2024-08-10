@@ -58,4 +58,3 @@ func get_player():
 func _on_navigation_agent_2d_velocity_computed(safe_velocity):
 	velocity = safe_velocity
 	move_and_slide()
-	pass # Replace with function body.

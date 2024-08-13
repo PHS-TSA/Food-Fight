@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://56hplkhf45aw"]
 
-[ext_resource type="PackedScene" uid="uid://bwjy877mvyge0" path="res://texture_button.tscn" id="1_rdmnm"]
+[ext_resource type="PackedScene" uid="uid://bh4e7n6ptavvp" path="res://card_button.tscn" id="1_rdmnm"]
 [ext_resource type="Script" path="res://card_view.gd" id="1_ymyb7"]
 
 [node name="Card_View" type="Control"]

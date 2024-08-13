@@ -1,9 +1,8 @@
-[gd_scene load_steps=64 format=4 uid="uid://bh26nrhkdgrtg"]
+[gd_scene load_steps=63 format=4 uid="uid://bh26nrhkdgrtg"]
 
 [ext_resource type="Script" path="res://Stages/Rounds/rounds.gd" id="1_obnhm"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0fakq"]
 [ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/Player/player2_tank.tscn" id="3_usok0"]
-[ext_resource type="PackedScene" uid="uid://chbl2hygrntgp" path="res://Tanks/AI/ai_tank.tscn" id="4_vsei0"]
 [ext_resource type="Texture2D" uid="uid://b0v2phvse2ynt" path="res://Assets/First Asset pack.png" id="5_mk5rv"]
 [ext_resource type="Texture2D" uid="uid://wdc8pclfyk2a" path="res://Assets/tileset_all16x16.png" id="6_3y5vk"]
 [ext_resource type="Script" path="res://Stages/layer_0.gd" id="7_lwgjx"]
@@ -937,40 +936,6 @@ position = Vector2(938, 154)
 z_index = 5
 position = Vector2(587, 314)
 zoom = Vector2(1.5, 1.5)
-
-[node name="Node2D" type="Node2D" parent="."]
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="Node2D"]
-z_index = -1
-offset_left = -595.0
-offset_top = -345.0
-offset_right = 1739.0
-offset_bottom = 974.0
-color = Color(0, 0.662745, 0.231373, 1)
-
-[node name="ColorRect2" type="ColorRect" parent="Node2D"]
-z_index = -1
-offset_left = -590.0
-offset_top = 262.0
-offset_right = 1748.0
-offset_bottom = 532.0
-color = Color(0.247059, 0.12549, 0, 1)
-
-[node name="AI_Tank" parent="." instance=ExtResource("4_vsei0")]
-position = Vector2(561, 358)
-
-[node name="AI_Tank2" parent="." instance=ExtResource("4_vsei0")]
-position = Vector2(728, 397)
-
-[node name="AI_Tank3" parent="." instance=ExtResource("4_vsei0")]
-position = Vector2(1172, 340)
-
-[node name="AI_Tank4" parent="." instance=ExtResource("4_vsei0")]
-position = Vector2(788, 686)
-
-[node name="AI_Tank5" parent="." instance=ExtResource("4_vsei0")]
-position = Vector2(122, 675)
 
 [node name="Land" type="TileMapLayer" parent="."]
 z_index = -1

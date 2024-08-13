@@ -37,13 +37,6 @@ texture = ExtResource("3_sn0so")
 unique_name_in_owner = true
 position = Vector2(2.02857, -178.361)
 
-[node name="HealthBar" parent="." instance=ExtResource("4_esl8t")]
-offset_left = 124.008
-offset_top = 90.1878
-offset_right = 225.008
-offset_bottom = 117.188
-rotation = -1.56803
-
 [node name="Fire_Timer" type="Timer" parent="."]
 wait_time = 10.0
 one_shot = true
@@ -61,8 +54,16 @@ color = Color(1, 0.596078, 0, 1)
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 avoidance_enabled = true
-max_speed = 40000.0
+radius = 50.0
+max_speed = 20000.0
 debug_enabled = true
+
+[node name="HealthBar" parent="." instance=ExtResource("4_esl8t")]
+offset_left = 124.008
+offset_top = 90.1878
+offset_right = 225.008
+offset_bottom = 117.188
+rotation = -1.56803
 
 [connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

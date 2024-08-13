@@ -1,53 +1,63 @@
 extends Tank
 
-
-
-
-
-@onready var player = get_player()
 var randomNum = randi_range(0,360)
 
+@onready var player = get_player()
 @onready var nav: NavigationAgent2D = $NavigationAgent2D
 
+
 func _ready():
-	print(player)
-	print(get_player())
 	tankSpeed *= 0.5
+	onFire = false
+	health = maxHealth
+	healthBar = $HealthBar
+	healthBar.max_value = maxHealth
+	healthBar.value = health
 	
+	print(healthBar)
 
 func _physics_process(delta):
-	#move(get_circle_position(randomNum),delta)
+	#move(get_cir	#health += maxHealth * regen * delta #regenerates tank health
+	#healthBar.value = healthcle_position(randomNum),delta)
+
+	
 	var direction = Vector3()
 	nav.target_position = player.global_position
 	
 	direction = nav.get_next_path_position() - global_position
 	direction = direction.normalized()
-	
-	#velocity = direction * tankSpeed * delta
-	#move_and_slide()
-	var intended_velocity = direction * tankSpeed * delta
-	nav.set_velocity(intended_velocity)
+
+	rotation = direction.angle()
+	#Points cannon to player
+	%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(player.global_position) + (PI/2) 
+	var intended_velocity = direction * tankSpeed * delta * 0.2
+	if nav.avoidance_enabled:
+		nav.set_velocity(intended_velocity)
+	else:
+		_on_navigation_agent_2d_velocity_computed(intended_velocity)
 		
-
-func move(target,delta):
-
-	rotation = get_angle_to(target)
-	velocity = transform.x * tankSpeed
+	
 	move_and_slide()
+
+#func move(target,delta):
+#
+	#rotation = get_angle_to(target)
+	#velocity = transform.x * tankSpeed
+	#move_and_slide()
 	
 	
 	
  ## Set a target near the player.
-func get_circle_position(random):
-	var kill_circle_centre = player.global_position
-	var radius = 100
-	 #Distance from center to circumference of circle
-	var angle = random * PI * 2;
-	var x = kill_circle_centre.x + cos(angle) * radius;
-	var y = kill_circle_centre.y + sin(angle) * radius;
-
-	return Vector2(x, y)
-
+#func get_circle_position(random):
+	#var kill_circle_centre = player.global_position
+	#var radius = 100
+	 ##Distance from center to circumference of circle
+	#var angle = random * PI * 2;
+	#var x = kill_circle_centre.x + cos(angle) * radius;
+	#var y = kill_circle_centre.y + sin(angle) * radius;
+#
+	#return Vector2(x, y)
+#
 
 func get_player():
 	for child in get_parent().get_children():
@@ -56,6 +66,17 @@ func get_player():
 			return	child
 
 
-func _on_navigation_agent_2d_velocity_computed(safe_velocity):
+func _on_navigation_agent_2d_velocity_computed(safe_velocity): #Makes it so this agent doesnt colide with others
+	#TODO update avoidance values in navigation agent 2D so ai tanks dont collide 
 	velocity = safe_velocity
-	move_and_slide()
+
+
+func _on_fire_timer_timeout():
+	self.onFire = false
+	$Fire.visible = false
+	pass # Replace with function body.
+
+
+func _on_attack_speed_timeout():
+	self.attackCooldown = false
+	pass # Replace with function body.

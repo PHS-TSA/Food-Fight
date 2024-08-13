@@ -37,9 +37,11 @@ signal tank_dead(index:int) #signals to the round/level that the tank is dead
 func _ready():
 	onFire = false
 	health = maxHealth
-	healthBar = self.get_node("HealthBar")
+	healthBar = $HealthBar
 	healthBar.max_value = maxHealth
 	healthBar.value = health
+	
+	print(healthBar)
 
 
 
@@ -49,6 +51,7 @@ func take_damage(damage:float,fire:bool):
 		fireDamage = damage/10
 		$Fire_Timer.start(10)
 		$Fire.visible = true
+	
 	healthBar.max_value = maxHealth #could be less redudant be need it here so the bar doesn't bug when max health increases
 	health -= damage
 	healthBar.value = health

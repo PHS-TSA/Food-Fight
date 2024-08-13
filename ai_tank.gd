@@ -15,6 +15,7 @@ func _ready():
 	healthBar.value = health
 	
 	print(healthBar)
+	fire()
 
 func _physics_process(delta):
 	#move(get_cir	#health += maxHealth * regen * delta #regenerates tank health
@@ -79,4 +80,5 @@ func _on_fire_timer_timeout():
 
 func _on_attack_speed_timeout():
 	self.attackCooldown = false
+	fire()
 	pass # Replace with function body.

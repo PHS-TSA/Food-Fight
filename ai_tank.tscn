@@ -11,6 +11,7 @@ size = Vector2(280, 330)
 [node name="AI_Tank" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
 motion_mode = 1
+wall_min_slide_angle = 0.0
 script = ExtResource("1_052c8")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]
@@ -53,6 +54,7 @@ color = Color(1, 0.596078, 0, 1)
 [node name="Attack_Speed" type="Timer" parent="."]
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
 avoidance_enabled = true
 radius = 50.0
 max_speed = 20000.0

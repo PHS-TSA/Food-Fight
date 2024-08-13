@@ -41,7 +41,7 @@ func _on_tank_dead(index:int): #Use index to determine which player gets a card
 		print(player_wins)
 		tanks_alive = len(players)
 		save_stats()
-		self.get_tree().change_scene_to_file("res://card_view.tscn")
+		self.get_tree().change_scene_to_file("res://Cards/card_view.tscn")
 		
 
 func pause_objects(pause_unpause:bool):

@@ -20,7 +20,7 @@ var aimMethod:bool = true #true = key board. false = mouse
 var rotationDirection = 0
 
 #Bullet Stats
-var damage:float = 10
+var damage:float = 100
 var bulletSpeed = 400
 var bulletRange = 1200
 var bulletSize = 0.5

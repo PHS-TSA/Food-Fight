@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://56hplkhf45aw"]
+
+[ext_resource type="PackedScene" uid="uid://bh4e7n6ptavvp" path="res://Cards/card_button.tscn" id="1_rdmnm"]
+[ext_resource type="Script" path="res://Cards/card_view.gd" id="1_ymyb7"]
+
+[node name="Card_View" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+script = ExtResource("1_ymyb7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1213.0
+offset_top = -543.0
+offset_right = 45.0
+offset_bottom = -131.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 5
+theme_override_constants/margin_top = 5
+theme_override_constants/margin_right = 5
+theme_override_constants/margin_bottom = 5
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 75
+
+[node name="Card1" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_rdmnm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Card2" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_rdmnm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Card3" parent="MarginContainer/HBoxContainer" instance=ExtResource("1_rdmnm")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.7, 0.7)
+
+[node name="Picking_Label" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -1428.0
+offset_top = -747.0
+offset_right = 1435.0
+offset_bottom = -610.0
+theme_override_font_sizes/font_size = 100
+text = "Tank # is picking!"
+horizontal_alignment = 1

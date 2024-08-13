@@ -19,10 +19,6 @@ func _ready():
 	fire()
 
 func _physics_process(delta):
-	#move(get_cir	#health += maxHealth * regen * delta #regenerates tank health
-	#healthBar.value = healthcle_position(randomNum),delta)
-
-	
 	var direction = Vector3()
 	nav.target_position = player.global_position
 	
@@ -56,7 +52,6 @@ func _physics_process(delta):
 
 func get_player():
 	for child in get_parent().get_children():
-		#print(get_tree().get_child(i))
 		if(child.name == "Tank"): #TODO add in support for other player names and multi player and when the ai tank is a child of something other than the tree
 			return	child
 
@@ -69,10 +64,8 @@ func _on_navigation_agent_2d_velocity_computed(safe_velocity): #Makes it so this
 func _on_fire_timer_timeout():
 	self.onFire = false
 	$Fire.visible = false
-	pass # Replace with function body.
 
 
 func _on_attack_speed_timeout():
 	self.attackCooldown = false
 	fire()
-	pass # Replace with function body.

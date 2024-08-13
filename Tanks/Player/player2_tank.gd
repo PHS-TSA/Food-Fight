@@ -13,4 +13,3 @@ func _on_fire_timer_timeout():
 
 func _on_attack_speed_timeout():
 	self.attackCooldown = false
-	pass # Replace with function body.

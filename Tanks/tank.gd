@@ -62,7 +62,7 @@ func fire():
 		attackCooldown = true
 		$Attack_Speed.start(attackSpeed)
 		var spawned:Bullet = BULLET.instantiate()
-		spawned.global_rotation = %TankTopGreen.global_rotation #this rotation is broken rn
+		spawned.global_rotation = %TankTopGreen.global_rotation
 		spawned.position = %FirePoint.global_position
 		spawned.damage = damage
 		spawned.speed = bulletSpeed

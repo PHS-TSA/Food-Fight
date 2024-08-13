@@ -25,7 +25,7 @@ var bulletSpeed = 400
 var bulletRange = 1200
 var bulletSize = 0.5
 var fireBullets = false
-var fireDamage #Definied later in code
+var fireDamage: float # Defined later in code
 var aiFired:bool
 
 

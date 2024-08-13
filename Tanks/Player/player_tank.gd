@@ -32,6 +32,7 @@ func _init(
 	fire_button = p_fire_button
 
 func _ready():
+	print("runs")
 	onFire = false
 	health = maxHealth
 	healthBar = $HealthBar

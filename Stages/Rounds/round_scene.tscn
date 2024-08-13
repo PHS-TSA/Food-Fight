@@ -1,9 +1,9 @@
 [gd_scene load_steps=64 format=4 uid="uid://bh26nrhkdgrtg"]
 
 [ext_resource type="Script" path="res://Stages/Rounds/rounds.gd" id="1_obnhm"]
-[ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/player_tank.tscn" id="2_0fakq"]
-[ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/player2_tank.tscn" id="3_usok0"]
-[ext_resource type="PackedScene" uid="uid://chbl2hygrntgp" path="res://ai_tank.tscn" id="4_vsei0"]
+[ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0fakq"]
+[ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/Player/player2_tank.tscn" id="3_usok0"]
+[ext_resource type="PackedScene" uid="uid://chbl2hygrntgp" path="res://Tanks/AI/ai_tank.tscn" id="4_vsei0"]
 [ext_resource type="Texture2D" uid="uid://b0v2phvse2ynt" path="res://Assets/First Asset pack.png" id="5_mk5rv"]
 [ext_resource type="Texture2D" uid="uid://wdc8pclfyk2a" path="res://Assets/tileset_all16x16.png" id="6_3y5vk"]
 [ext_resource type="Script" path="res://Stages/layer_0.gd" id="7_lwgjx"]

@@ -1,7 +1,7 @@
 class_name Tank
 extends CharacterBody2D
 
-const BULLET = preload("res://Tanks/bullet.tscn") 
+const BULLET = preload("res://Tanks/Bullet/bullet.tscn") 
 
 #Tank Stats
 var maxHealth:float = 100.0
@@ -41,7 +41,6 @@ signal tank_dead(index:int) #signals to the round/level that the tank is dead
 
 func take_damage(damage:float,fire:bool,p_aiFired:bool):
 	if(p_aiFired && ai): #If the bullet is fired by an ai and hits an ai return
-		print("runs")
 		return
 	else:
 		if(fire):

@@ -1,0 +1,62 @@
+[gd_scene load_steps=6 format=3 uid="uid://b5fbuan1rk7nq"]
+
+[ext_resource type="Script" path="res://Tanks/Player/player2_tank.gd" id="1_ww4pu"]
+[ext_resource type="Texture2D" uid="uid://dhdj0g402t8wj" path="res://Assets/Tank_Bottom_Red.png" id="2_f7iaa"]
+[ext_resource type="Texture2D" uid="uid://dk4le02ua54dp" path="res://Assets/Tank Sprites.png" id="3_srskn"]
+[ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="4_c4a1n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
+size = Vector2(279.582, 333.695)
+
+[node name="Enemy_Tank" type="CharacterBody2D"]
+scale = Vector2(0.2, 0.2)
+motion_mode = 1
+script = ExtResource("1_ww4pu")
+
+[node name="TankBottomGreen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1.78814e-07, 2.38419e-07)
+rotation = 1.5708
+scale = Vector2(1.33333, 1.25697)
+texture = ExtResource("2_f7iaa")
+
+[node name="TankCollision" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(-2.26912e-05, 8.3322e-06)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7ianc")
+
+[node name="TankTopGreen" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 1
+scale = Vector2(1.51536, 1.51536)
+texture = ExtResource("3_srskn")
+
+[node name="FirePoint" type="Marker2D" parent="TankTopGreen"]
+unique_name_in_owner = true
+position = Vector2(0, -178.547)
+
+[node name="HealthBar" parent="." instance=ExtResource("4_c4a1n")]
+offset_left = 124.008
+offset_top = 90.1878
+offset_right = 225.008
+offset_bottom = 117.188
+rotation = -1.56803
+
+[node name="Fire_Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="Fire" type="ColorRect" parent="."]
+visible = false
+z_index = 2
+offset_left = -155.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 90.0
+color = Color(1, 0.596078, 0, 1)
+
+[node name="Attack_Speed" type="Timer" parent="."]
+
+[connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
+[connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

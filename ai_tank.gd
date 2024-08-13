@@ -14,7 +14,8 @@ func _ready():
 	healthBar.max_value = maxHealth
 	healthBar.value = health
 	
-	print(healthBar)
+	aiFired = true
+	ai = true
 	fire()
 
 func _physics_process(delta):
@@ -40,14 +41,7 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-#func move(target,delta):
-#
-	#rotation = get_angle_to(target)
-	#velocity = transform.x * tankSpeed
-	#move_and_slide()
-	
-	
-	
+
  ## Set a target near the player.
 #func get_circle_position(random):
 	#var kill_circle_centre = player.global_position

@@ -31,6 +31,19 @@ func _init(
 	backwards_button =	p_backwards_button
 	fire_button = p_fire_button
 
+func _ready():
+	onFire = false
+	health = maxHealth
+	healthBar = $HealthBar
+	healthBar.max_value = maxHealth
+	healthBar.value = health
+	
+	aiFired = false
+	ai = false
+	
+	print(healthBar)
+
+
 func _physics_process(delta): #Seperate physics process for AI and Player 
 	rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
 	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta

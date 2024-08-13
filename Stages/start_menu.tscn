@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bjd03uacoxg33"]
 
-[ext_resource type="Script" path="res://Levels/Demo_Button.gd" id="1_cxioe"]
-[ext_resource type="Script" path="res://Levels/Round_Button.gd" id="2_h26ai"]
+[ext_resource type="Script" path="res://Stages/Demo/Demo_Button.gd" id="1_cxioe"]
+[ext_resource type="Script" path="res://Stages/Rounds/Round_Button.gd" id="2_h26ai"]
 
 [node name="Node2D" type="Node2D"]
 

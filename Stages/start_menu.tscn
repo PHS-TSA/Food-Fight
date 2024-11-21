@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bjd03uacoxg33"]
 
-[ext_resource type="Script" path="res://Stages/Rounds/Round_Button.gd" id="2_h26ai"]
+[ext_resource type="Script" path="res://Stages/2-Player-Rounds/Round_Button.gd" id="2_h26ai"]
 [ext_resource type="Texture2D" uid="uid://buy3qfw48p7ma" path="res://Assets/Images/awesome-sauce.jpg" id="3_pgw1m"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2trhj"]

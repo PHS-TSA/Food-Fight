@@ -1,6 +1,6 @@
 [gd_scene load_steps=61 format=4 uid="uid://bh26nrhkdgrtg"]
 
-[ext_resource type="Script" path="res://Stages/Rounds/rounds.gd" id="1_obnhm"]
+[ext_resource type="Script" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0fakq"]
 [ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/Player/player2_tank.tscn" id="3_usok0"]
 [ext_resource type="Texture2D" uid="uid://wdc8pclfyk2a" path="res://Assets/Tile Sets/tileset_all16x16.png" id="6_3y5vk"]
@@ -606,5 +606,5 @@ script = ExtResource("7_lwgjx")
 z_index = -1
 use_parent_material = true
 scale = Vector2(3.04, 3.04)
-tile_map_data = PackedByteArray("AAAJAAcAAgADAAsAAAAJAAYAAgADAAsAAAAJAAUAAgADAAsAAAAJAAQAAgADAAsAAAAJAAMAAgADAAsAAAAJAAIAAgADAAoAAAAJAAgAAgADAAsAAAAJAAkAAgADAAsAAAAJAAoAAgADAAwAAAAFAAMAAgADABsAAAAFAAIAAgADABsAAAAFAAEAAgADABsAAAAFAAAAAgADABoAAAAFAAQAAgADABwAAAA=")
+tile_map_data = PackedByteArray("AAAJAAcAAgADAAsAAAAJAAYAAgADAAsAAAAJAAUAAgADAAsAAAAJAAQAAgADAAsAAAAJAAMAAgADAAsAAAAJAAIAAgADAAoAAAAJAAgAAgADAAsAAAAJAAkAAgADAAsAAAAJAAoAAgADAAwAAAA=")
 tile_set = SubResource("TileSet_5qttq")

@@ -9,7 +9,7 @@ var health
 var tankSpeed = 20000.0 #May need tweaking
 var regen:float = 0 #perecent based
 var onFire = false
-var attackSpeed = 1
+var attackSpeed = 0.5
 var attackCooldown = false
 var ai:bool
 
@@ -20,7 +20,7 @@ var aimMethod:bool = true #true = key board. false = mouse
 var rotationDirection = 0
 
 #Bullet Stats
-var damage:float = 100
+var damage:float = 20
 var bulletSpeed = 400
 var bulletRange = 1200
 var bulletSize = 0.5

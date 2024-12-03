@@ -1,12 +1,24 @@
-[gd_scene load_steps=61 format=4 uid="uid://bh26nrhkdgrtg"]
+[gd_scene load_steps=63 format=4 uid="uid://bh26nrhkdgrtg"]
 
 [ext_resource type="Script" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0fakq"]
 [ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/Player/player2_tank.tscn" id="3_usok0"]
+[ext_resource type="Texture2D" uid="uid://i8870mi045qr" path="res://Assets/Tile Sets/cafeteria_tiles.png" id="4_247ho"]
 [ext_resource type="Texture2D" uid="uid://wdc8pclfyk2a" path="res://Assets/Tile Sets/tileset_all16x16.png" id="6_3y5vk"]
 [ext_resource type="Script" path="res://Stages/layer_0.gd" id="7_lwgjx"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lui4j"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e2isi"]
+texture = ExtResource("4_247ho")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_5cbsf"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)
@@ -579,6 +591,7 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_lui4j")
 navigation_layer_0/layers = 1
 sources/2 = SubResource("TileSetAtlasSource_qoos4")
+sources/0 = SubResource("TileSetAtlasSource_e2isi")
 
 [node name="Round_Scene" type="Node2D"]
 script = ExtResource("1_obnhm")

@@ -140,6 +140,8 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 				tank.bulletSize *= 0.2
 				tank.bulletSpeed *= 2
 				tank.damage *= 1.5
+				if(tank.bulletSize < 0.1): # After 0.1 they are invisble and not fun
+					tank.bulletSize = 0.1
 				
 	Global.G_tanks_picking = []
 	Global.G_cards_picked = []

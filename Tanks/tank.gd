@@ -15,7 +15,7 @@ var ai:bool
 
 var healthBar:ProgressBar
 var rotationSpeed:float = 2
-var aimSpeed:float = 3
+var aimSpeed:float = 2
 var aimMethod:bool = true #true = key board. false = mouse
 var rotationDirection = 0
 

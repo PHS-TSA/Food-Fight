@@ -4,11 +4,13 @@ class_name global
 #Round System
 var G_tanks_picking = [] #alligns with cards picked
 var G_cards_picked = [] #make sure to reset these in rounds
+var total_rounds
 
 #Store Tank stats between rounds:
 
 #Wins
-var G_wins = []
+#TODO change implementation if doing more than two players
+var G_wins = [0,0]
 
 #Tank Stats
 var G_maxHealth= []

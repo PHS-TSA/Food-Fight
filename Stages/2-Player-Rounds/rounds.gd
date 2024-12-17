@@ -8,8 +8,8 @@ var tanks_alive
 
 var tanks_picking = []
 var card:String
-# Called when the node enters the scene tree for the first time.
 
+# Called when the node enters the scene tree for the first time.
 func _ready():
 	var tank_index = 0
 	var connections = [] #stores signal connections
@@ -36,9 +36,17 @@ func _on_tank_dead(index:int): #Use index to determine which player gets a card
 		for i in range(len(players)): #adds a win to every player who's not dead. This loop is not needed now but will be for future updates with more players
 			if(players[i].health>0):
 				player_wins[i] += 1
+				#need to figure out why this causes players to get to choose two cards after first win
+				if player_wins[i] == Global.total_rounds:
+					print("Player has won ", i+1)
+					Global.G_winningPlayer = str(i+1)
+					self.get_tree().change_scene_to_file("res://win_screen.tscn")
+					return
 			players[i].health = players[i].maxHealth
 		#pause_objects(true)
 		print(player_wins)
+		#Check to see if a player 
+		
 		tanks_alive = len(players)
 		save_stats()
 		self.get_tree().change_scene_to_file("res://Cards/card_view.tscn")

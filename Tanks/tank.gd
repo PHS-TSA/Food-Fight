@@ -5,22 +5,22 @@ const BULLET = preload("res://Tanks/Bullet/bullet.tscn")
 
 #Tank Stats
 var maxHealth:float = 100.0
-var health
+var health # current player health. automatically is set to max health at the start of the round
 var tankSpeed = 20000.0 #May need tweaking
 var regen:float = 0 #perecent based
 var onFire = false
-var attackSpeed = 1
+var attackSpeed = 0.5
 var attackCooldown = false
 var ai:bool
 
 var healthBar:ProgressBar
-var rotationSpeed:float = 4
-var aimSpeed:float = 3
+var rotationSpeed:float = 2
+var aimSpeed:float = 2
 var aimMethod:bool = true #true = key board. false = mouse
 var rotationDirection = 0
 
 #Bullet Stats
-var damage:float = 100
+var damage:float = 20
 var bulletSpeed = 400
 var bulletRange = 1200
 var bulletSize = 0.5

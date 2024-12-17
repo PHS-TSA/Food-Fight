@@ -586,9 +586,11 @@ script = ExtResource("1_obnhm")
 
 [node name="Tank" parent="." instance=ExtResource("2_0fakq")]
 position = Vector2(85, 118)
+rotation = 4.71239
 
 [node name="player2_tank" parent="." instance=ExtResource("3_usok0")]
 position = Vector2(938, 154)
+rotation = 4.71239
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 5

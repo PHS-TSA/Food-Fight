@@ -46,14 +46,10 @@ func _ready():
 
 
 func _physics_process(delta): #Seperate physics process for AI and Player 
-	#Code for 2d movement
-	#TODO find a good way to do firing with this movement
-	#var direction = Input.get_vector(rotate_left_button, rotate_right_button, forward_button, backwards_button)
-	#velocity = direction * tankSpeed	 * delta
-	
-	
 	rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
 	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
+	
+	
 	if(aimMethod): #might wanna update with delta
 		if(Input.is_action_pressed(aim_left_button)):
 			%TankTopGreen.global_rotation -= deg_to_rad(aimSpeed)

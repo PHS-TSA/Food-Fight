@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmdsynnjc3w7k"]
+[gd_scene load_steps=8 format=3 uid="uid://dmdsynnjc3w7k"]
 
 [ext_resource type="Script" path="res://Tanks/Player/player1_tank.gd" id="1_j15vl"]
 [ext_resource type="Texture2D" uid="uid://dwjc2jjj5pb3c" path="res://Assets/Tanks/Tank_Bottom_Green.png" id="2_4yc35"]
 [ext_resource type="Texture2D" uid="uid://ddi5o35wsb3h8" path="res://Assets/Tanks/Tank_Top_Green.png" id="3_dkwaf"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="4_yjnhi"]
+[ext_resource type="Texture2D" uid="uid://c0t1l0nx1njj1" path="res://Assets/Tanks/Character1Art.png" id="5_mlce5"]
+[ext_resource type="Texture2D" uid="uid://fdydkxlbtncy" path="res://Assets/Tanks/BlueTeamPlayer.png" id="6_cmtkr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 size = Vector2(280, 330)
@@ -15,21 +17,21 @@ script = ExtResource("1_j15vl")
 
 [node name="TankBottomGreen" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(1.78814e-07, 2.38419e-07)
+position = Vector2(885, 910)
 rotation = 1.5708
 scale = Vector2(1.33333, 1.25697)
 texture = ExtResource("2_4yc35")
 
 [node name="TankCollision" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
-position = Vector2(-2.23517e-05, 2.23337e-05)
+position = Vector2(1260, 1005)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_7ianc")
 
 [node name="TankTopGreen" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(-5.96046e-08, 0)
+position = Vector2(1330, 980)
 scale = Vector2(1.51536, 1.51536)
 texture = ExtResource("3_dkwaf")
 
@@ -58,6 +60,16 @@ offset_top = 90.1878
 offset_right = 225.008
 offset_bottom = 117.188
 rotation = -1.56803
+
+[node name="Character1Art" type="Sprite2D" parent="."]
+position = Vector2(175, 35)
+scale = Vector2(5.73437, 5.5625)
+texture = ExtResource("5_mlce5")
+
+[node name="BlueTeamPlayer" type="Sprite2D" parent="."]
+position = Vector2(170, 55)
+scale = Vector2(8.80469, 8.80469)
+texture = ExtResource("6_cmtkr")
 
 [connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

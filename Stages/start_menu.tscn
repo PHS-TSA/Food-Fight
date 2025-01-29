@@ -1,9 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjd03uacoxg33"]
+[gd_scene load_steps=2 format=3 uid="uid://bjd03uacoxg33"]
 
 [ext_resource type="Script" path="res://Stages/2-Player-Rounds/Round_Button.gd" id="2_h26ai"]
-[ext_resource type="Texture2D" uid="uid://buy3qfw48p7ma" path="res://Assets/Images/awesome-sauce.jpg" id="3_pgw1m"]
-
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2trhj"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -27,13 +24,5 @@ offset_bottom = -157.0
 theme_override_font_sizes/font_size = 80
 text = "Food Fight"
 horizontal_alignment = 1
-
-[node name="Awesome-sauce" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0.756863)
-z_index = -1
-material = SubResource("CanvasItemMaterial_2trhj")
-position = Vector2(-0.999985, -0.999996)
-scale = Vector2(1.16333, 1.16167)
-texture = ExtResource("3_pgw1m")
 
 [connection signal="pressed" from="Round_Button" to="Round_Button" method="_on_pressed"]

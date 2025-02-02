@@ -6,3 +6,5 @@ res://global.gd
 res://Stages/2-Player-Rounds/rounds.gd
 res://Tanks/Player/player_tank.tscn
 res://Tanks/Player/player_tank.gd
+res://Tanks/Player/player2_tank.tscn
+res://Tanks/tank.gd

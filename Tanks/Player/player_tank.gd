@@ -48,21 +48,21 @@ func _ready():
 func _physics_process(delta): #Seperate physics process for AI and Player 
 	
 	#TODO find a good way to do firing with this movement
-	#var direction = Input.get_vector(rotate_left_button, rotate_right_button, forward_button, backwards_button)
-	#velocity = direction * tankSpeed	 * delta
+	var direction = Input.get_vector(rotate_left_button, rotate_right_button, forward_button, backwards_button)
+	velocity = direction * tankSpeed	 * delta
+	#maybe make settings and allow players to choose based on single or multiplayer
 	
-	
-	rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
-	velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
-	
+	#rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
+	#velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
+	#
 	
 	if(aimMethod): #might wanna update with delta
 		if(Input.is_action_pressed(aim_left_button)):
-			%TankTopGreen.global_rotation -= deg_to_rad(aimSpeed)
+			%PivotPoint.global_rotation -= deg_to_rad(aimSpeed)
 		if(Input.is_action_pressed(aim_right_button)):
-			%TankTopGreen.global_rotation += deg_to_rad(aimSpeed)
+			%PivotPoint.global_rotation += deg_to_rad(aimSpeed)
 	else:
-		%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(get_global_mouse_position()) + (PI/2)
+		%PivotPoint.global_rotation = %PivotPoint.angle_to_point(get_global_mouse_position()) + (PI/2)
 	
 	if(Input.is_action_pressed(fire_button)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings

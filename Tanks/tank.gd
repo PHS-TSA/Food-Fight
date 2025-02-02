@@ -16,6 +16,7 @@ var ai:bool
 var healthBar:ProgressBar
 var rotationSpeed:float = 4
 var aimSpeed:float = 3
+#TODO fix mouse aiming with new assets
 var aimMethod:bool = true #true = key board. false = mouse
 var rotationDirection = 0
 
@@ -62,7 +63,7 @@ func fire():
 		attackCooldown = true
 		$Attack_Speed.start(attackSpeed)
 		var spawned:Bullet = BULLET.instantiate()
-		spawned.global_rotation = %TankTopGreen.global_rotation
+		spawned.global_rotation = %PivotPoint.global_rotation + PI/2
 		spawned.position = %FirePoint.global_position
 		spawned.damage = damage
 		spawned.speed = bulletSpeed

@@ -1,6 +1,6 @@
 [gd_scene load_steps=81 format=4 uid="uid://bh26nrhkdgrtg"]
 
-[ext_resource type="Script" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
+[ext_resource type="Script" uid="uid://b2mvo1h8x5tmx" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0fakq"]
 [ext_resource type="PackedScene" uid="uid://b5fbuan1rk7nq" path="res://Tanks/Player/player2_tank.tscn" id="3_usok0"]
 [ext_resource type="Texture2D" uid="uid://bkxjl4ebsaw5x" path="res://Assets/Tile Sets/SmallTableFoodFight.png" id="4_rtdbc"]
@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://wdc8pclfyk2a" path="res://Assets/Tile Sets/tileset_all16x16.png" id="6_3y5vk"]
 [ext_resource type="Texture2D" uid="uid://dyq8j25ccqyi7" path="res://Assets/Tile Sets/Table.png" id="6_ec6kc"]
 [ext_resource type="Texture2D" uid="uid://bv8g1s3i5qmhf" path="res://Assets/Tile Sets/LongTableExtension.png" id="6_vamuc"]
-[ext_resource type="Script" path="res://Stages/layer_0.gd" id="7_lwgjx"]
+[ext_resource type="Script" uid="uid://defr1cu8tij3k" path="res://Stages/layer_0.gd" id="7_lwgjx"]
 [ext_resource type="Texture2D" uid="uid://saudu85eltng" path="res://Assets/Tile Sets/Untitled-1.png" id="7_nus3o"]
 [ext_resource type="Texture2D" uid="uid://dab4rp4o4cjbm" path="res://Assets/Tile Sets/ReplacementTableSmall.png" id="8_bx1ij"]
 [ext_resource type="Texture2D" uid="uid://f3h1thry7gbf" path="res://Assets/Tile Sets/ChairFoodFight.png" id="9_5i33v"]

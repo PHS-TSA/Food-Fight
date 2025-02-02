@@ -1,0 +1,8 @@
+res://Stages/start_menu.tscn
+res://Stages/2-Player-Rounds/Round_Button.gd
+res://Stages/2-Player-Rounds/round_scene.tscn
+res://round_config_ui.tscn
+res://global.gd
+res://Stages/2-Player-Rounds/rounds.gd
+res://Tanks/Player/player_tank.tscn
+res://Tanks/Player/player_tank.gd

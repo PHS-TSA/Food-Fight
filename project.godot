@@ -12,7 +12,7 @@ config_version=5
 
 config/name="Food-f Ight - Copy (1)"
 run/main_scene="res://Stages/start_menu.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]

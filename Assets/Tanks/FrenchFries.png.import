@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bun6rk4ehqdnv"
-path="res://.godot/imported/Chicken leg.png-f06047bb0c6068533f6578c11e2dd733.ctex"
+uid="uid://bpkho8maxjvjt"
+path="res://.godot/imported/FrenchFries.png-0af52d9104c8aeec6b3ffb3eb1aaf2aa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tanks/Chicken leg.png"
-dest_files=["res://.godot/imported/Chicken leg.png-f06047bb0c6068533f6578c11e2dd733.ctex"]
+source_file="res://Assets/Tanks/FrenchFries.png"
+dest_files=["res://.godot/imported/FrenchFries.png-0af52d9104c8aeec6b3ffb3eb1aaf2aa.ctex"]
 
 [params]
 

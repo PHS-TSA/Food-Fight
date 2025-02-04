@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://bh5sf1d7y7bo0"]
 
-[ext_resource type="Script" path="res://Tanks/Bullet/bullet.gd" id="1_kvtrc"]
+[ext_resource type="Script" uid="uid://1mt12cnuioov" path="res://Tanks/Bullet/bullet.gd" id="1_kvtrc"]
 [ext_resource type="Texture2D" uid="uid://bfjn4wcj4fbxl" path="res://Assets/Tanks/Bullet.png" id="2_0bv7v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_akhup"]
@@ -11,6 +11,7 @@ scale = Vector2(0.319998, 0.319998)
 script = ExtResource("1_kvtrc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.259581, 0.259581)
 texture = ExtResource("2_0bv7v")
 

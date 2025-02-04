@@ -12,12 +12,12 @@ size = Vector2(60, 52)
 motion_mode = 1
 script = ExtResource("1_j15vl")
 
-[node name="TankBottomGreen" type="Sprite2D" parent="."]
+[node name="PlayerModel" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(1.33333, 1.25697)
 texture = ExtResource("5_mlce5")
 
-[node name="TankCollision" type="CollisionShape2D" parent="."]
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
 position = Vector2(0.99999, 0)
 rotation = 1.5708
@@ -49,14 +49,14 @@ scale = Vector2(0.75, 0.75)
 [node name="PivotPoint" type="Marker2D" parent="."]
 unique_name_in_owner = true
 
-[node name="TankTopGreen" type="Sprite2D" parent="PivotPoint"]
+[node name="PlayerHand" type="Sprite2D" parent="PivotPoint"]
 unique_name_in_owner = true
 z_index = 1
 position = Vector2(45, 0)
 scale = Vector2(0.5, 1)
 texture = ExtResource("4_8i85b")
 
-[node name="FirePoint" type="Marker2D" parent="PivotPoint/TankTopGreen"]
+[node name="FirePoint" type="Marker2D" parent="PivotPoint/PlayerHand"]
 unique_name_in_owner = true
 position = Vector2(20, -3.99999)
 

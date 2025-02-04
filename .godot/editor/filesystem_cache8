@@ -1,9 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1738534203
+::res://::1738636693
 export_presets.cfg::TextFile::-1::1738214299::0::1::::<><><><>::
-global.gd::GDScript::503152492684652853::1738214299::0::1::::global<>Node<><><>::
+global.gd::GDScript::503152492684652853::1738535111::0::1::::global<>Node<><><>::
 icon.svg::CompressedTexture2D::880781718021107544::1738214277::1738214361::1::::<><><>a6e65d3775a1c31ac4dfbfa23ecf0d2d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+menu_button.gd::GDScript::2490370746622059563::1738534586::0::1::::<>Button<><><>::
+rematch_button.gd::GDScript::8685376985130922734::1738534586::0::1::::<>Button<><><>::
+round_config_ui.tscn::PackedScene::5224046400148549467::1738636693::0::1::::<><><><>::uid://d2cmyv3xo3idn::::res://start_button.gd
+start_button.gd::GDScript::9059262195090922163::1738534586::0::1::::<>Button<><><>::
 tileset_all16x16.png::CompressedTexture2D::4687669648046513457::1738214299::1738214361::1::::<><><>da25df7ee6f0e3d15eaab8907645b52e<>res://.godot/imported/tileset_all16x16.png-88b8c2d92dd2f32b8ddc3b87ce8f5eeb.ctex::
+win_label.gd::GDScript::599358196699039017::1738534586::0::1::::<>Label<><><>::
+win_screen.tscn::PackedScene::8078716804826860237::1738535274::0::1::::<><><><>::res://win_label.gd<>res://rematch_button.gd<>res://menu_button.gd
 ::res://addons/::1738214277
 ::res://addons/copilot/::1738214360
 Copilot.gd::GDScript::8876210505539894808::1738214277::0::1::::<>Control<><><>::
@@ -23,13 +29,13 @@ plugin.cfg::TextFile::-1::1738214277::0::1::::<><><><>::
 THIRDPARTY.md::TextFile::-1::1738214277::0::1::::<><><><>::
 ::res://addons/godot-git-plugin/linux/::1738214277
 ::res://addons/godot-git-plugin/macos/::1738214277
-::res://addons/godot-git-plugin/win64/::1738534199
+::res://addons/godot-git-plugin/win64/::1738635634
 ::res://Assets/::1738214277
 health_bar.tscn::PackedScene::7373563094176510684::1738214277::0::1::::<><><><>::
 ::res://Assets/Images/::1738214362
 awesome-sauce.jpg::CompressedTexture2D::3841471569015923904::1738214277::1738214362::1::::<><><>ca9995fb73f09784e2a1f7fb3f448c06<>res://.godot/imported/awesome-sauce.jpg-e7a1480c219e794a240b65572919f306.ctex::
-::res://Assets/Tanks/::1738214362
-Apple pixel art.png::CompressedTexture2D::6454699492109809313::1738214299::1738214361::1::::<><><>d55a575d5b03b359c65b779a8b03450e<>res://.godot/imported/Apple pixel art.png-6107961d8b6a38ff7ce77a3933822c6d.ctex::
+::res://Assets/Tanks/::1738636669
+Apple.png::CompressedTexture2D::6454699492109809313::1738214299::1738636669::1::::<><><>191b29f19996159b276d99765da1b5ff<>res://.godot/imported/Apple.png-62c619245038c04ebee5fded2fbc9a4b.ctex::
 Bananna.png::CompressedTexture2D::7197253273648680141::1738214299::1738214361::1::::<><><>f32ead50e855e9694488942df88145e7<>res://.godot/imported/Bananna.png-4ae3789e5378a06037908c15e033273b.ctex::
 BlueTeamBody.png::CompressedTexture2D::7653557462191880343::1738214299::1738214361::1::::<><><>7ecc29b628549bcddaa0b9cafd4f6a90<>res://.godot/imported/BlueTeamBody.png-c993f1c01cdfe8cf2eb5c2facfc55d6b.ctex::
 BlueTeamPlayer.png::CompressedTexture2D::358600477926341976::1738214299::1738214361::1::::<><><>4b3840acdceb2b0547864bf827c7b41b<>res://.godot/imported/BlueTeamPlayer.png-f20be26cf97f8caf0af07b086fe2bf72.ctex::
@@ -39,8 +45,8 @@ Burger.png::CompressedTexture2D::342961360354102736::1738214299::1738214361::1::
 Carrot.png::CompressedTexture2D::329753067523818152::1738214299::1738214361::1::::<><><>62fd1d6bbc54f1c29c5aba65f26c61f9<>res://.godot/imported/Carrot.png-62eaef46941f9ccf6694806bbcce35e9.ctex::
 Character1Art.png::CompressedTexture2D::6568385255455521560::1738214299::1738214361::1::::<><><>0c762d986d747c974130ebf240b9abad<>res://.godot/imported/Character1Art.png-01cc0081503fd7603537721f6a2ac912.ctex::
 CharacterHands.png::CompressedTexture2D::8077366072671083961::1738214299::1738214361::1::::<><><>8f01fa0f79eeb2243308b5a6e460e9db<>res://.godot/imported/CharacterHands.png-7ecaece647c4b4750491b76d5154bf00.ctex::
-Chicken leg.png::CompressedTexture2D::3818947622753227787::1738214299::1738214362::1::::<><><>c3e632360c812ec29a7eb719a619dc4c<>res://.godot/imported/Chicken leg.png-f06047bb0c6068533f6578c11e2dd733.ctex::
-French Fries.png::CompressedTexture2D::3460348887707540177::1738214299::1738214362::1::::<><><>82b0a6076d2cd05fab67e166778ee7c8<>res://.godot/imported/French Fries.png-d6b9ce5ab29680a5fdd750575894538a.ctex::
+ChickenLeg.png::CompressedTexture2D::3818947622753227787::1738214299::1738636669::1::::<><><>85a173134ee310ffb6d8e14e1148d25d<>res://.godot/imported/ChickenLeg.png-c25f53b529eb4352804453411f8567ba.ctex::
+FrenchFries.png::CompressedTexture2D::3460348887707540177::1738214299::1738636669::1::::<><><>d50f87dfab32a105c1db6ddf2c9d1d21<>res://.godot/imported/FrenchFries.png-0af52d9104c8aeec6b3ffb3eb1aaf2aa.ctex::
 Hot dog.png::CompressedTexture2D::1502726433735310740::1738214299::1738214362::1::::<><><>7620a59a9220fcc4932526a8cc6312ea<>res://.godot/imported/Hot dog.png-aeaefd1efe5207a9d1b2433a3d1bd2fb.ctex::
 Orange.png::CompressedTexture2D::7276696671983871663::1738214299::1738214362::1::::<><><>08d85e7b34947bba9188e742ffe4d340<>res://.godot/imported/Orange.png-f7a55cb4f940d1eb2422fd57aa3a61f8.ctex::
 Pizza projectile.png::CompressedTexture2D::8821032104833152013::1738214299::1738214362::1::::<><><>df5521453908c7e044a529713bbe94e7<>res://.godot/imported/Pizza projectile.png-3b96b84458b4e338cf1fb8d9809056ee.ctex::
@@ -97,24 +103,26 @@ Super_Pointy_Bullets.png::CompressedTexture2D::2363096732594388693::1738214277::
 ::res://Misc/::1738214361
 SampleBox.gd::GDScript::5882176048184878612::1738214277::0::1::::<>StaticBody2D<><><>::
 sample_box.tscn::PackedScene::4335422453490171801::1738214277::0::1::::<><><><>::res://SampleBox.gd<>uid://mswl1hrsqgfw::::res://icon.svg<>uid://ddb2rh7axbe0c::::res://Assets/health_bar.tscn
-::res://Stages/::1738214379
+::res://Stages/::1738636693
 layer_0.gd::GDScript::7451418071388162550::1738214277::0::1::::<>TileMapLayer<><><>::
-start_menu.tscn::PackedScene::3025882387323564868::1738214379::0::1::::<><><><>::uid://4u03d2xpsvpc::::res://Stages/2-Player-Rounds/Round_Button.gd<>uid://buy3qfw48p7ma::::res://Assets/Images/awesome-sauce.jpg
-::res://Stages/2-Player-Rounds/::1738214361
-rounds.gd::GDScript::4307593430883497915::1738214299::0::1::::<>Node2D<><><>::
-Round_Button.gd::GDScript::2078332147978195060::1738214299::0::1::::<>Button<><><>::
-round_scene.tscn::PackedScene::2935387134784668464::1738214299::0::1::::<><><><>::res://Stages/2-Player-Rounds/rounds.gd<>uid://dmdsynnjc3w7k::::res://Tanks/Player/player_tank.tscn<>uid://b5fbuan1rk7nq::::res://Tanks/Player/player2_tank.tscn<>uid://bkxjl4ebsaw5x::::res://Assets/Tile Sets/SmallTableFoodFight.png<>uid://b7xvjod18d6lf::::res://Assets/Tile Sets/TileSets_Cafeteria.png<>uid://dbkpwllc5bn2g::::res://Assets/Tile Sets/SmallTableFoodFight8.png<>uid://wdc8pclfyk2a::::res://Assets/Tile Sets/tileset_all16x16.png<>uid://dyq8j25ccqyi7::::res://Assets/Tile Sets/Table.png<>uid://bv8g1s3i5qmhf::::res://Assets/Tile Sets/LongTableExtension.png<>res://Stages/layer_0.gd<>uid://saudu85eltng::::res://Assets/Tile Sets/Untitled-1.png<>uid://dab4rp4o4cjbm::::res://Assets/Tile Sets/ReplacementTableSmall.png<>uid://f3h1thry7gbf::::res://Assets/Tile Sets/ChairFoodFight.png<>uid://bal41oyymm1dt::::res://Assets/Tile Sets/TopChairView.png<>uid://b18sq6obq3dfm::::res://Assets/Tile Sets/BigTableFoodFight.png
-::res://Tanks/::1738214361
-tank.gd::GDScript::7212789000829293047::1738214299::0::1::::Tank<>CharacterBody2D<><><>::
+start_menu.tscn::PackedScene::3025882387323564868::1738636693::0::1::::<><><><>::uid://4u03d2xpsvpc::::res://Stages/2-Player-Rounds/Round_Button.gd<>uid://buy3qfw48p7ma::::res://Assets/Images/awesome-sauce.jpg
+::res://Stages/2-Player-Rounds/::1738636693
+rounds.gd::GDScript::4307593430883497915::1738535245::0::1::::<>Node2D<><><>::
+Round_Button.gd::GDScript::2078332147978195060::1738534771::0::1::::<>Button<><><>::
+round_scene.tscn::PackedScene::2935387134784668464::1738636693::0::1::::<><><><>::uid://b2mvo1h8x5tmx::::res://Stages/2-Player-Rounds/rounds.gd<>uid://dmdsynnjc3w7k::::res://Tanks/Player/player_tank.tscn<>uid://b5fbuan1rk7nq::::res://Tanks/Player/player2_tank.tscn<>uid://bkxjl4ebsaw5x::::res://Assets/Tile Sets/SmallTableFoodFight.png<>uid://b7xvjod18d6lf::::res://Assets/Tile Sets/TileSets_Cafeteria.png<>uid://dbkpwllc5bn2g::::res://Assets/Tile Sets/SmallTableFoodFight8.png<>uid://wdc8pclfyk2a::::res://Assets/Tile Sets/tileset_all16x16.png<>uid://dyq8j25ccqyi7::::res://Assets/Tile Sets/Table.png<>uid://bv8g1s3i5qmhf::::res://Assets/Tile Sets/LongTableExtension.png<>uid://defr1cu8tij3k::::res://Stages/layer_0.gd<>uid://saudu85eltng::::res://Assets/Tile Sets/Untitled-1.png<>uid://dab4rp4o4cjbm::::res://Assets/Tile Sets/ReplacementTableSmall.png<>uid://f3h1thry7gbf::::res://Assets/Tile Sets/ChairFoodFight.png<>uid://bal41oyymm1dt::::res://Assets/Tile Sets/TopChairView.png<>uid://b18sq6obq3dfm::::res://Assets/Tile Sets/BigTableFoodFight.png
+::res://Tanks/::1738636636
+tank.gd::GDScript::7212789000829293047::1738636636::0::1::::Tank<>CharacterBody2D<><><>::
 ::res://Tanks/AI/::1738214361
 ai_tank.gd::GDScript::3942738060652677671::1738214277::0::1::::<>Tank<><><>::
 ai_tank.tscn::PackedScene::5266944158996972255::1738214277::0::1::::<><><><>::res://Tanks/AI/ai_tank.gd<>uid://dwjc2jjj5pb3c::::res://Assets/Tanks/Tank_Bottom_Green.png<>uid://ddi5o35wsb3h8::::res://Assets/Tanks/Tank_Top_Green.png<>uid://ddb2rh7axbe0c::::res://Assets/health_bar.tscn
-::res://Tanks/Bullet/::1738214361
-bullet.gd::GDScript::1850883942979430473::1738214277::0::1::::Bullet<>Area2D<><><>::
-bullet.tscn::PackedScene::2940777128349223865::1738214277::0::1::::<><><><>::res://Tanks/Bullet/bullet.gd<>uid://bfjn4wcj4fbxl::::res://Assets/Tanks/Bullet.png
-::res://Tanks/Player/::1738214361
+::res://Tanks/Bullet/::1738636718
+bullet.gd::GDScript::1850883942979430473::1738636525::0::1::::Bullet<>Area2D<><><>::
+bullet.tscn::PackedScene::2940777128349223865::1738636693::0::1::::<><><><>::uid://1mt12cnuioov::::res://Tanks/Bullet/bullet.gd<>uid://bfjn4wcj4fbxl::::res://Assets/Tanks/Bullet.png
+Apple.tscn::PackedScene::5556294346493557746::1738636693::0::1::::<><><><>::uid://1mt12cnuioov::::res://Tanks/Bullet/bullet.gd<>uid://cx7x7s8ggwr3v::::res://Assets/Tanks/Apple.png
+Bannana.tscn::PackedScene::4882793424660584909::1738636718::0::1::::<><><><>::uid://1mt12cnuioov::::res://Tanks/Bullet/bullet.gd<>uid://cx7x7s8ggwr3v::::res://Assets/Tanks/Apple.png
+::res://Tanks/Player/::1738636693
 player1_tank.gd::GDScript::3738383795815459376::1738214277::0::1::::<>PlayerTank<><><>::
 player2_tank.gd::GDScript::6096091647965839319::1738214277::0::1::::<>PlayerTank<><><>::
-player2_tank.tscn::PackedScene::4502504335762162474::1738214277::0::1::::<><><><>::res://Tanks/Player/player2_tank.gd<>uid://dhdj0g402t8wj::::res://Assets/Tanks/Tank_Bottom_Red.png<>uid://dk4le02ua54dp::::res://Assets/Tanks/Tank Sprites.png<>uid://ddb2rh7axbe0c::::res://Assets/health_bar.tscn
-player_tank.gd::GDScript::2180446774604563050::1738214299::0::1::::PlayerTank<>Tank<><><>::
-player_tank.tscn::PackedScene::8008857776220112770::1738214299::0::1::::<><><><>::res://Tanks/Player/player1_tank.gd<>uid://dwjc2jjj5pb3c::::res://Assets/Tanks/Tank_Bottom_Green.png<>uid://ddi5o35wsb3h8::::res://Assets/Tanks/Tank_Top_Green.png<>uid://ddb2rh7axbe0c::::res://Assets/health_bar.tscn<>uid://c0t1l0nx1njj1::::res://Assets/Tanks/Character1Art.png<>uid://fdydkxlbtncy::::res://Assets/Tanks/BlueTeamPlayer.png
+player2_tank.tscn::PackedScene::4502504335762162474::1738636693::0::1::::<><><><>::uid://cs380ebqfps5l::::res://Tanks/Player/player2_tank.gd<>uid://dhdj0g402t8wj::::res://Assets/Tanks/Tank_Bottom_Red.png<>uid://dk4le02ua54dp::::res://Assets/Tanks/Tank Sprites.png<>uid://ddb2rh7axbe0c::::res://Assets/health_bar.tscn
+player_tank.gd::GDScript::2180446774604563050::1738536992::0::1::::PlayerTank<>Tank<><><>::
+player_tank.tscn::PackedScene::8008857776220112770::1738636693::0::1::::<><><><>::uid://bti5vt8m8s73y::::res://Tanks/Player/player1_tank.gd<>uid://dnc0blg0k6yqb::::res://Assets/Tanks/CharacterHands.png<>uid://ddb2rh7axbe0c::::res://Assets/health_bar.tscn<>uid://c0t1l0nx1njj1::::res://Assets/Tanks/Character1Art.png

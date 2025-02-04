@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bpkho8maxjvjt"
-path="res://.godot/imported/French Fries.png-d6b9ce5ab29680a5fdd750575894538a.ctex"
+uid="uid://cx7x7s8ggwr3v"
+path="res://.godot/imported/Apple.png-62c619245038c04ebee5fded2fbc9a4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tanks/French Fries.png"
-dest_files=["res://.godot/imported/French Fries.png-d6b9ce5ab29680a5fdd750575894538a.ctex"]
+source_file="res://Assets/Tanks/Apple.png"
+dest_files=["res://.godot/imported/Apple.png-62c619245038c04ebee5fded2fbc9a4b.ctex"]
 
 [params]
 

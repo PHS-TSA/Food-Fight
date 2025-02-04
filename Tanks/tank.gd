@@ -1,7 +1,8 @@
 class_name Tank
 extends CharacterBody2D
 
-const BULLET = preload("res://Tanks/Bullet/bullet.tscn") 
+const BULLET = [preload("res://Tanks/Bullet/Apple.tscn"),preload("res://Tanks/Bullet/Bananna.tscn"),preload("res://Tanks/Bullet/Burger.tscn"),preload("res://Tanks/Bullet/Carrot.tscn"),preload("res://Tanks/Bullet/Chicken.tscn"),preload("res://Tanks/Bullet/Fries.tscn"),preload("res://Tanks/Bullet/Hot-Dog.tscn"),preload("res://Tanks/Bullet/Orange.tscn"),preload("res://Tanks/Bullet/Pizza.tscn"),preload("res://Tanks/Bullet/Tomato.tscn")]
+#const fruits = [preload("res://Assets/Tanks/Apple.png"),preload("res://Assets/Tanks/Bananna.png"),preload("res://Assets/Tanks/Burger.png"),preload("res://Assets/Tanks/Carrot.png"),preload("res://Assets/Tanks/ChickenLeg.png"),preload("res://Assets/Tanks/FrenchFries.png")]
 
 #Tank Stats
 var maxHealth:float = 100.0
@@ -24,7 +25,7 @@ var rotationDirection = 0
 var damage:float = 20
 var bulletSpeed = 400
 var bulletRange = 1200
-var bulletSize = 0.5
+var bulletSize = 0.6
 var fireBullets = false
 var fireDamage: float # Defined later in code
 var aiFired:bool
@@ -62,7 +63,7 @@ func fire():
 	if(!attackCooldown):
 		attackCooldown = true
 		$Attack_Speed.start(attackSpeed)
-		var spawned:Bullet = BULLET.instantiate()
+		var spawned:Bullet = BULLET[randi_range(0,len(BULLET)-1)].instantiate()
 		spawned.global_rotation = %PivotPoint.global_rotation + PI/2
 		spawned.position = %FirePoint.global_position
 		spawned.damage = damage

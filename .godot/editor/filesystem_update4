@@ -4,3 +4,4 @@ res://Stages/2-Player-Rounds/round_scene.tscn
 res://Tanks/Player/player2_tank_test.tscn
 res://Tanks/Player/player_tank.tscn
 res://Tanks/Player/player2_tank.tscn
+res://Tanks/tank.gd

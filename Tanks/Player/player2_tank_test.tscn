@@ -1,21 +1,21 @@
-[gd_scene load_steps=6 format=3 uid="uid://dmdsynnjc3w7k"]
+[gd_scene load_steps=6 format=3 uid="uid://dl68l2jnvfjca"]
 
-[ext_resource type="Script" path="res://Tanks/Player/player1_tank.gd" id="1_j15vl"]
-[ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_8i85b"]
-[ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="4_yjnhi"]
-[ext_resource type="Texture2D" uid="uid://c0t1l0nx1njj1" path="res://Assets/Tanks/Character1Art.png" id="5_mlce5"]
+[ext_resource type="Script" path="res://Tanks/Player/player2_tank.gd" id="1_pmj06"]
+[ext_resource type="Texture2D" uid="uid://b33qyoj5rhw34" path="res://Tanks/Player/BlueCharacter.png" id="2_gaggd"]
+[ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_hhdn7"]
+[ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_sl7se"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 size = Vector2(60, 52)
 
 [node name="Player_Tank" type="CharacterBody2D"]
 motion_mode = 1
-script = ExtResource("1_j15vl")
+script = ExtResource("1_pmj06")
 
 [node name="PlayerModel" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 scale = Vector2(1.33333, 1.25697)
-texture = ExtResource("5_mlce5")
+texture = ExtResource("2_gaggd")
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 unique_name_in_owner = true
@@ -38,7 +38,7 @@ color = Color(1, 0.596078, 0, 1)
 
 [node name="Attack_Speed" type="Timer" parent="."]
 
-[node name="HealthBar" parent="." instance=ExtResource("4_yjnhi")]
+[node name="HealthBar" parent="." instance=ExtResource("3_hhdn7")]
 offset_left = -38.0
 offset_top = -47.0
 offset_right = 63.0
@@ -54,7 +54,7 @@ unique_name_in_owner = true
 z_index = 1
 position = Vector2(45, 0)
 scale = Vector2(0.5, 1)
-texture = ExtResource("4_8i85b")
+texture = ExtResource("4_sl7se")
 
 [node name="FirePoint" type="Marker2D" parent="PivotPoint/PlayerHand"]
 unique_name_in_owner = true

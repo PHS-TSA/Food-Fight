@@ -42,6 +42,7 @@ signal tank_dead(index:int) #signals to the round/level that the tank is dead
 
 
 func take_damage(damage:float,fire:bool,p_aiFired:bool):
+	%SplatSound.play()
 	if(p_aiFired && ai): #If the bullet is fired by an ai and hits an ai return
 		return
 	else:

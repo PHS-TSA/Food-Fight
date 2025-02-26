@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dl68l2jnvfjca"]
+[gd_scene load_steps=7 format=3 uid="uid://dl68l2jnvfjca"]
 
 [ext_resource type="Script" uid="uid://cs380ebqfps5l" path="res://Tanks/Player/player2_tank.gd" id="1_pmj06"]
 [ext_resource type="Texture2D" uid="uid://b33qyoj5rhw34" path="res://Tanks/Player/BlueCharacter.png" id="2_gaggd"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_hhdn7"]
 [ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_sl7se"]
+[ext_resource type="AudioStream" uid="uid://gpefi6l0d6tq" path="res://Assets/Audio/090035_splatwav-91604.mp3" id="5_dcs2k"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 size = Vector2(60, 52)
@@ -61,6 +62,10 @@ texture = ExtResource("4_sl7se")
 [node name="FirePoint" type="Marker2D" parent="PivotPoint/PlayerHand"]
 unique_name_in_owner = true
 position = Vector2(22, -4)
+
+[node name="SplatSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_dcs2k")
 
 [connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

@@ -17,3 +17,7 @@ res://Tanks/Bullet/Orange.tscn
 res://Tanks/Bullet/Pizza.tscn
 res://Tanks/Bullet/Tomato.tscn
 res://win_screen.tscn
+res://music_player.gd
+res://Stages/2-Player-Rounds/rounds.gd
+res://music_player.tscn
+res://Tanks/tank.gd

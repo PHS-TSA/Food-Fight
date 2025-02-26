@@ -11,6 +11,7 @@ var card:String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	MusicPlayer.play_music_level()
 	var tank_index = 0
 	var connections = [] #stores signal connections
 	for child in self.get_children(): #loops through the tree to find tanks

@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bjd03uacoxg33"]
+[gd_scene load_steps=5 format=3 uid="uid://bjd03uacoxg33"]
 
 [ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_cvaqr"]
 [ext_resource type="Script" uid="uid://4u03d2xpsvpc" path="res://Stages/2-Player-Rounds/Round_Button.gd" id="2_h26ai"]
+[ext_resource type="Script" uid="uid://b2stfxe6lo2ds" path="res://Stages/quitbutton.gd" id="2_p1d7x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2trhj"]
 
@@ -29,6 +30,16 @@ scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "Settings WIP"
 script = ExtResource("2_h26ai")
+
+[node name="Quitbutton" type="Button" parent="."]
+offset_left = -155.0
+offset_top = 205.0
+offset_right = 311.0
+offset_bottom = 282.0
+scale = Vector2(0.680442, 0.680442)
+theme_override_font_sizes/font_size = 50
+text = "Quit"
+script = ExtResource("2_p1d7x")
 
 [node name="1PlayerAIButton" type="Button" parent="."]
 offset_left = -193.0
@@ -61,4 +72,5 @@ texture = ExtResource("2_cvaqr")
 
 [connection signal="pressed" from="2PlayerRoundButton" to="2PlayerRoundButton" method="_on_pressed"]
 [connection signal="pressed" from="SettingsButton" to="SettingsButton" method="_on_pressed"]
+[connection signal="pressed" from="Quitbutton" to="Quitbutton" method="_on_pressed"]
 [connection signal="pressed" from="1PlayerAIButton" to="1PlayerAIButton" method="_on_pressed"]

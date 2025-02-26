@@ -1,13 +1,13 @@
 [gd_scene load_steps=3 format=3 uid="uid://bh4e7n6ptavvp"]
 
-[ext_resource type="Texture2D" uid="uid://bio10d2mrnuru" path="res://Cards/Tank Cards Assets/Legendary/Atom_Bullets.png" id="1_im873"]
+[ext_resource type="Texture2D" uid="uid://u61j6o6m0w5i" path="res://Cards/Food-Card-Assets/Legendary/Walnuts.png" id="1_n2ghk"]
 [ext_resource type="Script" uid="uid://tpgd8d6mwtdt" path="res://Cards/card_button.gd" id="2_2apfx"]
 
 [node name="Card" type="TextureButton"]
 offset_right = 750.0
 offset_bottom = 1050.0
 scale = Vector2(0.295991, 0.295991)
-texture_normal = ExtResource("1_im873")
+texture_normal = ExtResource("1_n2ghk")
 script = ExtResource("2_2apfx")
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]

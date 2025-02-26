@@ -23,3 +23,4 @@ res://music_player.tscn
 res://Tanks/tank.gd
 res://Cards/card_view.gd
 res://global.gd
+res://Cards/card_view.tscn

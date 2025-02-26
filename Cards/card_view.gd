@@ -23,7 +23,7 @@ func _ready():
 
 
 func generate_cards():
-	%Picking_Label.text = ("Tank "+str(tanks_picking[0]+1)+" is picking!") #this is broken
+	%Picking_Label.text = ("Player "+str(tanks_picking[0]+1)+" is picking!") #this is broken
 	
 	for card in card_list:
 		ran = randi_range(1,100)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b33qyoj5rhw34"
-path="res://.godot/imported/BlueCharacter.png-c9a0849243e7ef76d0903089e771deaf.ctex"
+path="res://.godot/imported/BlueCharacter.png-c1a5957d67827f55e8aee96a5d339fc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tanks/Player/BlueCharacter.png"
-dest_files=["res://.godot/imported/BlueCharacter.png-c9a0849243e7ef76d0903089e771deaf.ctex"]
+source_file="res://Assets/Tanks/BlueCharacter.png"
+dest_files=["res://.godot/imported/BlueCharacter.png-c1a5957d67827f55e8aee96a5d339fc9.ctex"]
 
 [params]
 

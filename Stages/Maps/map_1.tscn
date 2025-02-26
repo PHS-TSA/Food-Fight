@@ -965,6 +965,15 @@ tile_proxies/coords_level = [[5, Vector2i(0, 0)], [8, Vector2i(0, 0)], [5, Vecto
 
 [node name="Map1" type="Node2D"]
 
+[node name="Player1Spawn" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(91, 286)
+scale = Vector2(3.04, 3.04)
+
+[node name="Player2Spawn" type="Marker2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(1161, 280)
+
 [node name="Land" type="TileMapLayer" parent="."]
 z_index = -1
 texture_filter = 1

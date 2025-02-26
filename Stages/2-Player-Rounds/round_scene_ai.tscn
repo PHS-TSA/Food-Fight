@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://dhc06en7mfpx8"]
+
+[ext_resource type="Script" uid="uid://b2mvo1h8x5tmx" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_l840n"]
+[ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0u1gh"]
+[ext_resource type="PackedScene" uid="uid://dl68l2jnvfjca" path="res://Tanks/Player/player2_tank_test.tscn" id="3_pogxl"]
+[ext_resource type="AudioStream" uid="uid://dbl0rhfx0pbvw" path="res://Assets/Audio/school-bell-199584.mp3" id="4_3uteo"]
+
+[node name="Round_Scene" type="Node2D"]
+script = ExtResource("1_l840n")
+
+[node name="Tank" parent="." instance=ExtResource("2_0u1gh")]
+position = Vector2(85, 118)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+z_index = 5
+position = Vector2(639, 359)
+zoom = Vector2(1.5, 1.5)
+
+[node name="Player_Tank" parent="." instance=ExtResource("3_pogxl")]
+position = Vector2(881, 119)
+
+[node name="SchoolBell" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_3uteo")
+autoplay = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

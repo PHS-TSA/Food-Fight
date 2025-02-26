@@ -1,6 +1,8 @@
 extends Node2D
 
-const maps = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
+const MAPS = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
+const PLAYER1 = preload("res://Tanks/Player/player_tank.tscn")
+const PLAYER2 = preload("res://Tanks/Player/player2_tank_test.tscn")
 
 var players = [] #holds tank objects
 var player_wins = []
@@ -13,7 +15,25 @@ var card:String
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	#Choose a map
-	add_child(maps[randi_range(0,len(maps)-1)].instantiate())
+	add_child(MAPS[randi_range(0,len(MAPS)-1)].instantiate())
+	
+	#Spawn Players at spawn points
+	for child in self.get_children():
+		#This code isn't great. I just want to go to be and have it work
+		print(child)
+		if(len(child.get_children()) > 2):
+			if(child.get_child(0).name == "Player1Spawn"):
+				print("we spawning player 1 fr")
+				var spawnedPlayer1 = PLAYER1.instantiate()
+				spawnedPlayer1.position = child.get_node("Player1Spawn").global_position
+				add_child(spawnedPlayer1)
+			if(child.get_child(1).name == "Player2Spawn"):
+				print("we spawning player 2 fr")
+				var spawnedPlayer2 = PLAYER2.instantiate()
+				spawnedPlayer2.position = child.get_node("Player2Spawn").global_position
+				add_child(spawnedPlayer2)
+	#var spawnedPlayer1 = PLAYER1.instantiate()
+	#spawnedPlayer1.position = get_child()
 	
 	MusicPlayer.play_music_level()
 	var tank_index = 0

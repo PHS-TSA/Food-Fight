@@ -29,22 +29,22 @@ func generate_cards():
 		ran = randi_range(1,100)
 		if(ran>=95):
 			random_card = Global.legendary_cards[randi_range(0,len(Global.legendary_cards)-1)]
-			texture = load("res://Cards/Tank Cards Assets/Legendary/"+str(random_card)+".png")
+			texture = load("res://Cards/Food-Card-Assets/Legendary/"+str(random_card)+".png")
 			card.texture_normal = texture
 			card.card_name = random_card
 		elif(ran>=80): #need to add str() to these
 			random_card = Global.rare_cards[randi_range(0,len(Global.rare_cards)-1)]
-			texture = load(("res://Cards/Tank Cards Assets/Rare/"+random_card+".png"))
+			texture = load(("res://Cards/Food-Card-Assets/Rare/"+random_card+".png"))
 			card.texture_normal = texture
 			card.card_name = random_card
 		elif(ran>=50):
 			random_card = Global.uncommon_cards[randi_range(0,len(Global.uncommon_cards)-1)]
-			texture = load("res://Cards/Tank Cards Assets/Uncommon/"+random_card+".png")
+			texture = load("res://Cards/Food-Card-Assets/Uncommon/"+random_card+".png")
 			card.texture_normal = texture
 			card.card_name = random_card
 		else:
 			random_card = Global.common_cards[randi_range(0,len(Global.common_cards)-1)]
-			texture = load("res://Cards/Tank Cards Assets/Common/"+random_card+".png")
+			texture = load("res://Cards/Food-Card-Assets/Common/"+random_card+".png")
 			card.texture_normal = texture
 			card.card_name = random_card
 

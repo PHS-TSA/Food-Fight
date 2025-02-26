@@ -21,3 +21,5 @@ res://music_player.gd
 res://Stages/2-Player-Rounds/rounds.gd
 res://music_player.tscn
 res://Tanks/tank.gd
+res://Cards/card_view.gd
+res://global.gd

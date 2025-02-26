@@ -115,37 +115,37 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 		tank = players[Global.G_tanks_picking[i]] 
 		match card:
 			#Commons
-			"Pointer_Bullets": 
+			"Heavy-Food": 
 				tank.damage *= 1.2
-			"Reinforced_Armor":
+			"Jacket":
 				tank.maxHealth *= 1.2
 				tank.health = tank.maxHealth
-			"Speedy_Bullets":
+			"Fast-Flying":
 				tank.bulletSpeed *= 1.2
 				
 			#uncommon
-			"Galvanized_Steel_Plating":
+			"Watermelon-Helmet":
 				tank.maxHealth *= 1.4
 				tank.health = tank.maxHealth
-			"Bulking_Season":
+			"Cabbage":
 				tank.bulletSize *= 1.5
-			"Long_Range":
+			"Long-Range":
 				tank.bulletRange *= 3
-			"Super_Pointy_Bullets":
+			"Super-Heavy-Food":
 				tank.damage *= 1.4
 			
 			#rare
-			"Mechanic_on_Board":
+			"Vitamins":
 				tank.regen += 0.01 #percent based system
-			"Fire_Bullets":
+			"Pepper":
 				tank.fireBullets = true
-			"Super_Speed":
+			"Super-Shoes":
 				tank.tankSpeed *= 2
-			"Short_Fuse":
+			"Short-Range":
 				tank.damage *= 2
 				tank.bulletRange /= 2
 			#legendary
-			"Atom_Bullets":
+			"Walnuts":
 				tank.bulletSize *= 0.2
 				tank.bulletSpeed *= 2
 				tank.damage *= 1.5

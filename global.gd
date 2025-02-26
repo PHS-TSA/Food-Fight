@@ -30,10 +30,10 @@ var G_fireBullets = []
 #may eventually add the tank settings here once i have a settings menu
 
 # Card Data
-var common_cards = ["Reinforced_Armor","Pointer_Bullets","Speedy_Bullets"]
-var uncommon_cards = ["Galvanized_Steel_Plating","Bulking_Season",'Long_Range',"Super_Pointy_Bullets"]
-var rare_cards = ["Mechanic_on_Board","Fire_Bullets","Super_Speed","Short_Fuse"]
-var legendary_cards = ["Atom_Bullets"]
+var common_cards = ["Jacket","Heavy-Food","Fast-Flying"]
+var uncommon_cards = ["Watermelon-Helmet","Cabbage",'Long-Range',"Super-Heavy-Food"]
+var rare_cards = ["Vitamins","Pepper","Super-Shoes","Short-Range"]
+var legendary_cards = ["Walnuts"]
 
 func reset_stats():
 	#Round System

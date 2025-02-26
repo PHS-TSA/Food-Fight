@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dcih6f3787nbh"]
+[gd_scene load_steps=6 format=3 uid="uid://dcih6f3787nbh"]
 
-[ext_resource type="Script" path="res://start_button.gd" id="1_a1pqa"]
+[ext_resource type="Script" uid="uid://d2cmyv3xo3idn" path="res://start_button.gd" id="1_a1pqa"]
+[ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_7nvef"]
 
 [sub_resource type="Theme" id="Theme_sc1mv"]
 
@@ -8,12 +9,15 @@
 LineEdit/constants/minimum_character_width = 4
 LineEdit/font_sizes/font_size = 50
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fwkgv"]
+
 [node name="RoundConfigUI" type="Node2D"]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.85, 1.85)
 
 [node name="Label" type="Label" parent="."]
 anchors_preset = 8
@@ -22,14 +26,15 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -108.0
-offset_top = -235.0
+offset_top = -245.0
 offset_right = 110.0
-offset_bottom = -152.0
+offset_bottom = -162.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.0898121
 theme = SubResource("Theme_sc1mv")
 theme_override_font_sizes/font_size = 60
-text = "Rounds:"
+text = "Rounds"
 
 [node name="StartButton" type="Button" parent="."]
 anchors_preset = 8
@@ -65,5 +70,13 @@ min_value = 1.0
 value = 1.0
 rounded = true
 alignment = 1
+
+[node name="Awesome-sauce" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.756863)
+z_index = -1
+material = SubResource("CanvasItemMaterial_fwkgv")
+position = Vector2(-0.999985, -0.999996)
+scale = Vector2(0.565, 0.564)
+texture = ExtResource("2_7nvef")
 
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]

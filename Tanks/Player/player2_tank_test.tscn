@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://dl68l2jnvfjca"]
 
-[ext_resource type="Script" path="res://Tanks/Player/player2_tank.gd" id="1_pmj06"]
+[ext_resource type="Script" uid="uid://cs380ebqfps5l" path="res://Tanks/Player/player2_tank.gd" id="1_pmj06"]
 [ext_resource type="Texture2D" uid="uid://b33qyoj5rhw34" path="res://Tanks/Player/BlueCharacter.png" id="2_gaggd"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_hhdn7"]
 [ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_sl7se"]
@@ -9,6 +9,8 @@
 size = Vector2(60, 52)
 
 [node name="Player_Tank" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_pmj06")
 
@@ -52,13 +54,13 @@ unique_name_in_owner = true
 [node name="PlayerHand" type="Sprite2D" parent="PivotPoint"]
 unique_name_in_owner = true
 z_index = 1
-position = Vector2(45, 0)
+position = Vector2(48, 0)
 scale = Vector2(0.5, 1)
 texture = ExtResource("4_sl7se")
 
 [node name="FirePoint" type="Marker2D" parent="PivotPoint/PlayerHand"]
 unique_name_in_owner = true
-position = Vector2(20, -3.99999)
+position = Vector2(22, -4)
 
 [connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

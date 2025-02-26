@@ -8,6 +8,8 @@ radius = 20.0
 
 [node name="Orange" type="Area2D"]
 scale = Vector2(0.319998, 0.319998)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_a45ec")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

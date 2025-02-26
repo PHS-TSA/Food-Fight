@@ -1,6 +1,6 @@
 [gd_scene load_steps=81 format=4 uid="uid://bh26nrhkdgrtg"]
 
-[ext_resource type="Script" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
+[ext_resource type="Script" uid="uid://b2mvo1h8x5tmx" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
 [ext_resource type="PackedScene" uid="uid://dmdsynnjc3w7k" path="res://Tanks/Player/player_tank.tscn" id="2_0fakq"]
 [ext_resource type="Texture2D" uid="uid://bkxjl4ebsaw5x" path="res://Assets/Tile Sets/SmallTableFoodFight.png" id="4_rtdbc"]
 [ext_resource type="Texture2D" uid="uid://b7xvjod18d6lf" path="res://Assets/Tile Sets/TileSets_Cafeteria.png" id="5_4ggaf"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://wdc8pclfyk2a" path="res://Assets/Tile Sets/tileset_all16x16.png" id="6_3y5vk"]
 [ext_resource type="Texture2D" uid="uid://dyq8j25ccqyi7" path="res://Assets/Tile Sets/Table.png" id="6_ec6kc"]
 [ext_resource type="Texture2D" uid="uid://bv8g1s3i5qmhf" path="res://Assets/Tile Sets/LongTableExtension.png" id="6_vamuc"]
-[ext_resource type="Script" path="res://Stages/layer_0.gd" id="7_lwgjx"]
+[ext_resource type="Script" uid="uid://defr1cu8tij3k" path="res://Stages/layer_0.gd" id="7_lwgjx"]
 [ext_resource type="Texture2D" uid="uid://saudu85eltng" path="res://Assets/Tile Sets/Untitled-1.png" id="7_nus3o"]
 [ext_resource type="Texture2D" uid="uid://dab4rp4o4cjbm" path="res://Assets/Tile Sets/ReplacementTableSmall.png" id="8_bx1ij"]
 [ext_resource type="Texture2D" uid="uid://f3h1thry7gbf" path="res://Assets/Tile Sets/ChairFoodFight.png" id="9_5i33v"]
@@ -21,9 +21,13 @@
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ucrqx"]
 texture = ExtResource("4_rtdbc")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.39576, 8, -8, 8, -5.57562, -5.2159, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.899294, -8, -8, 4.49647, -4.49647, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -6.29505, -8, -8, 8, -8, 8, 0.179859, -0.539576, -2.69788, -8, -8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -0.179857, 0.359716, -3.0576, 8, -8, -8, -8)
 2:1/0 = 0
 2:2/0 = 0
 2:0/0 = 0
@@ -33,9 +37,13 @@ texture = ExtResource("4_rtdbc")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_46d7v"]
 texture = ExtResource("5_oxcxk")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.81392, -1.94849, -2.0058, -4.98584, 8, -4.98584, 8, 8, -4.98584, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.75661, 1.83387, -4.98584, 4.75661, -2.06311, 4.87122, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-5.04315, -8, -4.92853, -4.0689, -2.06311, -1.3754, 8, -1.14617, 8, -8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -1.14617, 1.83387, -1.14617, 4.92853, -4.24083, 4.87122, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1uvay"]
 texture = ExtResource("6_vamuc")
@@ -907,13 +915,21 @@ texture = ExtResource("10_8atrh")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1ja8k"]
 texture = ExtResource("11_nwkkl")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.13675, -5.93534, 8, -5.93534, 8, 8, -4.0689, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.96008, 4.81392, -5.96009, 4.87122, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.95689, -8, -4.0116, 8, 8, 8, 8, -8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.92853, -8, 4.92853, 8, -8, 8)
 0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.0689, -8, -4.12621, 8, 8, 8, 8, -8)
 1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4.92853, -8, 4.87122, 8, -8, 8)
 0:3/0 = 0
+0:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-4.13675, -8, -3.95689, -3.95689, 8, -4.13675, 8, -8)
 1:3/0 = 0
+1:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -3.95689, 4.31661, -3.95689, 4.49647, -8, -8, -8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p2o7x"]
 texture = ExtResource("5_4ggaf")

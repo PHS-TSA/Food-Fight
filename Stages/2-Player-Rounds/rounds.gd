@@ -1,5 +1,8 @@
 extends Node2D
 
+const MAPS = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
+const PLAYER1 = preload("res://Tanks/Player/Player1.tscn")
+const PLAYER2 = preload("res://Tanks/Player/Player2.tscn")
 
 var players = [] #holds tank objects
 var player_wins = []
@@ -11,6 +14,26 @@ var card:String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Choose a map
+	add_child(MAPS[randi_range(0,len(MAPS)-1)].instantiate())
+	
+	#Spawn Players at spawn points
+	for child in self.get_children():
+		#This code isn't great. I just want to go to be and have it work
+		print(child)
+		if(len(child.get_children()) > 2):
+			if(child.get_child(0).name == "Player1Spawn"):
+				var spawnedPlayer1 = PLAYER1.instantiate()
+				spawnedPlayer1.position = child.get_node("Player1Spawn").global_position
+				add_child(spawnedPlayer1)
+			if(child.get_child(1).name == "Player2Spawn"):
+				var spawnedPlayer2 = PLAYER2.instantiate()
+				spawnedPlayer2.position = child.get_node("Player2Spawn").global_position
+				add_child(spawnedPlayer2)
+	#var spawnedPlayer1 = PLAYER1.instantiate()
+	#spawnedPlayer1.position = get_child()
+	
+	MusicPlayer.play_music_level()
 	var tank_index = 0
 	var connections = [] #stores signal connections
 	for child in self.get_children(): #loops through the tree to find tanks
@@ -114,37 +137,37 @@ func apply_cards(): # Needs to apply card stats to the corresponding tank and re
 		tank = players[Global.G_tanks_picking[i]] 
 		match card:
 			#Commons
-			"Pointer_Bullets": 
+			"Heavy-Food": 
 				tank.damage *= 1.2
-			"Reinforced_Armor":
+			"Jacket":
 				tank.maxHealth *= 1.2
 				tank.health = tank.maxHealth
-			"Speedy_Bullets":
+			"Fast-Flying":
 				tank.bulletSpeed *= 1.2
 				
 			#uncommon
-			"Galvanized_Steel_Plating":
+			"Watermelon-Helmet":
 				tank.maxHealth *= 1.4
 				tank.health = tank.maxHealth
-			"Bulking_Season":
+			"Cabbage":
 				tank.bulletSize *= 1.5
-			"Long_Range":
+			"Long-Range":
 				tank.bulletRange *= 3
-			"Super_Pointy_Bullets":
+			"Super-Heavy-Food":
 				tank.damage *= 1.4
 			
 			#rare
-			"Mechanic_on_Board":
+			"Vitamins":
 				tank.regen += 0.01 #percent based system
-			"Fire_Bullets":
+			"Pepper":
 				tank.fireBullets = true
-			"Super_Speed":
+			"Super-Shoes":
 				tank.tankSpeed *= 2
-			"Short_Fuse":
+			"Short-Range":
 				tank.damage *= 2
 				tank.bulletRange /= 2
 			#legendary
-			"Atom_Bullets":
+			"Walnuts":
 				tank.bulletSize *= 0.2
 				tank.bulletSpeed *= 2
 				tank.damage *= 1.5

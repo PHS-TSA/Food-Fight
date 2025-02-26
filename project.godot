@@ -10,19 +10,21 @@ config_version=5
 
 [application]
 
-config/name="TankGameTest"
+config/name="Food-f Ight - Copy (1)"
 run/main_scene="res://Stages/start_menu.tscn"
-config/features=PackedStringArray("4.3", "GL Compatibility")
+config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://global.gd"
+MusicPlayer="*res://music_player.tscn"
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+window/size/mode=2
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 

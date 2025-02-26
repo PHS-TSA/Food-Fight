@@ -1,8 +1,11 @@
-[gd_scene load_steps=4 format=3 uid="uid://dndnjx8y0j7jd"]
+[gd_scene load_steps=6 format=3 uid="uid://dndnjx8y0j7jd"]
 
-[ext_resource type="Script" path="res://win_label.gd" id="1_10v12"]
-[ext_resource type="Script" path="res://rematch_button.gd" id="2_st7fa"]
-[ext_resource type="Script" path="res://menu_button.gd" id="3_eynpv"]
+[ext_resource type="Script" uid="uid://isllvjkpik30" path="res://win_label.gd" id="1_10v12"]
+[ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_1txte"]
+[ext_resource type="Script" uid="uid://dv0i5i3nhvbja" path="res://rematch_button.gd" id="2_st7fa"]
+[ext_resource type="Script" uid="uid://bbqmbo7qxnjbn" path="res://menu_button.gd" id="3_eynpv"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_26557"]
 
 [node name="WinScreen" type="Node2D"]
 
@@ -10,17 +13,27 @@
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -329.0
-offset_top = -342.0
-offset_right = 329.0
-offset_bottom = -205.0
+offset_left = -304.0
+offset_top = -309.0
+offset_right = 354.0
+offset_bottom = -172.0
 grow_horizontal = 2
+rotation = 0.0876963
 size_flags_horizontal = 0
 theme_override_font_sizes/font_size = 100
 text = "Player 1 Won!"
 script = ExtResource("1_10v12")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.85, 1.85)
+
+[node name="Awesome-sauce" type="Sprite2D" parent="Camera2D"]
+modulate = Color(1, 1, 1, 0.756863)
+z_index = -1
+material = SubResource("CanvasItemMaterial_26557")
+position = Vector2(-0.999985, -0.999996)
+scale = Vector2(0.565, 0.564)
+texture = ExtResource("2_1txte")
 
 [node name="RematchButton" type="Button" parent="."]
 anchors_preset = 8
@@ -28,13 +41,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -169.5
-offset_top = -52.0
-offset_right = 169.5
-offset_bottom = 52.0
+offset_left = -148.0
+offset_top = -97.0
+offset_right = 136.0
+offset_bottom = 7.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 50
 text = "Rematch?"
 script = ExtResource("2_st7fa")
 
@@ -44,13 +57,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -329.0
-offset_top = 106.0
-offset_right = 328.0
-offset_bottom = 210.0
+offset_left = -292.0
+offset_top = 33.0
+offset_right = 221.0
+offset_bottom = 137.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_font_sizes/font_size = 70
+theme_override_font_sizes/font_size = 50
 text = "Back to Main Menu"
 script = ExtResource("3_eynpv")
 

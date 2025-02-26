@@ -1,0 +1,71 @@
+[gd_scene load_steps=7 format=3 uid="uid://dl68l2jnvfjca"]
+
+[ext_resource type="Script" uid="uid://cs380ebqfps5l" path="res://Tanks/Player/player2.gd" id="1_ignp0"]
+[ext_resource type="Texture2D" uid="uid://b33qyoj5rhw34" path="res://Assets/Tanks/BlueCharacter.png" id="2_sl4e2"]
+[ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_bks2m"]
+[ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_1ij55"]
+[ext_resource type="AudioStream" uid="uid://gpefi6l0d6tq" path="res://Assets/Audio/090035_splatwav-91604.mp3" id="5_1oier"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
+size = Vector2(60, 52)
+
+[node name="Player_Tank" type="CharacterBody2D"]
+collision_layer = 3
+collision_mask = 3
+motion_mode = 1
+script = ExtResource("1_ignp0")
+
+[node name="PlayerModel" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(1.33333, 1.25697)
+texture = ExtResource("2_sl4e2")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(0.99999, 0)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7ianc")
+
+[node name="Fire_Timer" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="Fire" type="ColorRect" parent="."]
+visible = false
+z_index = 2
+offset_left = -155.0
+offset_top = 10.0
+offset_right = 110.0
+offset_bottom = 90.0
+color = Color(1, 0.596078, 0, 1)
+
+[node name="Attack_Speed" type="Timer" parent="."]
+
+[node name="HealthBar" parent="." instance=ExtResource("3_bks2m")]
+offset_left = -38.0
+offset_top = -47.0
+offset_right = 63.0
+offset_bottom = -20.0
+rotation = 0.0
+scale = Vector2(0.75, 0.75)
+
+[node name="PivotPoint" type="Marker2D" parent="."]
+unique_name_in_owner = true
+
+[node name="PlayerHand" type="Sprite2D" parent="PivotPoint"]
+unique_name_in_owner = true
+z_index = 1
+position = Vector2(48, 0)
+scale = Vector2(0.5, 1)
+texture = ExtResource("4_1ij55")
+
+[node name="FirePoint" type="Marker2D" parent="PivotPoint/PlayerHand"]
+unique_name_in_owner = true
+position = Vector2(22, -4)
+
+[node name="SplatSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_1oier")
+
+[connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
+[connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

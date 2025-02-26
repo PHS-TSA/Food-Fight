@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://56hplkhf45aw"]
 
 [ext_resource type="PackedScene" uid="uid://bh4e7n6ptavvp" path="res://Cards/card_button.tscn" id="1_rdmnm"]
-[ext_resource type="Script" path="res://Cards/card_view.gd" id="1_ymyb7"]
+[ext_resource type="Script" uid="uid://gj0f3j0lsi68" path="res://Cards/card_view.gd" id="1_ymyb7"]
 
 [node name="Card_View" type="Control"]
 layout_mode = 3
@@ -57,5 +57,5 @@ offset_top = -747.0
 offset_right = 1435.0
 offset_bottom = -610.0
 theme_override_font_sizes/font_size = 100
-text = "Tank # is picking!"
+text = "Player # is picking!"
 horizontal_alignment = 1

@@ -4,6 +4,7 @@ extends Area2D
 var velocity := Vector2.from_angle(self.global_rotation)
 var traveled_distance := 0.0
 
+
 #stats
 var speed:float
 var range:float 

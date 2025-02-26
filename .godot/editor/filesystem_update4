@@ -27,3 +27,5 @@ res://Cards/card_view.tscn
 res://Stages/quitbutton.gd
 res://Stages/Maps/map_1.tscn
 res://Stages/Maps/map_2.tscn
+res://Tanks/Player/Player1.tscn
+res://Tanks/Player/Player2.tscn

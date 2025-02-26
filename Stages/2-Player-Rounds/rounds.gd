@@ -1,8 +1,8 @@
 extends Node2D
 
 const MAPS = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
-const PLAYER1 = preload("res://Tanks/Player/player_tank.tscn")
-const PLAYER2 = preload("res://Tanks/Player/player2_tank_test.tscn")
+const PLAYER1 = preload("res://Tanks/Player/Player1.tscn")
+const PLAYER2 = preload("res://Tanks/Player/Player2.tscn")
 
 var players = [] #holds tank objects
 var player_wins = []
@@ -23,12 +23,10 @@ func _ready():
 		print(child)
 		if(len(child.get_children()) > 2):
 			if(child.get_child(0).name == "Player1Spawn"):
-				print("we spawning player 1 fr")
 				var spawnedPlayer1 = PLAYER1.instantiate()
 				spawnedPlayer1.position = child.get_node("Player1Spawn").global_position
 				add_child(spawnedPlayer1)
 			if(child.get_child(1).name == "Player2Spawn"):
-				print("we spawning player 2 fr")
 				var spawnedPlayer2 = PLAYER2.instantiate()
 				spawnedPlayer2.position = child.get_node("Player2Spawn").global_position
 				add_child(spawnedPlayer2)

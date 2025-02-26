@@ -25,3 +25,5 @@ res://Cards/card_view.gd
 res://global.gd
 res://Cards/card_view.tscn
 res://Stages/quitbutton.gd
+res://Stages/Maps/map_1.tscn
+res://Stages/Maps/map_2.tscn

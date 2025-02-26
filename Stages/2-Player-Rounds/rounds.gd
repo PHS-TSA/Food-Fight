@@ -1,5 +1,6 @@
 extends Node2D
 
+const maps = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
 
 var players = [] #holds tank objects
 var player_wins = []
@@ -11,6 +12,9 @@ var card:String
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	#Choose a map
+	add_child(maps[randi_range(0,len(maps)-1)].instantiate())
+	
 	MusicPlayer.play_music_level()
 	var tank_index = 0
 	var connections = [] #stores signal connections

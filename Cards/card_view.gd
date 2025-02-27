@@ -20,10 +20,11 @@ func _ready():
 	%Card3.card_picked.connect(self._on_card_picked)
 	generate_cards()
 	print(picks_left)
-	print(card_list[0].card_name)
-	print(card_list[1].card_name)
-	print(card_list[2].card_name)
+	#print(card_list[0].card_name)
+	#print(card_list[1].card_name)
+	#print(card_list[2].card_name)
 	# THIS NEEDS TO CHANGE FOR MULTI AI SUPPORT
+	await get_tree().create_timer(2.0).timeout
 	if(Global.mode_selected == "res://Stages/2-Player-Rounds/round_scene_ai.tscn" and tanks_picking[0] != 0): #Have ai pick
 		#Goes through generated picked cards and picks rarest one
 		for card in card_list:
@@ -71,8 +72,10 @@ func generate_cards():
 			texture = load("res://Cards/Food-Card-Assets/Common/"+random_card+".png")
 			card.texture_normal = texture
 			card.card_name = random_card
-
-
+	
+	
+	
+	
 
 func _on_card_picked():
 	picks_left -= 1
@@ -80,7 +83,5 @@ func _on_card_picked():
 	if(picks_left>0): #for 2+ player support
 		generate_cards()
 	else:
-		print(Global.mode_selected)
-		print("i should be swapping scences but i'm stupid")
 		self.get_tree().change_scene_to_file(Global.mode_selected) # THIS NEEDS TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL
 		

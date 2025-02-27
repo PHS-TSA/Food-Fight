@@ -24,22 +24,21 @@ text = "2 Player Food Fight"
 script = ExtResource("2_h26ai")
 
 [node name="1PlayerAIButton" type="Button" parent="."]
-offset_left = -188.0
-offset_top = -56.0
-offset_right = 403.0
-offset_bottom = 90.0
+offset_left = -193.247
+offset_top = -52.0
+offset_right = 397.753
+offset_bottom = 45.0
 rotation = 0.0872665
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
-text = "1 Player Food Fight vs AI
-(WIP)"
+text = "1 Player Food Fight vs AI"
 script = ExtResource("2_j4v5v")
 
 [node name="SettingsButton" type="Button" parent="."]
-offset_left = -148.0
-offset_top = 67.0
-offset_right = 318.0
-offset_bottom = 144.0
+offset_left = -150.247
+offset_top = 38.0
+offset_right = 315.753
+offset_bottom = 115.0
 rotation = 0.0872665
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
@@ -47,10 +46,10 @@ text = "Settings WIP"
 script = ExtResource("2_h26ai")
 
 [node name="Quitbutton" type="Button" parent="."]
-offset_left = -152.0
-offset_top = 140.0
-offset_right = 314.0
-offset_bottom = 217.0
+offset_left = -154.247
+offset_top = 111.0
+offset_right = 311.753
+offset_bottom = 188.0
 rotation = 0.0872665
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50

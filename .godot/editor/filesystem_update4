@@ -1,0 +1,14 @@
+res://Stages/2-Player-Rounds/round_scene.tscn
+res://Stages/start_menu.tscn
+res://Stages/2-Player-Rounds/round_scene_ai.tscn
+res://round_config_ui.tscn
+res://Tanks/AI/ai_tank.tscn
+res://Tanks/AI/PlayerAI.tscn
+res://Tanks/Player/Player2.tscn
+res://Stages/Maps/map_1.tscn
+res://Stages/Maps/map_2.tscn
+res://Tanks/Player/Player1.tscn
+res://music_player.tscn
+res://music_player.gd
+res://Tanks/AI/ai_tank.gd
+res://Stages/layer_0.gd

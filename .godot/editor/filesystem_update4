@@ -12,3 +12,7 @@ res://music_player.tscn
 res://music_player.gd
 res://Tanks/AI/ai_tank.gd
 res://Stages/layer_0.gd
+res://Cards/card_view.tscn
+res://Cards/card_view.gd
+res://Stages/2-Player-Rounds/rounds.gd
+res://rematch_button.gd

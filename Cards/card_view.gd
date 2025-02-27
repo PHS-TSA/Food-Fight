@@ -19,6 +19,30 @@ func _ready():
 	%Card2.card_picked.connect(self._on_card_picked)
 	%Card3.card_picked.connect(self._on_card_picked)
 	generate_cards()
+	print(picks_left)
+	print(card_list[0].card_name)
+	print(card_list[1].card_name)
+	print(card_list[2].card_name)
+	# THIS NEEDS TO CHANGE FOR MULTI AI SUPPORT
+	if(Global.mode_selected == "res://Stages/2-Player-Rounds/round_scene_ai.tscn" and tanks_picking[0] != 0): #Have ai pick
+		#Goes through generated picked cards and picks rarest one
+		for card in card_list:
+			if(Global.legendary_cards.has(card.card_name)):
+				Global.G_cards_picked.append(card.card_name)
+				_on_card_picked()
+				break
+			if(Global.rare_cards.has(card.card_name)):
+				Global.G_cards_picked.append(card.card_name)
+				_on_card_picked()
+				break
+			if(Global.uncommon_cards.has(card.card_name)):
+				Global.G_cards_picked.append(card.card_name)
+				_on_card_picked()
+				break
+			if(Global.common_cards.has(card.card_name)):
+				Global.G_cards_picked.append(card.card_name)
+				_on_card_picked()
+				break
 	
 
 
@@ -52,10 +76,11 @@ func generate_cards():
 
 func _on_card_picked():
 	picks_left -= 1
-	
-	if(picks_left>0):
+	print(Global.G_cards_picked)
+	if(picks_left>0): #for 2+ player support
 		generate_cards()
 	else:
+		print(Global.mode_selected)
+		print("i should be swapping scences but i'm stupid")
 		self.get_tree().change_scene_to_file(Global.mode_selected) # THIS NEEDS TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+		

@@ -7,4 +7,4 @@ extends Button
 func _on_pressed() -> void:
 	#Change this if adding in random maps
 	Global.reset_stats()
-	self.get_tree().change_scene_to_file("res://Stages/2-Player-Rounds/round_scene.tscn")
+	self.get_tree().change_scene_to_file(Global.mode_selected)

@@ -9,3 +9,6 @@ res://Tanks/Player/Player2.tscn
 res://Stages/Maps/map_2.tscn
 res://Tanks/Player/Player1.tscn
 res://Cards/card_view.tscn
+res://global.gd
+res://start_button.gd
+res://Tanks/Player/player_tank.gd

@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dojnvrscvvajf"]
+[gd_scene load_steps=11 format=3 uid="uid://dojnvrscvvajf"]
 
 [ext_resource type="Script" uid="uid://bwf5k4yd6inc6" path="res://Tanks/AI/ai_tank.gd" id="1_itdjn"]
 [ext_resource type="Texture2D" uid="uid://b33qyoj5rhw34" path="res://Assets/Tanks/BlueCharacter.png" id="2_xtaw3"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_f8nk8"]
 [ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_h2g7y"]
 [ext_resource type="AudioStream" uid="uid://gpefi6l0d6tq" path="res://Assets/Audio/090035_splatwav-91604.mp3" id="5_8h4hp"]
+[ext_resource type="Shader" uid="uid://c3wm3sqd2ij3r" path="res://flat_fire.gdshader" id="6_vqroq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 size = Vector2(60, 52)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_h06le"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bnqnx"]
+noise = SubResource("FastNoiseLite_h06le")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yilne"]
+shader = ExtResource("6_vqroq")
+shader_parameter/yoffset = 0.6
+shader_parameter/animation_speed = 0.5
+shader_parameter/flame_color = Color(0.894118, 0.4, 0, 1)
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_bnqnx")
 
 [node name="PlayerAI" type="CharacterBody2D"]
 collision_layer = 3
@@ -31,16 +44,6 @@ wait_time = 10.0
 one_shot = true
 
 [node name="Attack_Speed" type="Timer" parent="."]
-
-[node name="Fire" type="ColorRect" parent="."]
-visible = false
-z_index = 2
-offset_left = -34.0
-offset_top = 10.0
-offset_right = 231.0
-offset_bottom = 90.0
-scale = Vector2(0.280001, 0.280001)
-color = Color(1, 0.596078, 0, 1)
 
 [node name="HealthBar" parent="." instance=ExtResource("3_f8nk8")]
 offset_left = -38.0
@@ -75,6 +78,17 @@ avoidance_enabled = true
 radius = 50.0
 max_speed = 20000.0
 debug_enabled = true
+
+[node name="Fire" type="ColorRect" parent="."]
+visible = false
+z_index = 2
+material = SubResource("ShaderMaterial_yilne")
+offset_left = -24.0
+offset_top = -11.0
+offset_right = 151.0
+offset_bottom = 140.0
+scale = Vector2(0.280001, 0.280001)
+color = Color(1, 0.596078, 0, 1)
 
 [connection signal="timeout" from="Fire_Timer" to="." method="_on_fire_timer_timeout"]
 [connection signal="timeout" from="Attack_Speed" to="." method="_on_attack_speed_timeout"]

@@ -1,13 +1,26 @@
-[gd_scene load_steps=7 format=3 uid="uid://dmdsynnjc3w7k"]
+[gd_scene load_steps=11 format=3 uid="uid://dmdsynnjc3w7k"]
 
 [ext_resource type="Script" uid="uid://bti5vt8m8s73y" path="res://Tanks/Player/player1.gd" id="1_76fum"]
 [ext_resource type="Texture2D" uid="uid://c0t1l0nx1njj1" path="res://Assets/Tanks/Character1Art.png" id="2_l81to"]
+[ext_resource type="Shader" uid="uid://c3wm3sqd2ij3r" path="res://flat_fire.gdshader" id="3_l81to"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_s28if"]
 [ext_resource type="Texture2D" uid="uid://dnc0blg0k6yqb" path="res://Assets/Tanks/CharacterHands.png" id="4_03v8f"]
 [ext_resource type="AudioStream" uid="uid://gpefi6l0d6tq" path="res://Assets/Audio/090035_splatwav-91604.mp3" id="5_eg2j6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ianc"]
 size = Vector2(60, 52)
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_s28if"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_l81to"]
+noise = SubResource("FastNoiseLite_s28if")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_eg2j6"]
+shader = ExtResource("3_l81to")
+shader_parameter/yoffset = 0.6
+shader_parameter/animation_speed = 0.5
+shader_parameter/flame_color = Color(0.894118, 0.4, 0, 1)
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_l81to")
 
 [node name="Player1" type="CharacterBody2D"]
 collision_layer = 7
@@ -33,10 +46,11 @@ one_shot = true
 [node name="Fire" type="ColorRect" parent="."]
 visible = false
 z_index = 2
-offset_left = -34.0
-offset_top = 10.0
-offset_right = 231.0
-offset_bottom = 90.0
+material = SubResource("ShaderMaterial_eg2j6")
+offset_left = -24.0
+offset_top = -11.0
+offset_right = 151.0
+offset_bottom = 140.0
 scale = Vector2(0.280001, 0.280001)
 color = Color(1, 0.596078, 0, 1)
 

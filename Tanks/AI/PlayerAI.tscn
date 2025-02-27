@@ -30,16 +30,17 @@ shape = SubResource("RectangleShape2D_7ianc")
 wait_time = 10.0
 one_shot = true
 
+[node name="Attack_Speed" type="Timer" parent="."]
+
 [node name="Fire" type="ColorRect" parent="."]
 visible = false
 z_index = 2
-offset_left = -155.0
+offset_left = -34.0
 offset_top = 10.0
-offset_right = 110.0
+offset_right = 231.0
 offset_bottom = 90.0
+scale = Vector2(0.280001, 0.280001)
 color = Color(1, 0.596078, 0, 1)
-
-[node name="Attack_Speed" type="Timer" parent="."]
 
 [node name="HealthBar" parent="." instance=ExtResource("3_f8nk8")]
 offset_left = -38.0

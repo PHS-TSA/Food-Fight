@@ -56,13 +56,14 @@ func _physics_process(delta): #Seperate physics process for AI and Player
 	#velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
 	#
 	
-	if(aimMethod): #might wanna update with delta
+	if(Global.G_aimMethod): #might wanna update with delta
 		if(Input.is_action_pressed(aim_left_button)):
 			%PivotPoint.global_rotation -= deg_to_rad(aimSpeed)
 		if(Input.is_action_pressed(aim_right_button)):
 			%PivotPoint.global_rotation += deg_to_rad(aimSpeed)
 	else:
-		%PivotPoint.global_rotation = %PivotPoint.angle_to_point(get_global_mouse_position()) + (PI/2)
+		#%PivotPoint.global_rotation = %PivotPoint.angle_to_point(get_global_mouse_position()) + (PI/2)
+		%PivotPoint.global_rotation = get_angle_to(get_global_mouse_position())
 	
 	if(Input.is_action_pressed(fire_button)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings

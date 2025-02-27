@@ -29,9 +29,10 @@ func _physics_process(delta):
 	#Points cannon to player
 	%PivotPoint.global_rotation = %PivotPoint.global_position.angle_to_point(player.global_position)
 	var intended_velocity = direction * tankSpeed * delta * 0.2
-	print(intended_velocity)
+	#print(nav.velocity)
 	if nav.avoidance_enabled:
 		nav.set_velocity(intended_velocity)
+		velocity = nav.velocity * 2
 	else:
 		_on_navigation_agent_2d_velocity_computed(intended_velocity)
 		

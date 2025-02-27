@@ -19,7 +19,7 @@ var G_maxHealth= []
 var G_tankSpeed = []
 var G_regen = []
 var G_attackSpeed = []
-
+var G_aimMethod
 
 #Bullet Stats
 var G_damage = []

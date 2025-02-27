@@ -12,3 +12,5 @@ res://Cards/card_view.tscn
 res://global.gd
 res://start_button.gd
 res://Tanks/Player/player_tank.gd
+res://score_ui.tscn
+res://Stages/Maps/map_1.tscn

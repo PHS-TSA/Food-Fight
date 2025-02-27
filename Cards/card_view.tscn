@@ -1,7 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://56hplkhf45aw"]
+[gd_scene load_steps=5 format=3 uid="uid://56hplkhf45aw"]
 
 [ext_resource type="PackedScene" uid="uid://bh4e7n6ptavvp" path="res://Cards/card_button.tscn" id="1_rdmnm"]
 [ext_resource type="Script" uid="uid://gj0f3j0lsi68" path="res://Cards/card_view.gd" id="1_ymyb7"]
+[ext_resource type="Texture2D" uid="uid://du0yx558oxaj1" path="res://Assets/Images/cafeteria.jpg" id="2_k6wal"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6wal"]
+bg_color = Color(0.366595, 0.366595, 0.366594, 0.462745)
 
 [node name="Card_View" type="Control"]
 layout_mode = 3
@@ -13,6 +17,11 @@ grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
 script = ExtResource("1_ymyb7")
+
+[node name="BackgroundImage" type="Sprite2D" parent="."]
+position = Vector2(-3.49996, 13.5)
+scale = Vector2(2.991, 2.61833)
+texture = ExtResource("2_k6wal")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -52,11 +61,12 @@ zoom = Vector2(0.7, 0.7)
 [node name="Picking_Label" type="Label" parent="."]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = -1428.0
+offset_left = -467.0
 offset_top = -747.0
-offset_right = 1435.0
+offset_right = 500.0
 offset_bottom = -610.0
 theme_override_font_sizes/font_size = 100
+theme_override_styles/normal = SubResource("StyleBoxFlat_k6wal")
 text = "Player # is picking!"
 horizontal_alignment = 1
 

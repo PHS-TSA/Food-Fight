@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://dhc06en7mfpx8"]
+[gd_scene load_steps=4 format=3 uid="uid://dhc06en7mfpx8"]
 
 [ext_resource type="Script" uid="uid://b2mvo1h8x5tmx" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_l840n"]
+[ext_resource type="PackedScene" uid="uid://be1fkoyf2ygfb" path="res://score_ui.tscn" id="2_lx4ue"]
 [ext_resource type="AudioStream" uid="uid://dbl0rhfx0pbvw" path="res://Assets/Audio/school-bell-199584.mp3" id="4_3uteo"]
 
 [node name="Round_Scene" type="Node2D"]
@@ -12,6 +13,10 @@ player2Path = "res://Tanks/AI/PlayerAI.tscn"
 z_index = 5
 position = Vector2(639, 359)
 zoom = Vector2(1.5, 1.5)
+
+[node name="ScoreUI" parent="Camera2D" instance=ExtResource("2_lx4ue")]
+offset_top = -362.0
+offset_bottom = -362.0
 
 [node name="SchoolBell" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_3uteo")

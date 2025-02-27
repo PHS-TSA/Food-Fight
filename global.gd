@@ -4,6 +4,7 @@ class_name global
 #Round System
 var G_tanks_picking = [] #alligns with cards picked
 var G_cards_picked = [] #make sure to reset these in rounds
+var mode_selected:String
 var total_rounds
 
 #Store Tank stats between rounds:

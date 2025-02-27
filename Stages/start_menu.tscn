@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bjd03uacoxg33"]
+[gd_scene load_steps=6 format=3 uid="uid://bjd03uacoxg33"]
 
 [ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_cvaqr"]
 [ext_resource type="Script" uid="uid://4u03d2xpsvpc" path="res://Stages/2-Player-Rounds/Round_Button.gd" id="2_h26ai"]
+[ext_resource type="Script" uid="uid://wsvfpmyqsvmn" path="res://Stages/1_player_ai_button.gd" id="2_j4v5v"]
 [ext_resource type="Script" uid="uid://b2stfxe6lo2ds" path="res://Stages/quitbutton.gd" id="2_p1d7x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2trhj"]
@@ -12,52 +13,56 @@
 zoom = Vector2(1.85, 1.85)
 
 [node name="2PlayerRoundButton" type="Button" parent="."]
-offset_left = -154.0
-offset_top = -90.0
-offset_right = 312.0
-offset_bottom = -13.0
+offset_left = -151.0
+offset_top = -127.0
+offset_right = 315.0
+offset_bottom = -50.0
+rotation = 0.0872665
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "2 Player Food Fight"
 script = ExtResource("2_h26ai")
 
+[node name="1PlayerAIButton" type="Button" parent="."]
+offset_left = -188.0
+offset_top = -56.0
+offset_right = 403.0
+offset_bottom = 90.0
+rotation = 0.0872665
+scale = Vector2(0.680442, 0.680442)
+theme_override_font_sizes/font_size = 50
+text = "1 Player Food Fight vs AI
+(WIP)"
+script = ExtResource("2_j4v5v")
+
 [node name="SettingsButton" type="Button" parent="."]
-offset_left = -155.0
-offset_top = 144.0
-offset_right = 311.0
-offset_bottom = 221.0
+offset_left = -148.0
+offset_top = 67.0
+offset_right = 318.0
+offset_bottom = 144.0
+rotation = 0.0872665
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "Settings WIP"
 script = ExtResource("2_h26ai")
 
 [node name="Quitbutton" type="Button" parent="."]
-offset_left = -155.0
-offset_top = 205.0
-offset_right = 311.0
-offset_bottom = 282.0
+offset_left = -152.0
+offset_top = 140.0
+offset_right = 314.0
+offset_bottom = 217.0
+rotation = 0.0872665
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "Quit"
 script = ExtResource("2_p1d7x")
-
-[node name="1PlayerAIButton" type="Button" parent="."]
-offset_left = -193.0
-offset_top = 3.0
-offset_right = 398.0
-offset_bottom = 149.0
-scale = Vector2(0.680442, 0.680442)
-theme_override_font_sizes/font_size = 50
-text = "1 Player Food Fight vs AI
-(WIP)"
-script = ExtResource("2_h26ai")
 
 [node name="Title" type="Label" parent="."]
 offset_left = -203.0
 offset_top = -267.0
 offset_right = 200.0
 offset_bottom = -157.0
-rotation = 0.0888626
+rotation = 0.0872665
 theme_override_font_sizes/font_size = 75
 text = "Food Fight"
 horizontal_alignment = 1
@@ -71,6 +76,6 @@ scale = Vector2(0.565297, 0.564491)
 texture = ExtResource("2_cvaqr")
 
 [connection signal="pressed" from="2PlayerRoundButton" to="2PlayerRoundButton" method="_on_pressed"]
+[connection signal="pressed" from="1PlayerAIButton" to="1PlayerAIButton" method="_on_pressed"]
 [connection signal="pressed" from="SettingsButton" to="SettingsButton" method="_on_pressed"]
 [connection signal="pressed" from="Quitbutton" to="Quitbutton" method="_on_pressed"]
-[connection signal="pressed" from="1PlayerAIButton" to="1PlayerAIButton" method="_on_pressed"]

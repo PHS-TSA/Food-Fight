@@ -5,6 +5,8 @@
 
 [node name="Round_Scene" type="Node2D"]
 script = ExtResource("1_obnhm")
+player1Path = "res://Tanks/Player/Player1.tscn"
+player2Path = "res://Tanks/Player/Player2.tscn"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 5

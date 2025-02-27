@@ -56,6 +56,6 @@ func _on_card_picked():
 	if(picks_left>0):
 		generate_cards()
 	else:
-		self.get_tree().change_scene_to_file("res://Stages/2-Player-Rounds/round_scene.tscn") # THIS NEEDS TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL
+		self.get_tree().change_scene_to_file(Global.mode_selected) # THIS NEEDS TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.

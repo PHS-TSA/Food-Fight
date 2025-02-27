@@ -1,8 +1,10 @@
 extends Node2D
 
 const MAPS = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
-const PLAYER1 = preload("res://Tanks/Player/Player1.tscn")
-const PLAYER2 = preload("res://Tanks/Player/Player2.tscn")
+
+@export var player1Path:String
+@export var player2Path:String
+
 
 var players = [] #holds tank objects
 var player_wins = []
@@ -18,6 +20,8 @@ func _ready():
 	add_child(MAPS[randi_range(0,len(MAPS)-1)].instantiate())
 	
 	#Spawn Players at spawn points
+	var PLAYER1 = load(player1Path)
+	var PLAYER2 = load(player2Path)
 	for child in self.get_children():
 		#This code isn't great. I just want to go to be and have it work
 		print(child)

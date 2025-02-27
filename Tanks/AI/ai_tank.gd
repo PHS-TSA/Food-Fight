@@ -27,8 +27,9 @@ func _physics_process(delta):
 
 	rotation = direction.angle()
 	#Points cannon to player
-	%TankTopGreen.global_rotation = %TankTopGreen.global_position.angle_to_point(player.global_position) + (PI/2) 
+	%PivotPoint.global_rotation = %PivotPoint.global_position.angle_to_point(player.global_position)
 	var intended_velocity = direction * tankSpeed * delta * 0.2
+	print(intended_velocity)
 	if nav.avoidance_enabled:
 		nav.set_velocity(intended_velocity)
 	else:
@@ -52,7 +53,7 @@ func _physics_process(delta):
 
 func get_player():
 	for child in get_parent().get_children():
-		if(child.name == "Tank"): #TODO add in support for other player names and multi player and when the ai tank is a child of something other than the tree
+		if(child.name == "Player1"): #TODO add in support for other player names and multi player and when the ai tank is a child of something other than the tree
 			return	child
 
 

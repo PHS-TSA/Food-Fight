@@ -17,3 +17,4 @@ mono_crash.*.json
 # Ignore OS-generated files
 .DS_Store
 Thumbs.db
+.tmp

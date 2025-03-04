@@ -1,6 +1,5 @@
 extends Button
 
-
 #might need to write some good to reset all my global variables
 
 

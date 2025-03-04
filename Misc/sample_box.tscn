@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://b21d1lg4beol2"]
 
-[ext_resource type="Script" path="res://SampleBox.gd" id="1_kq0ba"]
+[ext_resource type="Script" uid="uid://cp2mtyu6evwdo" path="res://Misc/SampleBox.gd" id="1_kq0ba"]
 [ext_resource type="Texture2D" uid="uid://mswl1hrsqgfw" path="res://icon.svg" id="2_iqokd"]
 [ext_resource type="PackedScene" uid="uid://ddb2rh7axbe0c" path="res://Assets/health_bar.tscn" id="3_obvs5"]
 

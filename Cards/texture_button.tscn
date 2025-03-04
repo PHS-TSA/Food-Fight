@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://1xr4kksrhmy0"]
 
 [ext_resource type="Texture2D" uid="uid://bio10d2mrnuru" path="res://Cards/Tank Cards Assets/Legendary/Atom_Bullets.png" id="1_n7ead"]
-[ext_resource type="Script" path="res://Cards/card_button.gd" id="2_n2q3t"]
+[ext_resource type="Script" uid="uid://tpgd8d6mwtdt" path="res://Cards/card_button.gd" id="2_n2q3t"]
 
 [node name="Card" type="TextureButton"]
 offset_right = 750.0

@@ -1,0 +1,106 @@
+---
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  merge_group:
+  schedule:
+    - cron: "0 14 * * 1" # Every Monday at 9 A.M. CST.
+  workflow_dispatch:
+
+env:
+  CI: true
+  GODOT_VERSION: "4.4.0"
+  DENO_VERSION: "v2.2.3"
+
+permissions: {}
+
+jobs:
+  build:
+    name: Build
+    needs: []
+    timeout-minutes: ${{ (matrix.target == 'web') && 5 || 10 }}
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      fail-fast: false
+      matrix:
+        target:
+          - web
+          # - macos
+        include:
+          - target: web
+            os: ubuntu-latest
+            godot-flags: --export-release "Web" build/index.html
+          # - target: macos
+          #   os: macos-latest
+          #   godot-flags: --export-release "OS X"
+
+    permissions:
+      contents: read # Needed to download the repository.
+
+    steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          submodules: recursive
+          clean: true
+          persist-credentials: false
+          set-safe-directory: true
+      - name: 🤖 Set up Godot
+        uses: chickensoft-games/setup-godot@1dc3741f474fcf64a3b302d5fdd263010c200866 # v2.0.0
+        with:
+          version: ${{ env.GODOT_VERSION }}
+          use-dotnet: false
+          include-templates: true
+      - name: 🔬 Verify setup
+        run: godot --version
+      - name: 🔌 Make and delete directories
+        run: mkdir build/ && rm -rf addons/{godot-git-plugin,copilot}
+      - name: 🔧 Build
+        run: godot --headless ${{ matrix.godot-flags }}
+      - name: ⚙️ Upload build
+        if: matrix.target == 'web'
+        uses: actions/upload-artifact@5d5d22a31266ced268874388b861e4b58bb5c2f3 # v4.3.1
+        with:
+          name: build-${{ matrix.target }}
+          path: "./build"
+          if-no-files-found: error
+
+  deploy:
+    name: Deploy to Deno Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    permissions:
+      id-token: write # Needed to authenticate with Deno Deploy.
+    concurrency:
+      group: deploy-${{ github.ref }}
+      cancel-in-progress: true
+
+    steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
+        with:
+          submodules: recursive
+          clean: true
+          persist-credentials: false
+          set-safe-directory: true
+      - name: ⚙️ Download build
+        uses: actions/download-artifact@c850b930e6ba138125429b7e5c93fc707a7f8427 # v4.1.4
+        with:
+          name: build-web
+          path: "./build"
+      - name: 🔧 Deploy
+        uses: denoland/deployctl@612f83df2b874c6908d68de5cf3f36a6538fa8f7 # 1.12.0
+        with:
+          project: "food-fight"
+          entrypoint: server/server.ts
+          include: |
+            server
+            build
+            deno.json
+            deno.lock

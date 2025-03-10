@@ -1,6 +1,6 @@
 extends Node2D
 
-const MAPS = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn")]
+const MAPS = [preload("res://Stages/Maps/map_1.tscn"),preload("res://Stages/Maps/map_2.tscn"),preload("res://Stages/Maps/map_3.tscn"),preload("res://Stages/Maps/map_4.tscn"),preload("res://Stages/Maps/map_5.tscn")]
 
 @export var player1Path:String
 @export var player2Path:String

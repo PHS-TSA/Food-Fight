@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://be1fkoyf2ygfb" path="res://score_ui.tscn" id="2_lx4ue"]
 [ext_resource type="AudioStream" uid="uid://dbl0rhfx0pbvw" path="res://Assets/Audio/school-bell-199584.mp3" id="4_3uteo"]
 
-[node name="Round_Scene" type="Node2D"]
+[node name="Round_Scene2" type="Node2D"]
 script = ExtResource("1_l840n")
 player1Path = "res://Tanks/Player/Player1.tscn"
 player2Path = "res://Tanks/AI/PlayerAI.tscn"

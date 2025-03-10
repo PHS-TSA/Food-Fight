@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bh4e7n6ptavvp" path="res://Cards/card_button.tscn" id="1_rdmnm"]
 [ext_resource type="Script" uid="uid://gj0f3j0lsi68" path="res://Cards/card_view.gd" id="1_ymyb7"]
-[ext_resource type="Texture2D" uid="uid://du0yx558oxaj1" path="res://Assets/Images/cafeteria.jpg" id="2_k6wal"]
+[ext_resource type="Texture2D" uid="uid://c42y2ty5wmoal" path="res://Assets/Images/BackgroundCardSelector (1).png" id="2_k6wal"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6wal"]
 bg_color = Color(0.366595, 0.366595, 0.366594, 0.462745)
@@ -20,7 +20,7 @@ script = ExtResource("1_ymyb7")
 
 [node name="BackgroundImage" type="Sprite2D" parent="."]
 position = Vector2(-3.49996, 13.5)
-scale = Vector2(2.991, 2.61833)
+scale = Vector2(1.70941, 1.49642)
 texture = ExtResource("2_k6wal")
 
 [node name="MarginContainer" type="MarginContainer" parent="."]

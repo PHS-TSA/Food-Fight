@@ -18,7 +18,7 @@ void fragment() {
 	final_color.a = final_color.r;
 	final_color.rgb = flame_color.rgb;
 	COLOR = final_color;
-	
+
 	// Called for every pixel the material is visible on.
 }
 

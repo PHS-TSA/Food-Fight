@@ -50,7 +50,11 @@ func _ready():
 
 
 func generate_cards():
-	%Picking_Label.text = ("Player " + str(tanks_picking[0] + 1) + " is picking!")  #this is broken
+	if(tanks_picking[0] == 0):
+		%Picking_Label.text = ("Red Player is Picking!")
+	elif(tanks_picking[0] == 1):
+		%Picking_Label.text = ("Blue Player is Picking!")  
+	#%Picking_Label.text = ("Player " + str(tanks_picking[0] + 1) + " is picking!")  #this is broken
 
 	for card in card_list:
 		ran = randi_range(1, 100)

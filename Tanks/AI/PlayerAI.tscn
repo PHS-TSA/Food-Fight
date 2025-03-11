@@ -77,7 +77,6 @@ path_postprocessing = 1
 avoidance_enabled = true
 radius = 50.0
 max_speed = 20000.0
-debug_enabled = true
 
 [node name="Fire" type="ColorRect" parent="."]
 visible = false

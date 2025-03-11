@@ -22,7 +22,7 @@ shader_parameter/animation_speed = 0.5
 shader_parameter/flame_color = Color(0.894118, 0.4, 0, 1)
 shader_parameter/noise_texture = SubResource("NoiseTexture2D_03v8f")
 
-[node name="Player_Tank" type="CharacterBody2D"]
+[node name="Player2" type="CharacterBody2D"]
 collision_layer = 3
 collision_mask = 3
 motion_mode = 1

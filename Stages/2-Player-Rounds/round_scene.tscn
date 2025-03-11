@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bh26nrhkdgrtg"]
+[gd_scene load_steps=5 format=3 uid="uid://bh26nrhkdgrtg"]
 
 [ext_resource type="Script" uid="uid://b2mvo1h8x5tmx" path="res://Stages/2-Player-Rounds/rounds.gd" id="1_obnhm"]
 [ext_resource type="PackedScene" uid="uid://be1fkoyf2ygfb" path="res://score_ui.tscn" id="2_o3ipf"]
+[ext_resource type="PackedScene" uid="uid://uolb06pa2sgu" path="res://pause.tscn" id="4_64w15"]
 [ext_resource type="AudioStream" uid="uid://dbl0rhfx0pbvw" path="res://Assets/Audio/school-bell-199584.mp3" id="16_4l075"]
 
 [node name="Round_Scene" type="Node2D"]
@@ -23,3 +24,14 @@ stream = ExtResource("16_4l075")
 autoplay = true
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_64w15")]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 639.0
+offset_top = 359.0
+offset_right = 639.0
+offset_bottom = 359.0

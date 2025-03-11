@@ -6,6 +6,7 @@ var G_tanks_picking := []  # aligns with cards picked
 var G_cards_picked := []  # make sure to reset these in rounds
 var mode_selected: String
 var total_rounds: int
+var autoaim:bool = false
 
 #Store Tank stats between rounds:
 

@@ -12,6 +12,10 @@ var forward_button = "forwards"
 var backwards_button = "backwards"
 var fire_button = "fire"
 
+#Player 
+@onready var player = get_player()
+
+
 #Constructer 
 func _init(
 	p_rotate_left_button: String,
@@ -32,7 +36,6 @@ func _init(
 	fire_button = p_fire_button
 
 func _ready():
-	print("runs")
 	onFire = false
 	health = maxHealth
 	healthBar = $HealthBar
@@ -42,7 +45,6 @@ func _ready():
 	aiFired = false
 	ai = false
 	
-	print(healthBar)
 
 
 func _physics_process(delta): #Seperate physics process for AI and Player 
@@ -55,16 +57,22 @@ func _physics_process(delta): #Seperate physics process for AI and Player
 	#rotationDirection = Input.get_axis(rotate_left_button, rotate_right_button) 
 	#velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
 	#
-	
-	if(Global.G_aimMethod): #might wanna update with delta
-		if(Input.is_action_pressed(aim_left_button)):
-			%PivotPoint.global_rotation -= deg_to_rad(aimSpeed)
-		if(Input.is_action_pressed(aim_right_button)):
-			%PivotPoint.global_rotation += deg_to_rad(aimSpeed)
+	if(Global.autoaim):
+		print(player)
+		if(player != null):
+			%PivotPoint.global_rotation = %PivotPoint.global_position.angle_to_point(player.global_position)
+		else:
+			player = get_player()
 	else:
-		#%PivotPoint.global_rotation = %PivotPoint.angle_to_point(get_global_mouse_position()) + (PI/2)
-		%PivotPoint.global_rotation = get_angle_to(get_global_mouse_position())
-	
+		if(Global.G_aimMethod): #might wanna update with delta
+			if(Input.is_action_pressed(aim_left_button)):
+				%PivotPoint.global_rotation -= deg_to_rad(aimSpeed)
+			if(Input.is_action_pressed(aim_right_button)):
+				%PivotPoint.global_rotation += deg_to_rad(aimSpeed)
+		else:
+			#%PivotPoint.global_rotation = %PivotPoint.angle_to_point(get_global_mouse_position()) + (PI/2)
+			%PivotPoint.global_rotation = get_angle_to(get_global_mouse_position())
+		
 	if(Input.is_action_pressed(fire_button)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
@@ -75,3 +83,18 @@ func _physics_process(delta): #Seperate physics process for AI and Player
 	healthBar.value = health
 	rotation += rotationDirection * rotationSpeed * delta
 	move_and_slide()
+
+
+func get_player():
+	#UPDATE THIS FOR MORE PLAYERS OR AUTO AIM AI
+	if(self.name == "Player1"):
+		for child in get_parent().get_children():
+			if(child.name == "Player2"): #TODO add in support for other player names and multi player and when the ai tank is a child of something other than the tree
+				return child
+			if(child.name == "PlayerAI"):
+				return child
+				
+	elif(self.name == "Player2"):
+		for child in get_parent().get_children():
+			if(child.name == "Player1"): #TODO add in support for other player names and multi player and when the ai tank is a child of something other than the tree
+				return	child

@@ -38,6 +38,8 @@ func _on_restart_pressed():
 
 
 func _on_quit_pressed():
+	get_tree().paused = false
+	Global.reset_stats()
 	self.get_tree().change_scene_to_file("res://Stages/start_menu.tscn")
 	get_tree().paused = false
 

@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dcih6f3787nbh"]
+[gd_scene load_steps=9 format=3 uid="uid://dcih6f3787nbh"]
 
 [ext_resource type="Script" uid="uid://d2cmyv3xo3idn" path="res://start_button.gd" id="1_a1pqa"]
 [ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_7nvef"]
+[ext_resource type="Script" uid="uid://b7gd2cnmkobyv" path="res://check_button.gd" id="3_fwkgv"]
 
 [sub_resource type="Theme" id="Theme_sc1mv"]
 
@@ -10,6 +11,10 @@ LineEdit/constants/minimum_character_width = 4
 LineEdit/font_sizes/font_size = 50
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fwkgv"]
+
+[sub_resource type="Theme" id="Theme_7nvef"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_fwkgv"]
 
 [node name="RoundConfigUI" type="Node2D"]
 
@@ -42,10 +47,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -175.0
-offset_top = 40.0
-offset_right = 175.0
-offset_bottom = 138.0
+offset_left = -177.0
+offset_top = 77.0
+offset_right = 173.0
+offset_bottom = 175.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 65
@@ -79,4 +84,16 @@ position = Vector2(-0.999985, -0.999996)
 scale = Vector2(0.565, 0.564)
 texture = ExtResource("2_7nvef")
 
+[node name="CheckButton" type="CheckButton" parent="."]
+offset_left = -131.0
+offset_top = 2.0
+offset_right = 95.0
+offset_bottom = 65.0
+theme = SubResource("Theme_7nvef")
+theme_override_font_sizes/font_size = 40
+text = "Auto Aim"
+icon = SubResource("CanvasTexture_fwkgv")
+script = ExtResource("3_fwkgv")
+
 [connection signal="pressed" from="StartButton" to="StartButton" method="_on_pressed"]
+[connection signal="pressed" from="CheckButton" to="CheckButton" method="_on_pressed"]

@@ -35,3 +35,5 @@ offset_left = 639.0
 offset_top = 359.0
 offset_right = 639.0
 offset_bottom = 359.0
+size_flags_horizontal = 6
+size_flags_vertical = 3

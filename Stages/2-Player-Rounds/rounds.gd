@@ -20,7 +20,6 @@ var card: String
 
 
 func _ready():
-	print("rounds ready is running")
 	#Choose a map
 	add_child(MAPS[randi_range(0, len(MAPS) - 1)].instantiate())
 

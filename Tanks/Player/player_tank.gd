@@ -58,7 +58,6 @@ func _physics_process(delta): #Seperate physics process for AI and Player
 	#velocity = transform.x * Input.get_axis(backwards_button, forward_button) * tankSpeed * delta
 	#
 	if(Global.autoaim):
-		print(player)
 		if(player != null):
 			%PivotPoint.global_rotation = %PivotPoint.global_position.angle_to_point(player.global_position)
 		else:

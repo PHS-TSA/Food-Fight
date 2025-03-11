@@ -14,7 +14,7 @@ config/name="Food-Fight"
 run/main_scene="res://Stages/start_menu.tscn"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 boot_splash/image="uid://c677sqcuotoq4"
-config/icon="res://icon.svg"
+config/icon="uid://c677sqcuotoq4"
 
 [autoload]
 

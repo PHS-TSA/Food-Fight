@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bh4e7n6ptavvp" path="res://Cards/card_button.tscn" id="1_rdmnm"]
 [ext_resource type="Script" uid="uid://gj0f3j0lsi68" path="res://Cards/card_view.gd" id="1_ymyb7"]
-[ext_resource type="Texture2D" uid="uid://c42y2ty5wmoal" path="res://Assets/Images/BackgroundCardSelector (1).png" id="2_k6wal"]
+[ext_resource type="Texture2D" uid="uid://c42y2ty5wmoal" path="res://Assets/Images/BackgroundCardSelector.png" id="2_k6wal"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6wal"]
 bg_color = Color(0.366595, 0.366595, 0.366594, 0.462745)

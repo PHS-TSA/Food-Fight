@@ -19,34 +19,50 @@ func _ready():
 	%Card2.card_picked.connect(self._on_card_picked)
 	%Card3.card_picked.connect(self._on_card_picked)
 	generate_cards()
-	print(picks_left)
 	#print(card_list[0].card_name)
 	#print(card_list[1].card_name)
 	#print(card_list[2].card_name)
 	# THIS NEEDS TO CHANGE FOR MULTI AI SUPPORT
-	await get_tree().create_timer(2.0).timeout
 	if (
 		Global.mode_selected == "res://Stages/2-Player-Rounds/round_scene_ai.tscn"
 		and tanks_picking[0] != 0
 	):  #Have ai pick
 		#Goes through generated picked cards and picks rarest one
+		var card_picked = false
+		await get_tree().create_timer(2.0).timeout
+		# Check for legendary cards first
 		for card in card_list:
-			if Global.legendary_cards.has(card.card_name):
+			if Global.legendary_cards.has(card.card_name) and not card_picked:
 				Global.G_cards_picked.append(card.card_name)
 				_on_card_picked()
+				card_picked = true
 				break
-			if Global.rare_cards.has(card.card_name):
-				Global.G_cards_picked.append(card.card_name)
-				_on_card_picked()
-				break
-			if Global.uncommon_cards.has(card.card_name):
-				Global.G_cards_picked.append(card.card_name)
-				_on_card_picked()
-				break
-			if Global.common_cards.has(card.card_name):
-				Global.G_cards_picked.append(card.card_name)
-				_on_card_picked()
-				break
+				
+		# If no legendary card found, check for rare cards
+		if not card_picked:
+			for card in card_list:
+				if Global.rare_cards.has(card.card_name):
+					Global.G_cards_picked.append(card.card_name)
+					_on_card_picked()
+					card_picked = true
+					break
+					
+		# If still no card found, check for uncommon cards
+		if not card_picked:
+			for card in card_list:
+				if Global.uncommon_cards.has(card.card_name):
+					Global.G_cards_picked.append(card.card_name)
+					_on_card_picked()
+					card_picked = true
+					break
+					
+		# If still no card found, pick a common card
+		if not card_picked:
+			for card in card_list:
+				if Global.common_cards.has(card.card_name):
+					Global.G_cards_picked.append(card.card_name)
+					_on_card_picked()
+					break
 
 
 func generate_cards():
@@ -86,4 +102,5 @@ func _on_card_picked():
 	if picks_left > 0:  #for 2+ player support
 		generate_cards()
 	else:
+		print(Global.mode_selected)
 		self.get_tree().change_scene_to_file(Global.mode_selected)  # THIS NEEDS TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL

@@ -18,6 +18,7 @@ zoom = Vector2(1.5, 1.5)
 [node name="ScoreUI" parent="Camera2D" instance=ExtResource("2_o3ipf")]
 offset_top = -362.0
 offset_bottom = -362.0
+metadata/_edit_use_anchors_ = true
 
 [node name="SchoolBell" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("16_4l075")

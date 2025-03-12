@@ -1,0 +1,74 @@
+[gd_scene load_steps=4 format=3 uid="uid://cm24wjbhtkuo3"]
+
+[ext_resource type="Texture2D" uid="uid://c42y2ty5wmoal" path="res://Assets/Images/BackgroundCardSelector.png" id="1_7n6eb"]
+[ext_resource type="Script" uid="uid://dshcib7bbt0yt" path="res://tutorial.gd" id="1_ehuit"]
+[ext_resource type="Script" uid="uid://cl77a8obwg8du" path="res://back_button.gd" id="2_yb1ct"]
+
+[node name="Tutorial" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ehuit")
+
+[node name="BackgroundCardSelector" type="Sprite2D" parent="."]
+position = Vector2(964.068, 581.5)
+scale = Vector2(1.15075, 1.28981)
+texture = ExtResource("1_7n6eb")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -510.0
+offset_top = 30.0
+offset_right = 510.0
+offset_bottom = -178.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/ScrollContainer"]
+custom_minimum_size = Vector2(1000, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Welcome to Food Fight! In Food Fight the player must compete againts another player or AI in a Food Fight for a set number of rounds. Each round, the loser to gets to pick a card that provides them a power up. The game ends once one player was won the selected number of rounds"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Label2" type="Label" parent="PanelContainer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(400, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "The controls are also very simple. For two player, the red player uses WASD to move, Q and E to aim, and F to shoot. The blue player uses the arrow keys to move, , and . to aim, and / to shoot. It's recommended to turn on auto aim for 2 player for improved quality of life. For single player, the controls are the same as the red player but the mouse is used for aiming."
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -282.0
+offset_top = -157.0
+offset_right = 283.0
+offset_bottom = -66.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 60
+text = "Back to Main Menu"
+script = ExtResource("2_yb1ct")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

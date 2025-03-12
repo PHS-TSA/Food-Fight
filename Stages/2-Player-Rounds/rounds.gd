@@ -71,7 +71,7 @@ func _on_tank_dead(index: int):  #Use index to determine which player gets a car
 				#need to figure out why this causes players to get to choose two cards after first win
 				if player_wins[i] == Global.total_rounds:
 					print("Player has won ", i + 1)
-					Global.G_winningPlayer = str(i + 1)
+					Global.G_winningPlayer = i + 1
 					self.get_tree().change_scene_to_file("res://win_screen.tscn")
 					return
 			players[i].health = players[i].maxHealth

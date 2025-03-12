@@ -1,14 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjd03uacoxg33"]
+[gd_scene load_steps=5 format=3 uid="uid://bjd03uacoxg33"]
 
 [ext_resource type="Texture2D" uid="uid://c677sqcuotoq4" path="res://Assets/Images/foodfightlogo.png" id="1_f04u3"]
+[ext_resource type="Script" uid="uid://dlr4y8qge4k3m" path="res://Stages/start_menu.gd" id="1_nlly5"]
 [ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_cvaqr"]
-[ext_resource type="Script" uid="uid://4u03d2xpsvpc" path="res://Stages/2-Player-Rounds/Round_Button.gd" id="2_h26ai"]
-[ext_resource type="Script" uid="uid://wsvfpmyqsvmn" path="res://Stages/1_player_ai_button.gd" id="2_j4v5v"]
-[ext_resource type="Script" uid="uid://b2stfxe6lo2ds" path="res://Stages/quitbutton.gd" id="2_p1d7x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2trhj"]
 
-[node name="Node2D" type="Node2D"]
+[node name="StartMenu" type="Node2D"]
+script = ExtResource("1_nlly5")
 
 [node name="Foodfightlogo" type="Sprite2D" parent="."]
 position = Vector2(-6.47684, -213.807)
@@ -27,7 +26,6 @@ offset_bottom = -30.0
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "2 Player Food Fight"
-script = ExtResource("2_h26ai")
 
 [node name="1PlayerAIButton" type="Button" parent="."]
 offset_left = -164.0
@@ -37,7 +35,6 @@ offset_bottom = 49.0
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "Single Player vs AI"
-script = ExtResource("2_j4v5v")
 
 [node name="TutorialButton" type="Button" parent="."]
 offset_left = -164.0
@@ -47,7 +44,6 @@ offset_bottom = 120.0
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "How To Play"
-script = ExtResource("2_h26ai")
 
 [node name="Quitbutton" type="Button" parent="."]
 offset_left = -164.0
@@ -57,7 +53,6 @@ offset_bottom = 195.0
 scale = Vector2(0.680442, 0.680442)
 theme_override_font_sizes/font_size = 50
 text = "Quit"
-script = ExtResource("2_p1d7x")
 
 [node name="Awesome-sauce" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.756863)
@@ -67,7 +62,8 @@ position = Vector2(-0.999985, -0.999996)
 scale = Vector2(0.565297, 0.564491)
 texture = ExtResource("2_cvaqr")
 
-[connection signal="pressed" from="2PlayerRoundButton" to="2PlayerRoundButton" method="_on_pressed"]
-[connection signal="pressed" from="1PlayerAIButton" to="1PlayerAIButton" method="_on_pressed"]
+[connection signal="pressed" from="2PlayerRoundButton" to="." method="_on_player_round_button_pressed"]
+[connection signal="pressed" from="1PlayerAIButton" to="." method="_on_player_ai_button_pressed"]
+[connection signal="pressed" from="TutorialButton" to="." method="_on_tutorial_button_pressed"]
 [connection signal="pressed" from="TutorialButton" to="TutorialButton" method="_on_pressed"]
-[connection signal="pressed" from="Quitbutton" to="Quitbutton" method="_on_pressed"]
+[connection signal="pressed" from="Quitbutton" to="." method="_on_quitbutton_pressed"]

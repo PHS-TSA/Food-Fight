@@ -13,7 +13,7 @@ var autoaim:bool = false
 #Wins
 #TODO change implementation if doing more than two players
 var G_wins := [0, 0]
-var G_winningPlayer := ""
+var G_winningPlayer:int
 
 #Tank Stats
 var G_maxHealth := []
@@ -46,7 +46,7 @@ func reset_stats() -> void:
 	#Wins
 	#TODO: change implementation if doing more than two players
 	G_wins = [0, 0]
-	G_winningPlayer = ""
+	G_winningPlayer = 1
 
 	#Tank Stats
 	G_maxHealth = []

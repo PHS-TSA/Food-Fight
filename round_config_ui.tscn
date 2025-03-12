@@ -72,7 +72,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = SubResource("Theme_4dijn")
 min_value = 1.0
-value = 1.0
+value = 10.0
 rounded = true
 alignment = 1
 

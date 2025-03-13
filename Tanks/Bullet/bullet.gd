@@ -29,6 +29,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
+	if(traveled_distance < 0.1):
+		return
 	queue_free()
 	if(body.has_method("take_damage")):
 		body.take_damage(damage,fireB,aiFired)

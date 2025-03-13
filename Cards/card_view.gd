@@ -73,7 +73,8 @@ func generate_cards():
 	#%Picking_Label.text = ("Player " + str(tanks_picking[0] + 1) + " is picking!")  #this is broken
 
 	for card in card_list:
-		ran = randi_range(1, 100)
+		#ran = randi_range(1, 100)
+		ran = 51
 		if ran >= 95:
 			random_card = Global.legendary_cards[randi_range(0, len(Global.legendary_cards) - 1)]
 			texture = load("res://Cards/Food-Card-Assets/Legendary/" + str(random_card) + ".png")

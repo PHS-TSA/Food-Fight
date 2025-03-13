@@ -24,6 +24,7 @@ func _physics_process(delta: float) -> void:
 	#the velocity.rotated just gives the angle as a vector i think
 	self.position += velocity.rotated(global_rotation-(PI/2)) * speed * delta
 	self.traveled_distance += speed * delta
+	print(self.speed)
 	if self.traveled_distance > range:
 		queue_free()
 

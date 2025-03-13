@@ -76,7 +76,7 @@ texture = ExtResource("4_03v8f")
 
 [node name="FirePoint" type="Marker2D" parent="PivotPoint/PlayerHand"]
 unique_name_in_owner = true
-position = Vector2(24, -4)
+position = Vector2(28, -4)
 
 [node name="SplatSound" type="AudioStreamPlayer2D" parent="."]
 unique_name_in_owner = true

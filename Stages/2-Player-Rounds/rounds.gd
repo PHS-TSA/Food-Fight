@@ -131,6 +131,10 @@ func apply_stats():  #applys and resets stats
 		players[i].bulletRange = Global.G_bulletRange[i]
 		players[i].bulletSize = Global.G_bulletSize[i]
 		players[i].fireBullets = Global.G_fireBullets[i]
+		if players[i].bulletSize < 0.1:  # After 0.1 they are invisble and not fun
+					players[i].bulletSize = 0.1
+		if(players[i].bulletSpeed > 10000):
+			players[i].bulletSpeed == 10000
 	Global.G_maxHealth = []
 	Global.G_tankSpeed = []
 	Global.G_regen = []
@@ -190,8 +194,7 @@ func apply_cards():  # Needs to apply card stats to the corresponding tank and r
 				tank.bulletSize *= 0.2
 				tank.bulletSpeed *= 2
 				tank.damage *= 1.5
-				if tank.bulletSize < 0.1:  # After 0.1 they are invisble and not fun
-					tank.bulletSize = 0.1
+				
 			"Gatling-Pea":
 				tank.bulletSpeed *= 2
 				tank.attackSpeed /= 3

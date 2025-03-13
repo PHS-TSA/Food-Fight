@@ -11,6 +11,7 @@ var aim_right_button = "aim_right"
 var forward_button = "forwards"
 var backwards_button = "backwards"
 var fire_button = "fire"
+var fire_mouse = "fire_mouse"
 
 #Player 
 @onready var player = get_player()
@@ -72,7 +73,7 @@ func _physics_process(delta): #Seperate physics process for AI and Player
 			#%PivotPoint.global_rotation = %PivotPoint.angle_to_point(get_global_mouse_position()) + (PI/2)
 			%PivotPoint.global_rotation = get_angle_to(get_global_mouse_position())
 		
-	if(Input.is_action_pressed(fire_button)):
+	if(Input.is_action_pressed(fire_button) or (Input.is_action_pressed(fire_mouse) and not Global.G_aimMethod)):
 		fire() #could eventually add parameters to make the bullets more fun. Should do that in tank settings
 	
 	if(onFire):

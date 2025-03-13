@@ -52,12 +52,9 @@ func take_damage(damage:float,fire:bool,p_aiFired:bool):
 			fireDamage = damage/10
 			$Fire_Timer.start(10)
 			$Fire.visible = true
-		print(maxHealth)
-		print(health)
 		healthBar.max_value = maxHealth #could be less redudant be need it here so the bar doesn't bug when max health increases
 		health -= damage
 		healthBar.value = health
-		print(health)
 		if(health <= 0):
 			tank_dead.emit(tank_index)
 			#queue_free()

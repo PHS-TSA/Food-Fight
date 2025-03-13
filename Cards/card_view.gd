@@ -19,11 +19,8 @@ func _ready():
 	%Card2.card_picked.connect(self._on_card_picked)
 	%Card3.card_picked.connect(self._on_card_picked)
 	generate_cards()
-	#print(card_list[0].card_name)
-	#print(card_list[1].card_name)
-	#print(card_list[2].card_name)
+
 	# THIS NEEDS TO CHANGE FOR MULTI AI SUPPORT
-	print("attack speed in card view: ", Global.G_attackSpeed)
 	if (
 		Global.mode_selected == "res://Stages/2-Player-Rounds/round_scene_ai.tscn"
 		and tanks_picking[0] != 0
@@ -99,9 +96,7 @@ func generate_cards():
 
 func _on_card_picked():
 	picks_left -= 1
-	print(Global.G_cards_picked)
 	if picks_left > 0:  #for 2+ player support
 		generate_cards()
 	else:
-		print(Global.mode_selected)
 		self.get_tree().change_scene_to_file(Global.mode_selected)  # THIS NEEDS TO BE EDITIED IN THE FUTURE FOR OTHER LEVELS. USE A GLOBAL FOR CURRENT LEVEL

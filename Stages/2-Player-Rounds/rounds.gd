@@ -28,7 +28,6 @@ func _ready():
 	var PLAYER2 = load(player2Path)
 	for child in self.get_children():
 		#This code isn't great. I just want to go to be and have it work
-		print(child)
 		if len(child.get_children()) > 2:
 			if child.get_child(0).name == "Player1Spawn":
 				var spawnedPlayer1 = PLAYER1.instantiate()
@@ -111,7 +110,6 @@ func save_stats():  #Saves stats before scene change
 		Global.G_bulletRange.append(player.bulletRange)
 		Global.G_bulletSize.append(player.bulletSize)
 		Global.G_fireBullets.append(player.fireBullets)
-		print("Saving attack speed: ",player.attackSpeed)
 
 
 func apply_stats():  #applys and resets stats
@@ -124,7 +122,6 @@ func apply_stats():  #applys and resets stats
 		players[i].tankSpeed = Global.G_tankSpeed[i]
 		players[i].regen = Global.G_regen[i]
 		players[i].attackSpeed = Global.G_attackSpeed[i]
-		print("Applying attack speed: ",players[i].attackSpeed)
 		#Bullet STats
 		players[i].damage = Global.G_damage[i]
 		players[i].bulletSpeed = Global.G_bulletSpeed[i]

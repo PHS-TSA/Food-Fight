@@ -1,6 +1,6 @@
 extends AudioStreamPlayer
 
-const level_music := preload("res://Assets/Audio/Avner Kelmer - Lunch Time.mp3")
+const level_music := preload("res://Assets/Audio/new-music.mp3")
 
 
 # Best volume is -15.22

@@ -16,6 +16,9 @@ func _ready():
 	
 	aiFired = true
 	ai = true
+	
+	#delay to avoid unupdated bullets
+	await get_tree().create_timer(.5).timeout
 	fire()
 
 func _physics_process(delta):

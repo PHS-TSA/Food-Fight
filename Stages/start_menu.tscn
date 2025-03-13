@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bjd03uacoxg33"]
 
 [ext_resource type="Texture2D" uid="uid://c677sqcuotoq4" path="res://Assets/Images/foodfightlogo.png" id="1_f04u3"]
-[ext_resource type="Script" uid="uid://dlr4y8qge4k3m" path="res://Stages/start_menu.gd" id="1_nlly5"]
+[ext_resource type="Script" path="res://Stages/start_menu.gd" id="1_nlly5"]
 [ext_resource type="Texture2D" uid="uid://dvkoiubjpe735" path="res://Assets/Images/Start.png" id="2_cvaqr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_2trhj"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bobfh1hrrdfyq"
-path="res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"
+uid="uid://bfeuh3hcl5fdy"
+path="res://.godot/imported/Quick-Feet.png-6d981c5d1aed2ee8857a2df9113e6e56.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Food-Card-Assets/Rare/Short-Range.png"
-dest_files=["res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"]
+source_file="res://Cards/Food-Card-Assets/Common/Quick-Feet.png"
+dest_files=["res://.godot/imported/Quick-Feet.png-6d981c5d1aed2ee8857a2df9113e6e56.ctex"]
 
 [params]
 

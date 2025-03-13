@@ -1,8 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cm24wjbhtkuo3"]
+[gd_scene load_steps=4 format=3 uid="uid://bolmw4wc7dgvi"]
 
 [ext_resource type="Texture2D" uid="uid://c42y2ty5wmoal" path="res://Assets/Images/BackgroundCardSelector.png" id="1_7n6eb"]
-[ext_resource type="Script" uid="uid://dshcib7bbt0yt" path="res://tutorial.gd" id="1_ehuit"]
-[ext_resource type="Script" uid="uid://cl77a8obwg8du" path="res://back_button.gd" id="2_yb1ct"]
+[ext_resource type="Script" path="res://tutorial.gd" id="1_ehuit"]
+[ext_resource type="Script" path="res://back_button.gd" id="2_yb1ct"]
 
 [node name="Tutorial" type="Control"]
 layout_mode = 3

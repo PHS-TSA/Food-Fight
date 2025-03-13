@@ -43,6 +43,14 @@ func _ready():
 	healthBar.max_value = maxHealth
 	healthBar.value = health
 	
+	#Quick fix for random health bug
+	await get_tree().create_timer(0.25).timeout
+	health = maxHealth
+	healthBar = $HealthBar
+	healthBar.max_value = maxHealth
+	healthBar.value = health
+	
+	
 	aiFired = false
 	ai = false
 	

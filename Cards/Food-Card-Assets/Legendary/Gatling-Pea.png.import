@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bobfh1hrrdfyq"
-path="res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"
+uid="uid://b2rgtrag0qqok"
+path="res://.godot/imported/Gatling-Pea.png-58fe811583cd19bcbde17c09dcaf69d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Food-Card-Assets/Rare/Short-Range.png"
-dest_files=["res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"]
+source_file="res://Cards/Food-Card-Assets/Legendary/Gatling-Pea.png"
+dest_files=["res://.godot/imported/Gatling-Pea.png-58fe811583cd19bcbde17c09dcaf69d6.ctex"]
 
 [params]
 

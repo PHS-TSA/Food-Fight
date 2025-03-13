@@ -20,6 +20,13 @@ func _ready():
 	#delay to avoid unupdated bullets
 	await get_tree().create_timer(.5).timeout
 	fire()
+	#Quick fix for random health bug
+	health = maxHealth
+	healthBar = $HealthBar
+	healthBar.max_value = maxHealth
+	healthBar.value = health
+	
+	
 
 func _physics_process(delta):
 	var direction = Vector3()

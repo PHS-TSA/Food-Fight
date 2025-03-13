@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bobfh1hrrdfyq"
-path="res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"
+uid="uid://0a5dpno6xthj"
+path="res://.godot/imported/Juggernaut.png-41deed9e5e192cc8d133add110e50019.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Food-Card-Assets/Rare/Short-Range.png"
-dest_files=["res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"]
+source_file="res://Cards/Food-Card-Assets/Legendary/Juggernaut.png"
+dest_files=["res://.godot/imported/Juggernaut.png-41deed9e5e192cc8d133add110e50019.ctex"]
 
 [params]
 

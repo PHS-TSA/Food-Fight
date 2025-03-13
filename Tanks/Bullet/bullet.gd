@@ -29,7 +29,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if(traveled_distance < 0.1):
+	#Logic so big food doesn't kill player. Update in future to be more efficient 
+	if(traveled_distance < 2):
 		return
 	queue_free()
 	if(body.has_method("take_damage")):

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bobfh1hrrdfyq"
-path="res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"
+uid="uid://cq6hpsxrc01vq"
+path="res://.godot/imported/Super-Fast-Food.png-25ec98af094b53601a0c2a15d79b73c8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Cards/Food-Card-Assets/Rare/Short-Range.png"
-dest_files=["res://.godot/imported/Short-Range.png-dcd97275f2b74cca1d924e2ea131c4c1.ctex"]
+source_file="res://Cards/Food-Card-Assets/Uncommon/Super-Fast-Food.png"
+dest_files=["res://.godot/imported/Super-Fast-Food.png-25ec98af094b53601a0c2a15d79b73c8.ctex"]
 
 [params]
 

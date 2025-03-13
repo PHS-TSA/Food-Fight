@@ -59,7 +59,7 @@ modulate = Color(1, 1, 1, 0.756863)
 z_index = -1
 material = SubResource("CanvasItemMaterial_2trhj")
 position = Vector2(-0.999985, -0.999996)
-scale = Vector2(0.565297, 0.564491)
+scale = Vector2(0.578855, 0.57803)
 texture = ExtResource("2_cvaqr")
 
 [connection signal="pressed" from="2PlayerRoundButton" to="." method="_on_player_round_button_pressed"]

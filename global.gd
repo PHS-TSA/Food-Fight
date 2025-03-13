@@ -32,10 +32,10 @@ var G_fireBullets := []
 #may eventually add the tank settings here once i have a settings menu
 
 # Card Data
-var common_cards := ["Jacket", "Heavy-Food", "Fast-Flying"]
-var uncommon_cards := ["Watermelon-Helmet", "Cabbage", "Long-Range", "Super-Heavy-Food"]
-var rare_cards := ["Vitamins", "Pepper", "Super-Shoes", "Short-Range"]
-var legendary_cards := ["Walnuts"]
+var common_cards := ["Jacket", "Heavy-Food", "Fast-Flying","Quick-Feet"]
+var uncommon_cards := ["Watermelon-Helmet", "Cabbage", "Long-Range", "Super-Heavy-Food","Super-Fast-Food"]
+var rare_cards := ["Vitamins", "Pepper", "Super-Shoes", "Short-Range","Quick-Throw"]
+var legendary_cards := ["Walnuts","Gatling-Pea","Juggernaut"]
 
 
 func reset_stats() -> void:

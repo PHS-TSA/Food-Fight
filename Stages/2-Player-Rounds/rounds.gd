@@ -111,6 +111,7 @@ func save_stats():  #Saves stats before scene change
 		Global.G_bulletRange.append(player.bulletRange)
 		Global.G_bulletSize.append(player.bulletSize)
 		Global.G_fireBullets.append(player.fireBullets)
+		print("Saving attack speed: ",player.attackSpeed)
 
 
 func apply_stats():  #applys and resets stats
@@ -123,7 +124,7 @@ func apply_stats():  #applys and resets stats
 		players[i].tankSpeed = Global.G_tankSpeed[i]
 		players[i].regen = Global.G_regen[i]
 		players[i].attackSpeed = Global.G_attackSpeed[i]
-
+		print("Applying attack speed: ",players[i].attackSpeed)
 		#Bullet STats
 		players[i].damage = Global.G_damage[i]
 		players[i].bulletSpeed = Global.G_bulletSpeed[i]
@@ -133,6 +134,7 @@ func apply_stats():  #applys and resets stats
 	Global.G_maxHealth = []
 	Global.G_tankSpeed = []
 	Global.G_regen = []
+	Global.G_attackSpeed = []
 	Global.G_damage = []
 	Global.G_bulletSpeed = []
 	Global.G_bulletRange = []
@@ -153,6 +155,8 @@ func apply_cards():  # Needs to apply card stats to the corresponding tank and r
 				tank.health = tank.maxHealth
 			"Fast-Flying":
 				tank.bulletSpeed *= 1.2
+			"Quick-Feet":
+				tank.tankSpeed *= 1.3
 
 			#uncommon
 			"Watermelon-Helmet":
@@ -164,10 +168,13 @@ func apply_cards():  # Needs to apply card stats to the corresponding tank and r
 				tank.bulletRange *= 3
 			"Super-Heavy-Food":
 				tank.damage *= 1.4
+			"Super-Fast-Food":
+				tank.bulletSpeed *= 1.5
+				
 
 			#rare
 			"Vitamins":
-				tank.regen += 0.01  #percent based system
+				tank.regen += 0.025  #percent based system
 			"Pepper":
 				tank.fireBullets = true
 			"Super-Shoes":
@@ -175,6 +182,9 @@ func apply_cards():  # Needs to apply card stats to the corresponding tank and r
 			"Short-Range":
 				tank.damage *= 2
 				tank.bulletRange /= 2
+			"Quick-Throw":
+				tank.attackSpeed /= 1.75
+			
 			#legendary
 			"Walnuts":
 				tank.bulletSize *= 0.2
@@ -182,6 +192,17 @@ func apply_cards():  # Needs to apply card stats to the corresponding tank and r
 				tank.damage *= 1.5
 				if tank.bulletSize < 0.1:  # After 0.1 they are invisble and not fun
 					tank.bulletSize = 0.1
+			"Gatling-Pea":
+				tank.bulletSpeed *= 2
+				tank.attackSpeed /= 3
+				tank.damage *= 0.5
+				tank.bulletSize *= 0.5
+			"Juggernaut":
+				tank.maxHealth *= 2.5
+				tank.health = tank.maxHealth
+				tank.bulletSize *= 2
+				tank.tankSpeed *= 0.5
+				tank.damage *= 0.5
 
 	Global.G_tanks_picking = []
 	Global.G_cards_picked = []

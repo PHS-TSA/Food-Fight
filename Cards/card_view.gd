@@ -23,6 +23,7 @@ func _ready():
 	#print(card_list[1].card_name)
 	#print(card_list[2].card_name)
 	# THIS NEEDS TO CHANGE FOR MULTI AI SUPPORT
+	print("attack speed in card view: ", Global.G_attackSpeed)
 	if (
 		Global.mode_selected == "res://Stages/2-Player-Rounds/round_scene_ai.tscn"
 		and tanks_picking[0] != 0
@@ -73,9 +74,8 @@ func generate_cards():
 	#%Picking_Label.text = ("Player " + str(tanks_picking[0] + 1) + " is picking!")  #this is broken
 
 	for card in card_list:
-		#ran = randi_range(1, 100)
-		ran = 51
-		if ran >= 95:
+		ran = randi_range(1, 100)
+		if ran >= 93:
 			random_card = Global.legendary_cards[randi_range(0, len(Global.legendary_cards) - 1)]
 			texture = load("res://Cards/Food-Card-Assets/Legendary/" + str(random_card) + ".png")
 			card.texture_normal = texture
